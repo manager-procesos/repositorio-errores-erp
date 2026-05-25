@@ -1,0 +1,44 @@
+{
+  "errores": [
+    {
+      "numero": 13,
+      "titulo": "Manager ERP no carga — SQL Server no ejecutándose",
+      "modulo": "Acceso al sistema / Manager ERP (instalación local)",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-05-13",
+      "sintoma": "El sistema no carga o muestra error de conexión a la base de datos al intentar ingresar.",
+      "causa": "El servicio SQL Server en el servidor se detuvo (reinicio, mantenimiento, corte de energía).",
+      "solucion_pasos": [
+        "Derivar a informática (TI) del cliente",
+        "Abrir Servicios de Windows (services.msc) en el servidor",
+        "Buscar SQL Server (MSSQLSERVER) → clic derecho → Iniciar",
+        "Volver a ingresar desde los equipos clientes"
+      ],
+      "fuente": "Slack #customer-service-time — 05/05/2026 (cliente ARIDOS CAMARENA)",
+      "message_ts": "1778679242.094449",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-13-sql-no-ejecuta.png",
+      "imagen_local": "error-13-sql-no-ejecuta.png"
+    },
+    {
+      "numero": 16,
+      "titulo": "File Access Denied al intentar imprimir",
+      "modulo": "Impresión / Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-05-25",
+      "sintoma": "Al intentar imprimir desde Manager ERP aparece el mensaje 'File Access Denied' y la impresión no se realiza.",
+      "causa": "Permisos insuficientes sobre la carpeta temporal o de impresión del sistema.",
+      "solucion_pasos": [
+        "Verificar que el usuario de Windows tenga permisos de escritura en la carpeta de impresión temporal",
+        "Ejecutar Manager ERP como Administrador (clic derecho → Ejecutar como administrador)",
+        "Si el problema persiste, revisar permisos de la impresora en Panel de control → Dispositivos e impresoras",
+        "Contactar a informática (TI) del cliente para ajustar permisos de usuario en el servidor"
+      ],
+      "fuente": "Intercom — caso cerrado 18/05/2026",
+      "message_ts": "1779734500.424869",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-file-access-denied-imprimir.png",
+      "imagen_local": "error-16-file-access-denied-imprimir.png"
+    }
+  ]
+}
