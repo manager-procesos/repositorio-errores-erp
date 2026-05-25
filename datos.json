@@ -1,44 +1,311 @@
 {
   "errores": [
     {
-      "numero": 13,
-      "titulo": "Manager ERP no carga — SQL Server no ejecutándose",
-      "modulo": "Acceso al sistema / Manager ERP (instalación local)",
+      "numero": 1,
+      "titulo": "Field CIUDADORIGEN does not accept null values",
+      "modulo": "Factura de Venta",
+      "frecuencia": "Alta",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al intentar emitir una factura aparece un cuadro 'Program Error': Field CIUDADORIGEN does not accept null values",
+      "causa": "El campo Ciudad en la ficha del cliente está vacío o fue escrito manualmente en lugar de seleccionarse desde el listado desplegable.",
+      "solucion_pasos": [
+        "Ir a Ficha del Cliente → Modificar",
+        "Abrir pestaña Direcciones",
+        "Seleccionar comuna y ciudad desde el selector desplegable (NO escribir manualmente)",
+        "Guardar cambios",
+        "Cerrar y volver a ingresar al módulo de Ventas",
+        "Volver a emitir la factura"
+      ],
+      "fuente": "Intercom #215473210709669 — 2026-04-14",
+      "message_ts": "1776184827.323129",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-01-ciudad-origen.png",
+      "imagen_local": "error-01-ciudad-origen.png",
+      "slack_file_id": "F0ATP4T59H6"
+    },
+    {
+      "numero": 2,
+      "titulo": "OAPP is not an object — pantalla en blanco al ingresar",
+      "modulo": "Acceso al sistema / Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al intentar ingresar al sistema aparece pantalla en blanco con cuadro 'Program Error': OAPP is not an object",
+      "causa": "El zoom del navegador o del escritorio remoto estaba configurado a un porcentaje distinto de 100%, lo que impide que el sistema cargue correctamente.",
+      "solucion_pasos": [
+        "Reducir el zoom del navegador a 100% (Ctrl + tecla menos, o Ctrl + 0)",
+        "Si usa escritorio remoto (TS Plus / RDP): ajustar resolución de pantalla al 100%",
+        "Cerrar el navegador completamente y volver a ingresar",
+        "Si persiste: limpiar caché del navegador (Ctrl+Shift+Del)"
+      ],
+      "fuente": "Intercom #215473893604723 — 2026-04-14",
+      "message_ts": "1776184891.563169",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-02-acceso-zoom.png",
+      "imagen_local": "error-02-acceso-zoom.png",
+      "slack_file_id": "F0ASDD7NHBR"
+    },
+    {
+      "numero": 3,
+      "titulo": "Invalid path or file name — no se puede imprimir",
+      "modulo": "Print Preview / Impresión de documentos",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al intentar imprimir un informe o documento se abre Print Preview en blanco y aparece: Invalid path or file name",
+      "causa": "La ruta configurada para guardar los archivos de impresión no existe o no tiene permisos. También puede deberse a que la impresora no es compatible con Remote Desktop.",
+      "solucion_pasos": [
+        "Verificar en Parámetros Internos que la ruta de exportación/impresión sea válida y exista en el equipo",
+        "Asegurarse de que la impresora sea compatible con Remote Desktop (PCL o PostScript, NO Host Based)",
+        "Intentar imprimir usando Impresora Universal → vista previa → elegir destino",
+        "Si el problema persiste: cerrar sesión desde Archivo → Salir y volver a ingresar"
+      ],
+      "fuente": "Intercom #215473023208069 — 2026-04-14",
+      "message_ts": "1776184950.970559",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-03-impresion.png",
+      "imagen_local": "error-03-impresion.png",
+      "slack_file_id": "F0ASREZKJ21"
+    },
+    {
+      "numero": 4,
+      "titulo": "Input is not proper UTF-8 — carácter inválido en XML",
+      "modulo": "Factura de Venta / Envío al SII",
+      "frecuencia": "Alta",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al enviar la factura al SII aparece: 'Input is not proper UTF-8, indicate encoding! Bytes: 0xC0 0x93...' seguido del nombre del producto con el carácter inválido.",
+      "causa": "La descripción de uno de los productos contiene caracteres especiales no compatibles con UTF-8 (comillas tipográficas, tildes mal codificadas, símbolos de pulgadas).",
+      "solucion_pasos": [
+        "Identificar el producto indicado en el mensaje de error",
+        "Ir a la ficha del producto → Modificar",
+        "Revisar el campo Descripción y eliminar caracteres especiales: comillas, asteriscos, símbolos raros",
+        "Reemplazar comillas tipográficas por apóstrofes simples (tecla de signo de interrogación: ')",
+        "Guardar y volver a emitir la factura"
+      ],
+      "fuente": "Intercom #215472674188352 — 2026-04-14",
+      "message_ts": "1776185743.911139",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-04-caracter-invalido-xml.png",
+      "imagen_local": "error-04-caracter-invalido-xml.png",
+      "slack_file_id": "F0ATP8K191N"
+    },
+    {
+      "numero": 5,
+      "titulo": "Se han producido uno o varios errores — Guía de Despacho (caracteres especiales)",
+      "modulo": "Guía de Despacho / Ventas",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al intentar emitir una Guía de Despacho aparece: 'Error: Se han producido uno o varios errores.' (sin indicar un carácter específico).",
+      "causa": "La descripción detallada de uno o más productos contiene caracteres especiales incompatibles con el XML del SII (comillas de pulgadas, tildes mal codificadas u otros símbolos).",
+      "solucion_pasos": [
+        "Revisar la descripción de todos los productos del documento",
+        "Buscar caracteres como: comillas, asteriscos, guiones especiales, símbolos raros",
+        "Reemplazar comillas de pulgadas por apóstrofes simples (' con tecla de signo de interrogación)",
+        "Cerrar sesión desde Manager → Archivo → Salir",
+        "Volver a ingresar y emitir nuevamente la Guía de Despacho"
+      ],
+      "fuente": "Intercom #215473309001290 — 2026-04-14",
+      "message_ts": "1776185810.443459",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-05-gd-caracter-especial.png",
+      "imagen_local": "error-05-gd-caracter-especial.png",
+      "slack_file_id": "F0ASSUE2W6S"
+    },
+    {
+      "numero": 6,
+      "titulo": "Ocurrió un error. Más detalles archivo log — Servicio transaccional (DLL Acepta)",
+      "modulo": "Factura de Venta / Servicio transaccional",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al intentar emitir una factura aparece 'Servicio transaccional': Ocurrió un error. Más detalles archivo log.",
+      "causa": "Los archivos DLL de Acepta no están instalados correctamente en el equipo local desde el que se factura. Instalar en el servidor no es suficiente.",
+      "solucion_pasos": [
+        "Descargar el instalador ManagerTxInstaladorDLL versión Tx 3.0.0.0 (solicitarlo a soporte)",
+        "Ejecutar la instalación directamente en el equipo que va a facturar (no en el servidor)",
+        "Reiniciar el equipo después de la instalación",
+        "Volver a intentar emitir el documento"
+      ],
+      "fuente": "Intercom #215473152308109 — 2026-04-14",
+      "message_ts": "1776185840.178189",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-06-dll-acepta.png",
+      "imagen_local": "error-06-dll-acepta.png",
+      "slack_file_id": "F0ASYJCAY8L"
+    },
+    {
+      "numero": 7,
+      "titulo": "Se han producido uno o varios errores — Guía de Despacho (sesión colgada)",
+      "modulo": "Guía de Despacho / Ventas",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-14",
+      "sintoma": "Al intentar emitir una Guía de Despacho aparece: 'Error: Se han producido uno o varios errores.' El documento y sus productos se ven bien.",
+      "causa": "La sesión del sistema quedó en un estado inconsistente (colgada). No es un error del documento en sí, sino del estado de la conexión activa.",
+      "solucion_pasos": [
+        "Ir a Manager → Archivo → Salir (cerrar sesión correctamente, NO cerrar la ventana con la X)",
+        "Volver a ingresar al sistema",
+        "Abrir nuevamente la Guía de Despacho y emitir"
+      ],
+      "fuente": "Intercom #215470295588615 — 2026-04-14",
+      "message_ts": "1776185869.474169",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-07-gd-sesion.png",
+      "imagen_local": "error-07-gd-sesion.png",
+      "slack_file_id": "F0ASSUFCBC6"
+    },
+    {
+      "numero": 8,
+      "titulo": "Advertencia de certificado en conexión remota",
+      "modulo": "Acceso al sistema / TS Plus / RDP",
+      "frecuencia": "Alta",
+      "estado": "Resuelto",
+      "fecha": "2026-04-22",
+      "sintoma": "Al conectarse por escritorio remoto aparece: 'No se puede verificar la identidad del equipo remoto' o 'La conexión se interrumpió porque se recibió un certificado de autenticación de servidor inesperado'.",
+      "causa": "Windows no puede validar el certificado del servidor time.manager.cl al iniciar la sesión RDP.",
+      "solucion_pasos": [
+        "Abrir el cliente de Escritorio Remoto",
+        "Configurar la conexión con servidor: time.manager.cl:8025",
+        "Usuario: empresa.usuarioxx (según correo de bienvenida)",
+        "En Opciones avanzadas → seleccionar 'Conectar y no volver a advertirme'",
+        "Si el error persiste: reinstalar el cliente RDP (Microsoft Remote Desktop)",
+        "Alternativa inmediata: acceder desde navegador en https://time.manager.cl"
+      ],
+      "fuente": "Intercom #215473994843012 — 2026-04-22",
+      "message_ts": "1776869180.408589",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-08-certificado-rdp.png",
+      "imagen_local": "error-08-certificado-rdp.png",
+      "slack_file_id": "F0AUPKE77JQ"
+    },
+    {
+      "numero": 9,
+      "titulo": "Program Error: Too many arguments — Boleta de Honorarios",
+      "modulo": "Finanzas / Documentos genéricos",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-22",
+      "sintoma": "Al registrar una Boleta de Honorarios (BOH) y presionar OK, aparece: 'Program Error: Too many arguments'. En algunos casos el sistema cierra Manager inesperadamente.",
+      "causa": "La fórmula de cálculo configurada en el módulo de Boleta de Honorarios contiene un error interno.",
+      "solucion_pasos": [
+        "Si al presionar Ignorar el sistema graba igualmente, puede continuar de forma temporal",
+        "Contactar a soporte para solicitar conexión remota",
+        "El operador corrige la fórmula de cálculo del BOH directamente en el sistema",
+        "Validar emitiendo una boleta de prueba — el error no debe volver a aparecer"
+      ],
+      "fuente": "Intercom #215473409804855 — 2026-04-22",
+      "message_ts": "1776877205.002739",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-09-boh-too-many-args.png",
+      "imagen_local": "error-09-boh-too-many-args.png",
+      "slack_file_id": "F0AUERW6AFM"
+    },
+    {
+      "numero": 10,
+      "titulo": "Al crear tipo de documento indica \"Ya existe\"",
+      "modulo": "Tablas Generales / Tipos de documento",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-22",
+      "sintoma": "Al intentar crear un nuevo tipo de documento en Manager → Tablas Generales → Tipos de documentos, el sistema muestra: 'Ya existe', aunque el documento no está en la lista.",
+      "causa": "El correlativo interno de la tabla corr_db (campo sqtdoc) está desincronizado con los registros reales de la base de datos.",
+      "solucion_pasos": [
+        "Contactar a soporte — esta corrección requiere acceso directo a la base de datos",
+        "El operador identifica el numreg correspondiente al tipo de documento en la tabla corr_db",
+        "Se consulta el último valor real del correlativo",
+        "Se ejecuta: update corr_db set sqtdoc=xxx where numreg=xxx",
+        "Volver a intentar crear el tipo de documento — ya no debe arrojar el error"
+      ],
+      "fuente": "Intercom #215473907031311 — 2026-04-22",
+      "message_ts": "1776878571.461359",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-10-ya-existe-tipo-doc.png",
+      "imagen_local": "error-10-ya-existe-tipo-doc.png",
+      "slack_file_id": "F0AV0A78FGR"
+    },
+    {
+      "numero": 11,
+      "titulo": "No puede exportar a Excel — \"Aplicación Excel no existe\"",
+      "modulo": "Centro de Información / Parámetros Internos",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-04-22",
+      "sintoma": "Al intentar exportar un informe del Centro de Información a Excel, el sistema muestra: 'Aplicación Excel no existe', o falla la descarga sin generar el archivo.",
+      "causa": "En los Parámetros Internos del sistema estaba marcado el check 'No exportar Excel', lo que bloquea la funcionalidad de exportación para todos los usuarios.",
+      "solucion_pasos": [
+        "Ir a Manager → Parámetros → Parámetros Internos",
+        "Buscar la opción 'No exportar Excel'",
+        "Desmarcar el check",
+        "Guardar los cambios",
+        "Volver a intentar la exportación desde el Centro de Información"
+      ],
+      "fuente": "Intercom #215473547279755 — 2026-04-22",
+      "message_ts": "1776879748.839389",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-11-excel-no-existe.png",
+      "imagen_local": "error-11-excel-no-existe.png",
+      "slack_file_id": "F0AUKFKLSLE"
+    },
+    {
+      "numero": 12,
+      "titulo": "Tiene otra sesión activa — no puede ingresar a Ramaflex",
+      "modulo": "Acceso al sistema / Ramaflex (Manager ERP web)",
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-05-13",
-      "sintoma": "El sistema no carga o muestra error de conexión a la base de datos al intentar ingresar.",
-      "causa": "El servicio SQL Server en el servidor se detuvo (reinicio, mantenimiento, corte de energía).",
+      "sintoma": "Al intentar ingresar a Ramaflex, el sistema carga por unos segundos y luego desconecta al usuario mostrando un mensaje de que ya existe otra sesión activa.",
+      "causa": "Otro usuario del equipo está utilizando las mismas credenciales simultáneamente, o quedó una sesión activa anterior en el navegador (cookies/caché).",
       "solucion_pasos": [
-        "Derivar a informática (TI) del cliente",
-        "Abrir Servicios de Windows (services.msc) en el servidor",
-        "Buscar SQL Server (MSSQLSERVER) → clic derecho → Iniciar",
-        "Volver a ingresar desde los equipos clientes"
+        "Limpiar cookies y caché del navegador (Ctrl+Shift+Del → seleccionar 'Todos los tiempos' → Eliminar)",
+        "Cerrar completamente el navegador y volver a abrirlo",
+        "Reiniciar el equipo si el problema persiste",
+        "Acceder directamente desde https://time.manager.cl",
+        "Ingresar las credenciales nuevamente: usuario formato empresa.usuarioXX",
+        "Si el error sigue: verificar que nadie más del equipo esté usando el mismo usuario"
       ],
-      "fuente": "Slack #customer-service-time — 05/05/2026 (cliente ARIDOS CAMARENA)",
+      "fuente": "Intercom #215474278712937 — 2026-05-13",
+      "message_ts": "1778679225.396419",
+      "imagen_github": null,
+      "imagen_local": "error-12-otra-sesion-activa.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 13,
+      "titulo": "Manager ERP no carga — SQL Server no ejecutándose",
+      "modulo": "Acceso al sistema / Manager ERP (instalación local en servidor)",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-05-13",
+      "sintoma": "El cliente con instalación local de Manager ERP intenta acceder al sistema y no logra conectarse. El sistema no carga o muestra un error de conexión a la base de datos.",
+      "causa": "El servicio de SQL Server en el servidor donde está instalado Manager ERP se detuvo (reinicio, mantenimiento, corte de energía). Sin el servicio activo, Manager no puede conectarse a la base de datos.",
+      "solucion_pasos": [
+        "Derivar al área de informática (TI) del cliente — esta corrección se realiza en el servidor",
+        "El técnico de TI debe acceder al servidor donde está instalado Manager ERP",
+        "Abrir Servicios de Windows (services.msc) en el servidor",
+        "Buscar el servicio SQL Server (MSSQLSERVER) o similar",
+        "Verificar que el estado sea 'En ejecución' — si está detenido, hacer clic derecho → Iniciar",
+        "Esperar que el servicio inicie completamente",
+        "Volver a intentar acceder a Manager ERP desde los equipos clientes"
+      ],
+      "fuente": "Slack #customer-service-time — 2026-05-05 (cliente ARIDOS CAMARENA)",
       "message_ts": "1778679242.094449",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-13-sql-no-ejecuta.png",
-      "imagen_local": "error-13-sql-no-ejecuta.png"
+      "imagen_local": "error-13-sql-no-ejecuta.png",
+      "slack_file_id": "F0B1T65UYJJ"
     },
     {
       "numero": 16,
-      "titulo": "File Access Denied al intentar imprimir",
-      "modulo": "Impresión / Manager ERP",
+      "titulo": "\"File access is denied\" — Error al imprimir (intermitente, varios usuarios)",
+      "modulo": "Impresión / Archivos compartidos / FTP / Ramaflex",
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-05-25",
-      "sintoma": "Al intentar imprimir desde Manager ERP aparece el mensaje 'File Access Denied' y la impresión no se realiza.",
-      "causa": "Permisos insuficientes sobre la carpeta temporal o de impresión del sistema.",
+      "sintoma": "Al presionar el botón imprimir en Ramaflex, aparece el error 'File access is denied'. El error es intermitente: afecta a varios usuarios simultáneamente y se resuelve solo a los pocos minutos.",
+      "causa": "El archivo que Manager intenta usar para la impresión está bloqueado por otro usuario o proceso activo en una carpeta compartida de red (FTP u otro recurso compartido).",
       "solucion_pasos": [
-        "Verificar que el usuario de Windows tenga permisos de escritura en la carpeta de impresión temporal",
-        "Ejecutar Manager ERP como Administrador (clic derecho → Ejecutar como administrador)",
-        "Si el problema persiste, revisar permisos de la impresora en Panel de control → Dispositivos e impresoras",
-        "Contactar a informática (TI) del cliente para ajustar permisos de usuario en el servidor"
+        "Esperar unos minutos y reintentar la impresión (en la mayoría de casos se resuelve solo)",
+        "Verificar si hay otros usuarios activos usando el mismo recurso compartido simultáneamente",
+        "Si utiliza carpeta FTP compartida: revisar que los archivos temporales de impresión no estén bloqueados por otra sesión abierta",
+        "Cerrar sesión correctamente desde Manager → Archivo → Salir (NO cerrar con la X) y volver a ingresar",
+        "Si el error es recurrente: contactar a soporte para revisar la configuración de la carpeta de impresión compartida"
       ],
-      "fuente": "Intercom — caso cerrado 18/05/2026",
+      "fuente": "Intercom #215474350431361 — cliente Insytec, 2026-05-18",
       "message_ts": "1779734500.424869",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-file-access-denied-imprimir.png",
-      "imagen_local": "error-16-file-access-denied-imprimir.png"
+      "imagen_local": "error-16-file-access-denied-imprimir.png",
+      "slack_file_id": null
     }
   ]
 }
