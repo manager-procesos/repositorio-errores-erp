@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repositorio de Errores — Manager ERP</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f4f4f8;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4e 100%);
+  color: white;
+  padding: 32px 24px 28px;
+  text-align: center;
+}
+.header h1 { font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+.header p  { font-size: 14px; color: #aaa; }
+.header .badge-auto {
+  display: inline-block;
+  background: rgba(124,58,237,0.3);
+  border: 1px solid rgba(124,58,237,0.6);
+  color: #c4b5fd;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* STATS BAR */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: white;
+  padding: 14px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat-num { font-size: 22px; font-weight: 800; color: #7c3aed; }
+.stat-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* SEARCH + FILTER */
+.toolbar {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 0 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.search-box {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  transition: border 0.2s;
+}
+.search-box:focus { border-color: #7c3aed; }
+
+.filter-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #555;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+/* CARDS GRID */
+.grid {
+  max-width: 900px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-num {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #f3f0ff;
+  color: #7c3aed;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e9d5ff;
+}
+.card-meta { flex: 1; }
+.card-titulo { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
+.card-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.tag-modulo   { background: #ede9fe; color: #5b21b6; }
+.tag-freq     { background: #fef3c7; color: #92400e; }
+.tag-resuelto { background: #d1fae5; color: #065f46; }
+.tag-pendiente{ background: #fee2e2; color: #991b1b; }
+.tag-fecha    { background: #f0f0f0; color: #666; }
+
+.card-body { padding: 16px 20px; }
+
+.seccion { margin-bottom: 14px; }
+.seccion-title {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #999;
+  margin-bottom: 5px;
+}
+.seccion-content { font-size: 13.5px; line-height: 1.6; color: #333; }
+
+.pasos { list-style: none; padding: 0; }
+.pasos li {
+  font-size: 13.5px;
+  padding: 4px 0;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.5;
+  color: #333;
+}
+.pasos li::before {
+  content: attr(data-n);
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fuente {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* IMAGE SECTION */
+.card-imagen {
+  padding: 0 20px 20px;
+}
+.imagen-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #999;
+  margin-bottom: 8px;
+}
+.card-imagen img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  display: block;
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+.card-imagen img:hover { opacity: 0.9; }
+.sin-imagen {
+  background: #f8f8fb;
+  border-radius: 10px;
+  border: 2px dashed #ddd;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* LOADING / EMPTY */
+.loading { text-align: center; padding: 60px 20px; color: #888; font-size: 15px; }
+.empty   { text-align: center; padding: 60px 20px; color: #aaa; font-size: 15px; }
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 92vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  color: #bbb;
+  border-top: 1px solid #e5e5e5;
+  background: white;
+}
+footer span { color: #7c3aed; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📋 Repositorio de Errores — Manager ERP</h1>
+  <p>Fichas de errores comunes con solución paso a paso y captura de pantalla</p>
+  <div class="badge-auto">🤖 Actualizado automáticamente cada lunes</div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num" id="total-errores">—</div>
+    <div class="stat-label">Errores documentados</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="total-resueltos">—</div>
+    <div class="stat-label">Resueltos</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="ultima-actualizacion">—</div>
+    <div class="stat-label">Última actualización</div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <input type="text" class="search-box" id="busqueda" placeholder="🔍  Buscar error, módulo, síntoma…">
+  <button class="filter-btn active" data-filter="todos">Todos</button>
+  <button class="filter-btn" data-filter="Resuelto">✅ Resueltos</button>
+  <button class="filter-btn" data-filter="Pendiente">🔴 Pendientes</button>
+</div>
+
+<div class="grid" id="grid">
+  <div class="loading">Cargando fichas…</div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="Captura de pantalla">
+</div>
+
+<footer>
+  Repositorio de Errores ERP &mdash; <span>Manager ERP</span> &mdash; Actualizado automáticamente con Claude + Python
+</footer>
+
+<script>
+const DATOS_URL = './datos.json';
+
+let todosLosErrores = [];
+let filtroEstado = 'todos';
+
+async function cargarDatos() {
+  try {
+    const resp = await fetch(DATOS_URL + '?t=' + Date.now());
+    if (!resp.ok) throw new Error('No se pudo cargar datos.json');
+    const datos = await resp.json();
+    todosLosErrores = datos.errores || [];
+    actualizarStats(datos);
+    renderGrid(todosLosErrores);
+  } catch (e) {
+    document.getElementById('grid').innerHTML =
+      '<div class="empty">⚠️ No se pudieron cargar las fichas.<br><small>' + e.message + '</small></div>';
+  }
+}
+
+function actualizarStats(datos) {
+  const errores = datos.errores || [];
+  document.getElementById('total-errores').textContent = errores.length;
+  document.getElementById('total-resueltos').textContent =
+    errores.filter(e => e.estado === 'Resuelto').length;
+  const fechas = errores.map(e => e.fecha).filter(Boolean).sort().reverse();
+  document.getElementById('ultima-actualizacion').textContent =
+    fechas[0] ? formatFecha(fechas[0]) : '—';
+}
+
+function formatFecha(iso) {
+  if (!iso) return '—';
+  const [y, m, d] = iso.split('-');
+  return `${d}/${m}/${y}`;
+}
+
+function renderGrid(errores) {
+  const grid = document.getElementById('grid');
+  if (!errores.length) {
+    grid.innerHTML = '<div class="empty">No hay fichas que coincidan con la búsqueda.</div>';
+    return;
+  }
+  grid.innerHTML = errores.map(e => renderCard(e)).join('');
+
+  // Lightbox
+  grid.querySelectorAll('.card-imagen img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+}
+
+function renderCard(e) {
+  const tagEstado = e.estado === 'Resuelto'
+    ? `<span class="tag tag-resuelto">✅ Resuelto</span>`
+    : `<span class="tag tag-pendiente">🔴 Pendiente</span>`;
+
+  const pasos = (e.solucion_pasos || [])
+    .map((p, i) => `<li data-n="${i+1}">${p}</li>`)
+    .join('');
+
+  const imagenHTML = e.imagen_github
+    ? `<div class="imagen-label">📸 Captura de pantalla</div>
+       <img src="${e.imagen_github}" alt="Error ${e.numero}" loading="lazy">`
+    : `<div class="sin-imagen">📷 Imagen pendiente de adjuntar</div>`;
+
+  return `
+<div class="card" data-estado="${e.estado || ''}" data-texto="${[e.titulo,e.modulo,e.sintoma,e.causa].join(' ').toLowerCase()}">
+  <div class="card-header">
+    <div class="card-num">#${e.numero}</div>
+    <div class="card-meta">
+      <div class="card-titulo">🔴 ${e.titulo}</div>
+      <div class="card-tags">
+        ${e.modulo ? `<span class="tag tag-modulo">📦 ${e.modulo}</span>` : ''}
+        ${e.frecuencia ? `<span class="tag tag-freq">🔁 ${e.frecuencia}</span>` : ''}
+        ${tagEstado}
+        ${e.fecha ? `<span class="tag tag-fecha">📅 ${formatFecha(e.fecha)}</span>` : ''}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    ${e.sintoma ? `
+    <div class="seccion">
+      <div class="seccion-title">¿Qué se ve en pantalla?</div>
+      <div class="seccion-content">${e.sintoma}</div>
+    </div>` : ''}
+
+    ${e.causa ? `
+    <div class="seccion">
+      <div class="seccion-title">Causa raíz</div>
+      <div class="seccion-content">${e.causa}</div>
+    </div>` : ''}
+
+    ${pasos ? `
+    <div class="seccion">
+      <div class="seccion-title">✅ Solución paso a paso</div>
+      <ol class="pasos">${pasos}</ol>
+    </div>` : ''}
+
+    ${e.fuente ? `<div class="fuente">Fuente: ${e.fuente}</div>` : ''}
+  </div>
+
+  <div class="card-imagen">
+    ${imagenHTML}
+  </div>
+</div>`;
+}
+
+// FILTROS
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filtroEstado = btn.dataset.filter;
+    aplicarFiltros();
+  });
+});
+
+document.getElementById('busqueda').addEventListener('input', aplicarFiltros);
+
+function aplicarFiltros() {
+  const q = document.getElementById('busqueda').value.toLowerCase();
+  const filtrados = todosLosErrores.filter(e => {
+    const matchEstado = filtroEstado === 'todos' || e.estado === filtroEstado;
+    const texto = [e.titulo, e.modulo, e.sintoma, e.causa, ...(e.solucion_pasos||[])].join(' ').toLowerCase();
+    const matchQ = !q || texto.includes(q);
+    return matchEstado && matchQ;
+  });
+  renderGrid(filtrados);
+}
+
+// LIGHTBOX
+document.getElementById('lightbox').addEventListener('click', () => {
+  document.getElementById('lightbox').classList.remove('open');
+});
+
+cargarDatos();
+</script>
+</body>
+</html>
