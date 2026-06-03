@@ -1,0 +1,27 @@
+name: Update Portal
+on:
+  workflow_dispatch:
+    inputs:
+      ficha:
+        description: 'JSON de la ficha nueva'
+        required: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update datos.json
+        run: |
+          echo '${{ github.event.inputs.ficha }}' | python3 -c "
+          import json, sys
+          nueva = json.load(sys.stdin)
+          with open('datos.json') as f:
+              data = json.load(f)
+          data['errores'].append(nueva)
+          with open('datos.json', 'w') as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+          "
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Add error nuevo"
