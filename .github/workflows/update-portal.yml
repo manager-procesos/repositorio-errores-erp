@@ -1,27 +1,36 @@
-name: Update Portal
+name: Update Portal ERP
+
 on:
-  workflow_dispatch:
-    inputs:
-      ficha:
-        description: 'JSON de la ficha nueva'
-        required: true
+  repository_dispatch:
+    types: [new-error]
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Update datos.json
         run: |
-          echo '${{ github.event.inputs.ficha }}' | python3 -c "
-          import json, sys
-          nueva = json.load(sys.stdin)
+          echo '${{ github.event.client_payload.ficha }}' > /tmp/nueva_ficha.json
+          python3 -c "
+          import json
           with open('datos.json') as f:
               data = json.load(f)
+          with open('/tmp/nueva_ficha.json') as f:
+              nueva = json.load(f)
           data['errores'].append(nueva)
-          with open('datos.json', 'w') as f:
+          data['errores'].sort(key=lambda x: x['numero'])
+          with open('datos.json', 'w', ensure_ascii=False) as f:
               json.dump(data, f, ensure_ascii=False, indent=2)
           "
+
+      - name: Download and save image
+        if: ${{ github.event.client_payload.imagen_url != '' }}
+        run: |
+          curl -L "${{ github.event.client_payload.imagen_url }}" \
+            -o "imagenes/${{ github.event.client_payload.imagen_nombre }}"
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Add error nuevo"
+          commit_message: "Add error #${{ github.event.client_payload.ficha.numero }}"
