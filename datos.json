@@ -395,7 +395,8 @@
       "message_ts": null,
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null
+      "slack_file_id": null,
+      "ocultar": true
     },
     {
       "numero": 21,
@@ -415,9 +416,10 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26, caso Intercom #215474453188524",
       "message_ts": null,
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
-      "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
-      "slack_file_id": null
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "ocultar": true
     },
     {
       "numero": 22,
@@ -439,7 +441,8 @@
       "message_ts": null,
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null
+      "slack_file_id": null,
+      "ocultar": true
     },
     {
       "numero": 23,
@@ -482,9 +485,10 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Sylvia Fernandez, cliente bezma)",
       "message_ts": null,
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
-      "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
-      "slack_file_id": null
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "ocultar": true
     },
     {
       "numero": 25,
@@ -619,9 +623,10 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-06-01 (reporte de Alejandro Vera, ticket 260601-00003, solución de Eduardo Jofré / equipo Plataforma)",
       "message_ts": "1780581018.011439",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-30-ftp-ruta-importacion-desaparece.png",
-      "imagen_local": "error-30-ftp-ruta-importacion-desaparece.png",
-      "slack_file_id": null
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "ocultar": true
     }
   ],
   "total_errores": 28,
