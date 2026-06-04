@@ -318,7 +318,7 @@ async function cargarDatos() {
     const resp = await fetch(DATOS_URL + '?t=' + Date.now());
     if (!resp.ok) throw new Error('No se pudo cargar datos.json');
     const datos = await resp.json();
-    todosLosErrores = datos.errores || [];
+    todosLosErrores = (datos.errores || []).filter(e => !e.ocultar && e.imagen_github);
     actualizarStats(datos);
     renderGrid(todosLosErrores);
   } catch (e) {
