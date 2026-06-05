@@ -532,9 +532,10 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-06-03 (caso reportado por Claudia Lavín, diagnóstico de Osvaldo Anabalón y Oscar Olivares)",
       "message_ts": "1780520805.287289",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
-      "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
-      "slack_file_id": null
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "ocultar": true
     },
     {
       "numero": 27,
