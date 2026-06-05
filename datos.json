@@ -485,7 +485,7 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Sylvia Fernandez, cliente bezma)",
       "message_ts": null,
-      "imagen_github": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
       "imagen_local": null,
       "slack_file_id": null,
       "ocultar": true
