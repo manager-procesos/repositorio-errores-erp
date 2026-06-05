@@ -416,7 +416,7 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26, caso Intercom #215474453188524",
       "message_ts": null,
-      "imagen_github": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
       "imagen_local": null,
       "slack_file_id": null,
       "ocultar": true
