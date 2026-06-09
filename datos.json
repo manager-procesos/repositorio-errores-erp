@@ -78,7 +78,7 @@
         "Identificar el producto indicado en el mensaje de error",
         "Ir a la ficha del producto → Modificar",
         "Revisar el campo Descripción y eliminar caracteres especiales: comillas, asteriscos, símbolos raros",
-        "Reemplazar comillas tipográficas por apóstrofes simples (tecla de signo de interrogación: ')",
+        "Reemplazar comillas tipográficas por apóstrofes simples",
         "Guardar y volver a emitir la factura"
       ],
       "fuente": "Intercom #215472674188352 — 2026-04-14",
@@ -94,12 +94,12 @@
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-04-14",
-      "sintoma": "Al intentar emitir una Guía de Despacho aparece: 'Error: Se han producido uno o varios errores.' (sin indicar un carácter específico).",
+      "sintoma": "Al intentar emitir una Guía de Despacho aparece: 'Error: Se han producido uno o varios errores.'",
       "causa": "La descripción detallada de uno o más productos contiene caracteres especiales incompatibles con el XML del SII (comillas de pulgadas, tildes mal codificadas u otros símbolos).",
       "solucion_pasos": [
         "Revisar la descripción de todos los productos del documento",
         "Buscar caracteres como: comillas, asteriscos, guiones especiales, símbolos raros",
-        "Reemplazar comillas de pulgadas por apóstrofes simples (' con tecla de signo de interrogación)",
+        "Reemplazar comillas de pulgadas por apóstrofes simples",
         "Cerrar sesión desde Manager → Archivo → Salir",
         "Volver a ingresar y emitir nuevamente la Guía de Despacho"
       ],
@@ -257,7 +257,7 @@
       ],
       "fuente": "Intercom #215474278712937 — 2026-05-13",
       "message_ts": "1778679225.396419",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-12-otra-sesion-activa.png",
+      "imagen_github": null,
       "imagen_local": "error-12-otra-sesion-activa.png",
       "slack_file_id": null
     },
@@ -272,10 +272,9 @@
       "causa": "El servicio de SQL Server en el servidor donde está instalado Manager ERP se detuvo (reinicio, mantenimiento, corte de energía). Sin el servicio activo, Manager no puede conectarse a la base de datos.",
       "solucion_pasos": [
         "Derivar al área de informática (TI) del cliente — esta corrección se realiza en el servidor",
-        "El técnico de TI debe acceder al servidor donde está instalado Manager ERP",
         "Abrir Servicios de Windows (services.msc) en el servidor",
         "Buscar el servicio SQL Server (MSSQLSERVER) o similar",
-        "Verificar que el estado sea 'En ejecución' — si está detenido, hacer clic derecho → Iniciar",
+        "Si está detenido: clic derecho → Iniciar",
         "Esperar que el servicio inicie completamente",
         "Volver a intentar acceder a Manager ERP desde los equipos clientes"
       ],
@@ -297,9 +296,9 @@
       "solucion_pasos": [
         "Esperar unos minutos y reintentar la impresión (en la mayoría de casos se resuelve solo)",
         "Verificar si hay otros usuarios activos usando el mismo recurso compartido simultáneamente",
-        "Si utiliza carpeta FTP compartida: revisar que los archivos temporales de impresión no estén bloqueados por otra sesión abierta",
-        "Cerrar sesión correctamente desde Manager → Archivo → Salir (NO cerrar con la X) y volver a ingresar",
-        "Si el error es recurrente: contactar a soporte para revisar la configuración de la carpeta de impresión compartida"
+        "Si utiliza carpeta FTP compartida: revisar que los archivos temporales no estén bloqueados",
+        "Cerrar sesión correctamente desde Manager → Archivo → Salir y volver a ingresar",
+        "Si el error es recurrente: contactar a soporte para revisar la configuración de la carpeta compartida"
       ],
       "fuente": "Intercom #215474350431361 — cliente Insytec, 2026-05-18",
       "message_ts": "1779734500.424869",
@@ -313,44 +312,44 @@
       "modulo": "Importación / Comprobantes / Manager ERP",
       "frecuencia": "Media",
       "estado": "En análisis",
-      "fecha": "2026-05-25",
+      "fecha": "2026-05-19",
       "sintoma": "Al intentar importar un comprobante en Manager ERP, la aplicación muestra un cuadro 'Program Error' con el código C0000005 y se cierra inesperadamente.",
-      "causa": "El código C0000005 en FoxPro indica acceso inválido a memoria (crash de aplicación). Causas: impresoras redirigidas o Universal Printer activa interfiriendo, sesión RDP/TS Plus colgada, archivos temporales dañados, microcortes de red.",
+      "causa": "El código C0000005 en FoxPro indica acceso inválido a memoria. Causas frecuentes: impresoras redirigidas activas, sesión RDP colgada, archivos temporales dañados o microcortes de red.",
       "solucion_pasos": [
         "Cerrar sesión correctamente desde Manager → Archivo → Salir (NO cerrar con la X) y volver a ingresar",
-        "Verificar si hay impresoras redirigidas activas en la sesión remota y desactivarlas temporalmente",
+        "Verificar si hay impresoras redirigidas activas y desactivarlas temporalmente",
         "Si usa escritorio remoto: cerrar la sesión RDP completamente y reconectar",
         "Limpiar archivos temporales del sistema (carpeta %TEMP%)",
         "Volver a intentar la importación del comprobante",
         "Si el error persiste: contactar a soporte para diagnóstico con conexión remota"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-19",
-      "message_ts": null,
+      "message_ts": "1779739607.040869",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-17-c0000005-importar-comprobante.png",
       "imagen_local": "error-17-c0000005-importar-comprobante.png",
-      "slack_file_id": null
+      "slack_file_id": "F0B50EF0VRA"
     },
     {
       "numero": 18,
-      "titulo": "Mensaje de error al buscar histórico de cuenta — falta índice en base de datos",
+      "titulo": "Error al buscar histórico de cuenta — falta índice en base de datos",
       "modulo": "Consultas / Histórico de cuentas / Manager ERP",
       "frecuencia": "Baja",
       "estado": "Resuelto",
-      "fecha": "2026-05-25",
-      "sintoma": "Al realizar una búsqueda de histórico de una cuenta en Manager ERP, aparece un mensaje de error. El problema ocurre solo en bases de datos en versión Octubre.",
-      "causa": "Falta un índice en la base de datos. La tabla de histórico de cuentas no tiene el índice necesario para ejecutar la búsqueda correctamente en esa versión.",
+      "fecha": "2026-05-19",
+      "sintoma": "Al realizar una búsqueda de histórico de una cuenta en Manager ERP, aparece un mensaje de error. Ocurre solo en bases de datos en versión Octubre.",
+      "causa": "Falta un índice en la base de datos. La tabla de histórico de cuentas no tiene el índice necesario para ejecutar la búsqueda en esa versión.",
       "solucion_pasos": [
-        "Identificar que el problema ocurre solo al buscar histórico de cuenta (no en otras búsquedas)",
+        "Identificar que el problema ocurre solo al buscar histórico de cuenta",
         "Confirmar que la base de datos está en versión Octubre",
-        "Contactar a soporte técnico — la corrección requiere ejecutar un script de creación del índice faltante directamente en la BD",
+        "Contactar a soporte técnico — requiere ejecutar un script de creación del índice faltante en la BD",
         "Soporte ejecuta el script de reparación del índice en el servidor",
-        "Volver a intentar la búsqueda de histórico — debe funcionar correctamente"
+        "Volver a intentar la búsqueda de histórico"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-19",
-      "message_ts": null,
+      "message_ts": "1779739622.390329",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-18-historico-cuenta-indice-bd.png",
       "imagen_local": "error-18-historico-cuenta-indice-bd.png",
-      "slack_file_id": null
+      "slack_file_id": "F0B4V48LQV8"
     },
     {
       "numero": 19,
@@ -359,21 +358,21 @@
       "frecuencia": "Media",
       "estado": "En análisis",
       "fecha": "2026-05-27",
-      "sintoma": "Al trabajar con un Comprobante de Egreso en el módulo de Finanzas, aparece: 'Connectivity error: Unable to retrieve specific error information. Driver is probably out of resources'. Ocurre en versión V.ABR 2026 (SP00/0430).",
-      "causa": "El driver ODBC de FoxPro agota los recursos disponibles de conexión/cursores activos hacia la base de datos. Puede ocurrir con demasiadas conexiones simultáneas o cuando la actualización de versión introduce cambios en el manejo de conexiones.",
+      "sintoma": "Al trabajar con un Comprobante de Egreso en Finanzas (al contabilizar pagos), aparece: 'Connectivity error: Unable to retrieve specific error information. Driver is probably out of resources'. Comenzó tras actualizar a V.ABR 2026 (SP00/0430).",
+      "causa": "El driver ODBC de FoxPro agota los recursos disponibles de conexión/cursores activos hacia la base de datos. Ocurre cuando hay demasiadas conexiones abiertas simultáneamente o cuando la actualización de versión introduce cambios en el manejo de conexiones.",
       "solucion_pasos": [
         "Cerrar Manager correctamente desde Archivo → Salir (NO cerrar con la X)",
         "Esperar 1-2 minutos para que el driver libere los recursos",
-        "Volver a ingresar al sistema y repetir la operación en el Comprobante de Egreso",
-        "Si el error persiste: reiniciar el equipo completo (no solo cerrar Manager)",
-        "Si sigue ocurriendo tras reinicio: verificar que no haya otras sesiones de Manager abiertas en el mismo equipo o servidor",
-        "Si el error es recurrente después de actualizar a versión ABR 2026: contactar a soporte técnico"
+        "Volver a ingresar al sistema y repetir la operación",
+        "Si el error persiste: reiniciar el equipo completo",
+        "Si sigue ocurriendo: verificar que no haya otras sesiones de Manager abiertas en el mismo equipo o servidor",
+        "Si es recurrente tras actualizar a ABR 2026: contactar a soporte para revisión de configuración de conexiones"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26 (reporte de Sylvia Fernandez)",
-      "message_ts": null,
+      "message_ts": "1779889123.064979",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-connectivity-error-driver-resources.png",
       "imagen_local": "error-19-connectivity-error-driver-resources.png",
-      "slack_file_id": null
+      "slack_file_id": "F0B68T67FDY"
     },
     {
       "numero": 20,
@@ -385,18 +384,17 @@
       "sintoma": "Los indicadores económicos del Banco Central (UF, UTM, dólar, etc.) no aparecen automáticamente en Manager ERP al inicio del día, a pesar de tener una API Key de CMF configurada en los parámetros del sistema.",
       "causa": "La API Key de CMF registrada en los Parámetros de Manager está vencida, revocada o es inválida. Sin una clave activa, el sistema no puede conectarse a la API de la CMF.",
       "solucion_pasos": [
-        "Ingresar a https://api.cmfchile.cl y solicitar una nueva API Key",
+        "Ingresar a https://api.cmfchile.cl y solicitar una nueva API Key (opción 'Obtener una API Key')",
         "Una vez recibida la nueva API Key por correo, ir a Manager → Parámetros → Parámetros del Sistema",
         "Buscar la sección de integración CMF e ingresar la nueva API Key reemplazando la anterior",
         "Guardar los cambios",
         "Al primer acceso del día siguiente, los indicadores deben actualizarse automáticamente"
       ],
-      "fuente": "Intercom #215474440063375",
-      "message_ts": null,
+      "fuente": "caso Intercom #215474440063375",
+      "message_ts": "1779986577.118689",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "ocultar": true
+      "slack_file_id": null
     },
     {
       "numero": 21,
@@ -405,21 +403,20 @@
       "frecuencia": "Baja",
       "estado": "Resuelto",
       "fecha": "2026-05-28",
-      "sintoma": "Al intentar enviar Órdenes de Compra (OC) a proveedores por correo desde Manager, el sistema muestra rechazo del servidor de correo: '550-Mensaje rechazado: posible spoofing.' Las OC no llegan a los proveedores.",
+      "sintoma": "Al intentar enviar Órdenes de Compra (OC) a proveedores por correo desde Manager, el sistema muestra un rechazo del servidor de correo: '550-Mensaje rechazado: posible spoofing. El dominio del remitente pertenece a este servidor y debe enviar autenticado.'",
       "causa": "Se realizó un cambio en la dirección IP del servidor de correo/hosting. La nueva IP no está autorizada para enviar correos en nombre del dominio (falta configuración SPF/autenticación SMTP).",
       "solucion_pasos": [
-        "Workaround inmediato: Descargar el archivo de OC desde Manager y enviarlo manualmente como archivo adjunto por correo al proveedor",
+        "Workaround inmediato: descargar el archivo de OC desde Manager y enviarlo manualmente como adjunto al proveedor",
         "Contactar a Plataforma / área TI informando el cambio de IP del servidor realizado",
-        "Plataforma debe actualizar el registro SPF del dominio para incluir la nueva IP del servidor",
-        "Una vez actualizada la configuración DNS (puede tardar hasta 24-48 horas en propagarse), volver a probar el envío de OC desde Manager",
+        "Plataforma debe actualizar el registro SPF del dominio para incluir la nueva IP, o configurar autenticación SMTP",
+        "Una vez actualizada la configuración DNS (puede tardar 24-48 horas), volver a probar el envío de OC desde Manager",
         "Confirmar con el proveedor que recibió correctamente la OC"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26, caso Intercom #215474453188524",
-      "message_ts": null,
+      "message_ts": "1779986555.392629",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
-      "imagen_local": null,
-      "slack_file_id": null,
-      "ocultar": true
+      "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
+      "slack_file_id": "F0B72QWUPS4"
     },
     {
       "numero": 22,
@@ -432,17 +429,16 @@
       "causa": "La sesión del usuario quedó activa en el servidor de Ramaflex sin cerrarse correctamente (por cierre forzado del navegador, desconexión de red o corte de energía). La sesión persiste en el backend y no puede liberarse desde el lado del cliente.",
       "solucion_pasos": [
         "Confirmar que nadie del equipo está usando ese usuario en ningún dispositivo ni pestaña abierta",
-        "Limpiar cookies y caché del navegador en todos los equipos que usen esa cuenta (Ctrl+Shift+Del → seleccionar 'Todos los tiempos' → Eliminar) y reintentar el ingreso",
+        "Limpiar cookies y caché en todos los equipos que usen esa cuenta y reintentar el ingreso",
         "Si el error persiste: contactar a soporte PSI para solicitar el cierre forzado de la sesión del usuario",
-        "Indicar a soporte: nombre del usuario (formato empresa.usuarioXX), nombre de la empresa y que la sesión está bloqueada sin uso activo conocido",
+        "Indicar a soporte: nombre del usuario (formato empresa.usuarioXX) y nombre de la empresa",
         "Una vez que soporte confirme que la sesión fue liberada, reingresar con las credenciales normales"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-27 (reporte de Camila León)",
-      "message_ts": null,
+      "message_ts": "1780061992.729669",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "ocultar": true
+      "slack_file_id": null
     },
     {
       "numero": 23,
@@ -451,20 +447,20 @@
       "frecuencia": "Baja",
       "estado": "En análisis",
       "fecha": "2026-06-01",
-      "sintoma": "Al trabajar con una Factura de Venta en Manager (versión ASP), aparece un cuadro 'Program Error' con el mensaje: 'Property USER_IDX is not found.' El error ocurre a pesar de que el PDF del documento sí se genera y el DTE parece haber sido procesado.",
-      "causa": "Manager intenta acceder a la propiedad USER_IDX en un objeto de la Factura de Venta, pero esa propiedad no está disponible o no fue inicializada correctamente. Puede estar relacionado con un cambio de configuración en el ambiente ASP o un usuario sin índice asignado en la base de datos.",
+      "sintoma": "Al trabajar con una Factura de Venta en Manager (versión ASP), aparece un cuadro 'Program Error': Property USER_IDX is not found. El PDF del documento sí se genera y el DTE parece haber sido procesado.",
+      "causa": "Manager intenta acceder a la propiedad USER_IDX en un objeto de la Factura de Venta, pero esa propiedad no está disponible o no fue inicializada. Puede estar relacionado con un cambio de configuración en el ambiente ASP o una actualización de versión.",
       "solucion_pasos": [
-        "Verificar si el PDF del documento fue generado y si el DTE aparece en el SII — si es así, el documento fue procesado correctamente a pesar del error",
+        "Verificar si el PDF del documento fue generado y si el DTE aparece en el SII — si es así, el documento fue procesado correctamente",
         "Presionar 'Ignore' en el cuadro de error para continuar operando",
         "Cerrar sesión desde Manager → Archivo → Salir (NO cerrar con la X) y volver a ingresar",
-        "Si el error persiste en todos los documentos: contactar a soporte indicando el ambiente (ASP), la versión de Manager y que el error es 'Property USER_IDX is not found'",
-        "Soporte revisará la configuración del usuario en la base de datos y si corresponde aplicar un parche de versión"
+        "Si el error persiste en todos los documentos: contactar a soporte indicando el ambiente (ASP) y que el error es 'Property USER_IDX is not found'",
+        "Soporte revisará la configuración del usuario en la base de datos"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Camila León, cliente Comercial Las Americas)",
-      "message_ts": null,
+      "message_ts": "1780319438.846839",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
       "imagen_local": "error-23-property-user-idx-not-found.png",
-      "slack_file_id": null
+      "slack_file_id": "F0B6Y8WUKN1"
     },
     {
       "numero": 24,
@@ -473,22 +469,21 @@
       "frecuencia": "Baja",
       "estado": "En análisis",
       "fecha": "2026-06-01",
-      "sintoma": "Al intentar enviar Boletas al SII desde Manager ERP (instalación local), aparece: 'OLE error code 0x8002000e: Invalid number of parameters.' El problema comenzó a partir de la actualización a la versión Abril 2026 (V.ABR 2026).",
-      "causa": "El código OLE 0x8002000e indica DISP_E_BADPARAMCOUNT. Manager está realizando una llamada de automatización OLE al servicio de envío de boletas al SII con un número incorrecto de parámetros, incompatible con algún componente instalado en el equipo local tras actualizar a V.ABR 2026.",
+      "sintoma": "Al intentar enviar Boletas al SII desde Manager ERP (instalación local), aparece un cuadro 'Program Error': OLE error code 0x8002000e: Invalid number of parameters. Comenzó a partir de la actualización a V.ABR 2026.",
+      "causa": "El código OLE 0x8002000e corresponde a DISP_E_BADPARAMCOUNT. Manager realiza una llamada de automatización OLE al servicio de envío de boletas al SII con un número incorrecto de parámetros, posiblemente por incompatibilidad introducida en V.ABR 2026.",
       "solucion_pasos": [
         "Verificar que todos los componentes de integración SII estén actualizados en el equipo local (DLL de Acepta / servicio transaccional)",
         "Reiniciar Manager correctamente desde Archivo → Salir (NO cerrar con la X) y volver a intentar",
         "Reiniciar el equipo completo si el paso anterior no resuelve",
-        "Si persiste: contactar a soporte indicando versión V.ABR 2026, que es instalación local y el error exacto 'OLE error code 0x8002000e'",
-        "Soporte determinará si corresponde instalar un Service Pack (SP) o actualizar los componentes OLE del equipo",
-        "Como workaround temporal: exportar la boleta desde Manager y enviarla manualmente al SII si el cliente tiene acceso al portal"
+        "Si persiste: contactar a soporte indicando versión V.ABR 2026, instalación local y el error exacto",
+        "Soporte determinará si corresponde instalar un Service Pack o actualizar los componentes OLE",
+        "Como workaround temporal: exportar la boleta desde Manager y enviarla manualmente al SII"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Sylvia Fernandez, cliente bezma)",
-      "message_ts": null,
+      "message_ts": "1780319455.474749",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
-      "imagen_local": null,
-      "slack_file_id": null,
-      "ocultar": true
+      "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
+      "slack_file_id": "F0B7WSR8N56"
     },
     {
       "numero": 25,
@@ -497,21 +492,21 @@
       "frecuencia": "Baja",
       "estado": "En análisis",
       "fecha": "2026-06-02",
-      "sintoma": "Al intentar ingresar o guardar el detalle de una Nota de Venta, aparece: 'Connectivity error: Infracción de la restricción PRIMARY KEY PK_NOTDE_DB. No se puede insertar una clave duplicada en el objeto dbo.NOTDE_DB.' Afecta a todas las sucursales. Sistema en versión V.FEB 2026, SP00/0311.",
-      "causa": "El sistema intenta insertar un registro en dbo.NOTDE_DB con un número de clave que ya existe, violando la restricción PRIMARY KEY. El correlativo interno de la tabla se desincronizó con los registros reales — posiblemente por un corte abrupto de sesión, un proceso concurrente (multi-sucursal), o un WS que generó registros duplicados.",
+      "sintoma": "Al intentar ingresar o guardar el detalle de una Nota de Venta, aparece: 'Connectivity error: [Microsoft][SQL Server Native Client 10.0][SQL Server]Infracción de la restricción PRIMARY KEY PK_NOTDE_DB. No se puede insertar una clave duplicada en el objeto dbo.NOTDE_DB.' Afecta a todas las sucursales. Sistema en versión V.FEB 2026, SP00/0311.",
+      "causa": "El sistema intenta insertar un registro en dbo.NOTDE_DB con un número de clave que ya existe, violando la restricción PRIMARY KEY. Ocurre cuando el correlativo interno de la tabla se desincronizó con los registros reales.",
       "solucion_pasos": [
         "No forzar el cierre de Manager — cerrar siempre desde Archivo → Salir (nunca con la X)",
         "Verificar que no haya múltiples usuarios o procesos accediendo simultáneamente a la misma Nota de Venta",
-        "Reiniciar Manager correctamente y reintentar — si el error es por bloqueo temporal de PARAM_DB puede resolverse solo",
-        "Si persiste: contactar a soporte indicando versión V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB, el valor duplicado y que afecta a todas las sucursales",
-        "Soporte deberá revisar el correlativo de la tabla NOTDE_DB en la base de datos y corregir el valor desincronizado directamente en SQL Server",
-        "Confirmar con soporte si hay algún WS o proceso automático generando registros en NOTDE_DB que pueda estar causando la duplicidad"
+        "Reiniciar Manager correctamente y reintentar",
+        "Si persiste: contactar a soporte indicando versión V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales",
+        "Soporte deberá revisar el correlativo de la tabla NOTDE_DB y corregir el valor desincronizado en SQL Server",
+        "Confirmar si hay algún WS o proceso automático generando registros en NOTDE_DB"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-02 (reporte de Claudia Lavín, cliente Llantas del Pacífico)",
       "message_ts": "1780436553.740639",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-primary-key-notde-db.png",
       "imagen_local": "error-25-primary-key-notde-db.png",
-      "slack_file_id": "F0B7JU0ELQ3"
+      "slack_file_id": null
     },
     {
       "numero": 26,
@@ -520,7 +515,7 @@
       "frecuencia": "Baja",
       "estado": "Resuelto",
       "fecha": "2026-06-03",
-      "sintoma": "Al intentar abrir o usar Manager ERP, el sistema muestra un error de acceso, permisos o ejecución de consulta (query). El error aparece porque Manager fue instalado copiando directamente la carpeta Manager8 al equipo en lugar de ejecutar el instalador oficial.",
+      "sintoma": "Al intentar abrir o usar Manager ERP, el sistema muestra un error de acceso, permisos o ejecución de consulta (query). Manager fue instalado copiando directamente la carpeta Manager8 al equipo en lugar de ejecutar el instalador oficial.",
       "causa": "Manager ERP requiere que el instalador oficial sea ejecutado en cada equipo para registrar correctamente los drivers ODBC, las DLLs de sistema y otras dependencias. Si solo se copia la carpeta Manager8 sin instalar, faltan componentes críticos.",
       "solucion_pasos": [
         "Verificar con el cliente si Manager fue instalado mediante el instalador oficial o solo copiando la carpeta Manager8",
@@ -528,14 +523,13 @@
         "Ejecutar el instalador oficial en el equipo afectado (no solo copiar archivos)",
         "Reiniciar el equipo una vez finalizada la instalación",
         "Volver a ingresar a Manager con las credenciales habituales",
-        "Si el error persiste tras instalar correctamente: contactar a soporte para diagnóstico remoto"
+        "Si el error persiste: contactar a soporte para diagnóstico remoto"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-03 (caso reportado por Claudia Lavín, diagnóstico de Osvaldo Anabalón y Oscar Olivares)",
       "message_ts": "1780520805.287289",
-      "imagen_github": null,
-      "imagen_local": null,
-      "slack_file_id": null,
-      "ocultar": true
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
+      "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
+      "slack_file_id": null
     },
     {
       "numero": 27,
@@ -544,13 +538,13 @@
       "frecuencia": "Baja",
       "estado": "Resuelto",
       "fecha": "2026-06-04",
-      "sintoma": "Al intentar ingresar una factura de compra (FC), el sistema no permite guardar o procesa el documento con error. El cliente tiene un producto cuya moneda de venta está configurada en USD, pero el campo \"Origen\" en la ficha del producto dice \"Nacional\". El documento no puede ser procesado correctamente.",
-      "causa": "Manager ERP requiere coherencia entre el campo \"Origen\" del producto y su moneda de venta. Si un producto tiene moneda de venta en USD (divisa extranjera), su Origen debe ser \"Importado\". Cuando el Origen está configurado como \"Nacional\" pero la moneda de venta es USD, el sistema no puede procesar correctamente la factura de compra porque hay una inconsistencia en la configuración del producto.",
+      "sintoma": "Al intentar ingresar una factura de compra (FC), el sistema no permite guardar o procesa el documento con error. El cliente tiene un producto con moneda de venta en USD pero el campo 'Origen' en la ficha del producto dice 'Nacional'.",
+      "causa": "Manager ERP requiere coherencia entre el campo 'Origen' del producto y su moneda de venta. Si un producto tiene moneda de venta en USD, su Origen debe ser 'Importado'.",
       "solucion_pasos": [
         "Ir a la ficha del producto involucrado en la factura de compra",
         "Hacer clic en Modificar",
-        "Buscar el campo \"Origen\" en la ficha del producto",
-        "Cambiar el valor de \"Nacional\" a \"Importado\"",
+        "Buscar el campo 'Origen' en la ficha del producto",
+        "Cambiar el valor de 'Nacional' a 'Importado'",
         "Guardar los cambios",
         "Volver a ingresar la factura de compra — ya debe procesarse correctamente"
       ],
@@ -567,21 +561,21 @@
       "frecuencia": "Baja",
       "estado": "Resuelto",
       "fecha": "2026-06-04",
-      "sintoma": "Al intentar descargar o generar un informe desde el módulo Centro de Información en Manager ERP (instalación local), aparece un cuadro de error. El sistema no puede completar la operación. El error se debe a que faltan componentes DLL requeridos por la aplicación, porque Manager fue instalado copiando archivos directamente sin usar el instalador oficial.",
-      "causa": "Manager ERP no fue instalado correctamente en el equipo. El sistema fue configurado copiando archivos directamente (por ejemplo, la carpeta Manager8) sin ejecutar el instalador oficial. Al omitir el instalador, no se registran correctamente los componentes DLL y demás dependencias necesarias para que el módulo de Centro de Información pueda generar y descargar informes.",
+      "sintoma": "Al intentar descargar o generar un informe desde el módulo Centro de Información en Manager ERP (instalación local), aparece un cuadro de error. El sistema no puede completar la operación por falta de componentes DLL.",
+      "causa": "Manager ERP no fue instalado correctamente en el equipo. El sistema fue configurado copiando archivos directamente sin ejecutar el instalador oficial, omitiendo el registro de componentes DLL y dependencias necesarias para el módulo de Centro de Información.",
       "solucion_pasos": [
-        "Verificar con el área de informática del cliente si Manager fue instalado mediante el instalador oficial o solo copiando archivos",
-        "Si fue instalado sin el instalador oficial: solicitar el instalador oficial de Manager8 a soporte técnico (disponible en el sitio FTP de clientes)",
-        "Ejecutar el instalador oficial en el equipo afectado — no solo copiar archivos, se debe ejecutar el .exe del instalador",
+        "Verificar con el área de informática del cliente si Manager fue instalado mediante el instalador oficial",
+        "Si fue instalado sin el instalador oficial: solicitar el instalador oficial de Manager8 a soporte técnico",
+        "Ejecutar el instalador oficial en el equipo afectado — no solo copiar archivos",
         "Reiniciar el equipo una vez finalizada la instalación",
-        "Volver a ingresar a Manager y repetir la operación en Centro de Información — el informe debe descargarse correctamente",
-        "Si el error persiste tras reinstalar correctamente: contactar a soporte para diagnóstico remoto"
+        "Volver a ingresar a Manager y repetir la operación en Centro de Información",
+        "Si el error persiste: contactar a soporte para diagnóstico remoto"
       ],
       "fuente": "caso Intercom #215474564872107 (Mundolab SA, 2026-06-03, operadora Isidora)",
-      "message_ts": "1780579590.617969",
+      "message_ts": "1780581018.011439",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-28-descargar-informe-dll-faltante.png",
       "imagen_local": "error-28-descargar-informe-dll-faltante.png",
-      "slack_file_id": null
+      "slack_file_id": "F0B7MTHHVJB"
     },
     {
       "numero": 29,
@@ -590,8 +584,8 @@
       "frecuencia": "Baja",
       "estado": "Resuelto",
       "fecha": "2026-06-04",
-      "sintoma": "Al intentar emitir una boleta en Manager GO, el sistema no lo permite. El folio queda \"pegado\" o tomado sin ser liberado correctamente. El cliente no puede emitir nuevas boletas hasta que el folio sea liberado manualmente por soporte.",
-      "causa": "El folio quedó bloqueado internamente en el documento KNA (documento interno de Manager GO) sin liberarse correctamente. Ocurre por un cierre inesperado del proceso de emisión, una desconexión durante la operación, o un error al generar el documento.",
+      "sintoma": "Al intentar emitir una boleta en Manager GO, el sistema no lo permite. El folio queda 'pegado' o tomado sin ser liberado correctamente. El cliente no puede emitir nuevas boletas.",
+      "causa": "El folio quedó bloqueado internamente en el documento KNA (documento interno de Manager GO) sin liberarse correctamente. Ocurre por un cierre inesperado del proceso de emisión, desconexión durante la operación, o error al generar el documento.",
       "solucion_pasos": [
         "Identificar el número de folio afectado (Manager GO lo muestra al intentar emitir)",
         "Contactar a soporte indicando: nombre del cliente, módulo Manager GO y número de folio pegado",
@@ -601,7 +595,7 @@
         "Una vez corregido, el sistema permite emitir nuevas boletas con normalidad"
       ],
       "fuente": "caso Intercom #215474564889962 (Swarovski, 2026-06-04, operadora Emilia)",
-      "message_ts": "1780581007.380049",
+      "message_ts": "1780579590.617969",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-29-manager-go-folio-pegado.png",
       "imagen_local": "error-29-manager-go-folio-pegado.png",
       "slack_file_id": null
@@ -613,23 +607,134 @@
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-06-04",
-      "sintoma": "Los clientes no pueden importar documentos porque la ruta de importación FTP deja de ser reconocida por Manager, a pesar de estar configurada en Parámetros Internos. Al intentar actualizarla o reingresarla, la unidad Y (unidad FTP) no aparece visible en la lista de Parámetros Internos. El sistema no puede completar la importación.",
-      "causa": "La conexión entre Manager ERP y la ruta FTP se pierde a nivel de sesión. Ocurre por cambios en la infraestructura del servidor o cortes de red que no permiten al sistema reestablecer automáticamente la vinculación con la unidad FTP. Cuando afecta a múltiples clientes simultáneamente, es un incidente generalizado de infraestructura de Plataforma.",
+      "sintoma": "Los clientes no pueden importar documentos porque la ruta de importación FTP deja de ser reconocida por Manager. Al intentar actualizarla o reingresarla, la unidad Y (unidad FTP) no aparece visible en la lista de Parámetros Internos.",
+      "causa": "La conexión entre Manager ERP y la ruta FTP se pierde a nivel de sesión. Ocurre por cambios en la infraestructura del servidor o cortes de red. Cuando afecta a múltiples clientes simultáneamente, es un incidente generalizado de infraestructura de Plataforma.",
       "solucion_pasos": [
         "Cerrar sesión de Manager completamente (Archivo → Salir, NO cerrar con la X)",
         "Volver a ingresar al sistema (nuevo login)",
         "Verificar si la ruta FTP aparece correctamente en Parámetros Internos y reintentar la importación",
-        "Si el problema persiste tras el nuevo login: levantar ticket a IT indicando que la unidad Y no es visible en Parámetros Internos y el número de proyecto o cliente afectado",
+        "Si el problema persiste tras el nuevo login: levantar ticket a IT indicando que la unidad Y no es visible en Parámetros Internos",
         "Equipo Plataforma aplica solución definitiva a nivel de servidor"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-01 (reporte de Alejandro Vera, ticket 260601-00003, solución de Eduardo Jofré / equipo Plataforma)",
-      "message_ts": "1780581018.011439",
+      "message_ts": "1780581007.380049",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "ocultar": true
+      "slack_file_id": null
+    },
+    {
+      "numero": 31,
+      "titulo": "Error al guardar documentos / no puede imprimir (intermitente) — caché del navegador",
+      "modulo": "Ramaflex / Manager ERP Web — Impresión y guardado de documentos",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-04",
+      "sintoma": "Al intentar guardar o imprimir documentos en Manager ERP (versión web / Ramaflex), aparece un error de forma intermitente varias veces durante el día. En algunos momentos el sistema funciona con normalidad y en otros falla al intentar guardar o imprimir.",
+      "causa": "Se acumula información (caché y cookies) en el navegador web que impide que el sistema pueda guardar o imprimir documentos correctamente. El problema es intermitente porque el caché se va llenando gradualmente durante el día de trabajo.",
+      "solucion_pasos": [
+        "Abrir una nueva pestaña en Chrome",
+        "Hacer clic en los 3 puntos verticales (menú de Chrome) en la esquina superior derecha",
+        "Ir a Configuración → Privacidad y seguridad → Borrar datos de navegación",
+        "Seleccionar: Historial de navegación, Cookies y datos de sitios web, Imágenes y archivos en caché",
+        "En el período, seleccionar 'Siempre' (todos los tiempos)",
+        "Hacer clic en 'Borrar datos'",
+        "Volver a ingresar al sistema Manager — el error debe resolverse"
+      ],
+      "fuente": "caso Intercom #215474566679525 (Le Creuset, 2026-06-03/04, operadora Emilia)",
+      "message_ts": "1780600050.232219",
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null
+    },
+    {
+      "numero": 32,
+      "titulo": "DTE rechazado por SII — documento bloqueado, no puede eliminarse ni modificarse",
+      "modulo": "Facturación / DTE — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-04",
+      "sintoma": "Un documento tributario electrónico (DTE) fue rechazado por el SII y queda en estado bloqueado en Manager ERP. El cliente no puede eliminarlo ni modificarlo para corregir el error.",
+      "causa": "Al ser rechazado por el SII, el documento queda con los campos E_enviado='1' e impresa='1' en la base de datos docu_db, bloqueando cualquier modificación posterior.",
+      "solucion_pasos": [
+        "El cliente contacta a soporte indicando: RUT de la empresa, tipo de documento, número de folio y numreg del documento bloqueado",
+        "Enviar captura del documento con la información de la empresa visible",
+        "Soporte identifica la base de datos (BD) correspondiente al cliente",
+        "Soporte ejecuta el comando SQL para desbloquear: update docu_db set E_enviado='0', impresa='0' where numreg IN (XXXX)",
+        "Soporte confirma al cliente que el documento fue desbloqueado",
+        "El cliente elimina o modifica el documento, corrige el error y reenvía al SII"
+      ],
+      "fuente": "caso Intercom #215474567694548 (Blunding, 2026-06-03/04, operadora Isidora)",
+      "message_ts": "1780600065.467779",
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null
+    },
+    {
+      "numero": 33,
+      "titulo": "Connectivity error: HRESULT = 0x80040e19 — no se puede eliminar Factura de Compra vacía",
+      "modulo": "Compras / Factura de Compra — Manager ERP (instalación local, SQL Server)",
+      "frecuencia": "Baja",
+      "estado": "Resuelto (requiere soporte)",
+      "fecha": "2026-06-08",
+      "sintoma": "Al intentar eliminar una Factura de Compra en Manager Time ERP (V.ABR 2026, SP00/0430), aparece: 'Connectivity error: [Microsoft][ODBC SQL Server Driver][SQL Server]Error del procesador de consultas interno: el procesador de consultas detectó un error inesperado durante la ejecución (HRESULT = 0x80040e19).' La Factura de Compra tiene encabezado pero sin líneas de detalle.",
+      "causa": "La FC existe en la tabla de encabezados de la base de datos pero no tiene líneas de detalle asociadas (registro huérfano). Al intentar eliminarla, SQL Server no puede completar la operación porque el motor de consultas encuentra una inconsistencia de integridad.",
+      "solucion_pasos": [
+        "Confirmar que el documento no tiene pagos ni documentos asociados",
+        "El usuario NO puede eliminar el registro directamente desde la interfaz de Manager",
+        "Contactar a soporte indicando: empresa, número de FC, correlativo y versión de Manager",
+        "Soporte se conecta remotamente y ejecuta script SQL para eliminar el registro huérfano directamente en la base de datos",
+        "Verificar que la eliminación fue exitosa buscando el documento en Manager"
+      ],
+      "fuente": "caso Intercom #215474577523856 (Ingeniería y Construcción GGL Ltda., 2026-06-04, operadora Isidora / diagnóstico Oscar Olivares)",
+      "message_ts": "1780956600.131129",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-factura-compra-vacia-hresult-0x80040e19.png",
+      "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
+      "slack_file_id": "F0B8H6UQ9PW"
+    },
+    {
+      "numero": 34,
+      "titulo": "Program Error: Field FECHA does not accept null values — Libro de Honorarios / BALFLEX",
+      "modulo": "Finanzas / Informes Contables / Libro de Honorarios — Manager ERP (V.MAY 2026, BALFLEX)",
+      "frecuencia": "Baja",
+      "estado": "En análisis",
+      "fecha": "2026-06-08",
+      "sintoma": "Al intentar generar el Libro de Honorarios desde Informes Contables en Manager versión V.MAY 2026 (EXE SP00/0529, BALFLEX), aparece: 'Program Error: Field FECHA does not accept null values.' El sistema puede bloquearse o cerrar el módulo (_BALFLEX) tras el error.",
+      "causa": "Existe al menos un registro de honorarios en la base de datos con el campo FECHA vacío o nulo. El proceso de generación del Libro de Honorarios requiere que todos los registros tengan una fecha válida. También puede ocurrir si el período habilitado de ingreso de datos no incluye el rango de fechas solicitado.",
+      "solucion_pasos": [
+        "Ir a Manager → Parámetros → Período habilitado de ingreso de datos",
+        "Confirmar que las fechas del período incluyen el rango que se intenta generar (ej: 01/05/2026 a 31/05/2026)",
+        "Si el período está correcto y el error persiste: contactar a soporte indicando versión V.MAY 2026 BALFLEX y el error exacto",
+        "Soporte revisará la base de datos para identificar registros de honorarios con campo FECHA nulo",
+        "Soporte ejecutará script correctivo para asignar fecha válida o eliminar registros inválidos",
+        "Reintentar generar el Libro de Honorarios tras la corrección"
+      ],
+      "fuente": "caso Intercom #215474580363208 (Slack #customer-service-time, 2026-06-04, operadora Claudia Lavín)",
+      "message_ts": "1780956615.292379",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null-balflex.png",
+      "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
+      "slack_file_id": "F0B8AR14EJZ"
+    },
+    {
+      "numero": 35,
+      "titulo": "Error: Fecha invalida en el campo <FchSalida> — GD no se envían (V.ABR 2026 + Facturación.CL)",
+      "modulo": "Facturación / Guías de Despacho (DTE Tipo 52) — Manager ERP V.ABR 2026 + Facturador electrónico Facturación.CL (DTEPlanoWS)",
+      "frecuencia": "Baja",
+      "estado": "En análisis",
+      "fecha": "2026-06-08",
+      "sintoma": "Al intentar enviar Guías de Despacho (DTE Tipo 52) desde Manager ERP con facturador electrónico Facturación.CL (DTEPlanoWS v4.3.3.4), el sistema no envía los documentos y registra en el log: 'Error: Fecha invalida en el campo <FchSalida>.' Comenzó tras instalar V.ABR 2026.",
+      "causa": "La versión Abril 2026 de Manager ERP modificó la construcción del XML de la Guía de Despacho, generando el campo <FchSalida> con un valor inválido o vacío. El facturador electrónico Facturación.CL (DTEPlanoWS) valida este campo y rechaza el DTE cuando no contiene una fecha válida.",
+      "solucion_pasos": [
+        "Workaround inmediato: revertir a versión anterior de Manager si el negocio lo permite",
+        "Contactar a soporte indicando: versión V.ABR 2026, facturador DTEPlanoWS (Facturación.CL) v4.3.3.4, DTE Tipo 52 (GD) y el error exacto",
+        "Soporte debe escalar a PSI (equipo de desarrollo) — es un bug de compatibilidad de V.ABR 2026 con el facturador externo",
+        "Verificar si existe actualización de DTEPlanoWS en Facturación.CL compatible con V.ABR 2026",
+        "Esperar Service Pack o parche de PSI que corrija la generación del campo <FchSalida> en el XML de GD"
+      ],
+      "fuente": "Slack #customer-service-time — 2026-06-05 (reporte de Claudia Lavín)",
+      "message_ts": "1780956632.918089",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
+      "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
+      "slack_file_id": "F0B84DKP57H"
     }
-  ],
-  "total_errores": 28,
-  "ultima_actualizacion": "2026-06-04"
+  ]
 }
