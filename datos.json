@@ -735,27 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "Error 401 al autorizar Factura de Venta",
-      "modulo": "Facturación — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "En análisis",
-      "fecha": "2026-06-04",
-      "sintoma": "Al intentar autorizar o emitir una Factura de Venta, aparece popup 'Atención Administrativo' con Error: 401 y Causa del Error vacía",
-      "causa": "Error de autorización en el módulo de facturación. Puede estar relacionado con permisos del usuario, configuración de tipo de venta DISTRIBUIDOR, o problema con folio/timbre DTE",
-      "solucion_pasos": [
-        "Verificar que el usuario tenga permisos para emitir Facturas de Venta en el módulo",
-        "Revisar configuración de Tipo de Venta (DISTRIBUIDOR) y si requiere perfil especial",
-        "Comprobar que los folios DTE estén vigentes y disponibles",
-        "Si persiste, revisar log de Manager ERP para detalle de error 401",
-        "Contactar soporte con captura del log para análisis específico"
-      ],
-      "fuente": "Slack #customer-service-time (Ximena Gamboa, 04/06/2026) — cliente Llantas del Pacífico / Ramón Neumáticos EIRL",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-401-factura-venta-llantas-pacifico.png",
-      "imagen_local": "error-36-error-401-factura-venta-llantas-pacifico.png",
-      "slack_file_id": "F0B8C7BEHE2"
     }
   ]
 }
