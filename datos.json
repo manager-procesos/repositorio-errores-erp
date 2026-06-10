@@ -735,6 +735,46 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Error 401 — Al autorizar Factura de Venta",
+      "modulo": "Facturación / Facturas de Venta — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "En análisis",
+      "fecha": "2026-06-09",
+      "sintoma": "Al intentar autorizar una Factura de Venta en Manager ERP versión local, aparece un cuadro \"Atención Administrativo\" con el mensaje: Error: 401 / Causa del Error:. El error se presenta al usar el botón de autorización del documento. El sistema no permite completar la operación de emisión.",
+      "causa": "El código de error 401 en Manager ERP (instalación local) puede indicar: (1) permisos insuficientes del usuario para autorizar documentos, (2) sesión con bloqueos activos en la base de datos, o (3) inconsistencia en la configuración de perfiles de usuario/niveles de acceso para el módulo de Factura de Venta.",
+      "solucion_pasos": [
+        "Verificar que el usuario tenga permisos habilitados para autorizar documentos (Manager → Administración → Perfiles de Usuario → revisar nivel de acceso en Facturación)",
+        "Cerrar Manager correctamente desde Archivo → Salir (NO cerrar con la X) y volver a ingresar",
+        "Si persiste: verificar que no haya otro proceso o usuario bloqueando el documento en la misma base de datos",
+        "Si el error continúa: contactar a soporte indicando versión de Manager, código exacto \"Error 401\" y módulo Factura de Venta"
+      ],
+      "fuente": "Slack #customer-service-time — 2026-06-04 (reporte de Ximena Gamboa, cliente Llantas del Pacífico)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-401-factura-venta-llantas-pacifico.png",
+      "imagen_local": "error-36-error-401-factura-venta-llantas-pacifico.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 37,
+      "titulo": "Botón XLSX no funciona — No se puede exportar a Excel desde Ramaflex web",
+      "modulo": "Informes / Exportación — Manager ERP Ramaflex (web)",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-09",
+      "sintoma": "Al intentar exportar un informe o consulta a Excel desde Manager ERP Ramaflex (versión web), el botón XLSX no genera el archivo. Afecta a todos los usuarios de la empresa de forma simultánea.",
+      "causa": "El botón XLSX en la interfaz web de Ramaflex está defectuoso y no genera el archivo correctamente. El problema es conocido por el equipo de desarrollo y se ha solicitado eliminar ese botón.",
+      "solucion_pasos": [
+        "No usar el botón XLSX para exportar desde Ramaflex web",
+        "Usar en su lugar el botón \"Hoja de cálculo\" disponible en la misma pantalla de exportación",
+        "El archivo se descargará correctamente desde el botón \"Hoja de cálculo\"",
+        "Si el botón \"Hoja de cálculo\" tampoco está disponible: contactar a soporte indicando el módulo y la versión de Manager"
+      ],
+      "fuente": "Slack #customer-service-time — 2026-06-09 (reporte de Camila León, cliente Aquasolar, solución de Oscar Raul Olivares Corral)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-xlsx-no-funciona-exportar-excel-ramaflex.png",
+      "imagen_local": "error-37-xlsx-no-funciona-exportar-excel-ramaflex.png",
+      "slack_file_id": "F0BA8SUK8E4"
     }
   ]
 }
