@@ -257,7 +257,7 @@
       ],
       "fuente": "Intercom #215474278712937 — 2026-05-13",
       "message_ts": "1778679225.396419",
-      "imagen_github": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-12-otra-sesion-activa.png",
       "imagen_local": "error-12-otra-sesion-activa.png",
       "slack_file_id": null
     },
@@ -286,7 +286,7 @@
       "slack_file_id": "F0B3Y573QBW"
     },
     {
-      "numero": 16,
+      "numero": 14,
       "titulo": "\"File access is denied\" — Error al imprimir (intermitente, varios usuarios)",
       "modulo": "Impresión / Archivos compartidos / FTP / Ramaflex",
       "frecuencia": "Media",
@@ -303,12 +303,12 @@
       ],
       "fuente": "Intercom #215474350431361 — cliente Insytec, 2026-05-18",
       "message_ts": "1779734500.424869",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-file-access-denied-imprimir.png",
-      "imagen_local": "error-16-file-access-denied-imprimir.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-14-file-access-denied-imprimir.png",
+      "imagen_local": "error-14-file-access-denied-imprimir.png",
       "slack_file_id": null
     },
     {
-      "numero": 17,
+      "numero": 15,
       "titulo": "Program Error C0000005 — Crash al importar comprobante",
       "modulo": "Importación / Comprobantes / Manager ERP",
       "frecuencia": "Media",
@@ -327,12 +327,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-19",
       "message_ts": "1779739607.040869",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-17-c0000005-importar-comprobante.png",
-      "imagen_local": "error-17-c0000005-importar-comprobante.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-15-c0000005-importar-comprobante.png",
+      "imagen_local": "error-15-c0000005-importar-comprobante.png",
       "slack_file_id": "F0B50EF0VRA"
     },
     {
-      "numero": 18,
+      "numero": 16,
       "titulo": "Error al buscar histórico de cuenta — falta índice en base de datos",
       "modulo": "Consultas / Histórico de cuentas / Manager ERP",
       "frecuencia": "Baja",
@@ -344,18 +344,18 @@
         "Confirmar que el problema ocurre solo al buscar histórico de cuenta (no en otras búsquedas)",
         "Verificar la versión de la base de datos — este problema se presenta en versión Octubre",
         "Requiere acceso al servidor SQL del cliente: ejecutar el script de creación del índice faltante directamente en la base de datos de Manager",
-        "Si no se tiene el script a mano, solicitarlo al equipo de Plataforma o PSI indicando: error en búsqueda de histórico de cuenta, versión Octubre de la BD",
+        "Si no se tiene el script a mano, derivar a Plataforma indicando: error en búsqueda de histórico de cuenta, versión Octubre de la BD",
         "Una vez ejecutado el script, volver a intentar la búsqueda de histórico para confirmar que el error desapareció",
         "Documentar el script utilizado para futuras instalaciones en versión Octubre"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-19",
       "message_ts": "1779739622.390329",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-18-historico-cuenta-indice-bd.png",
-      "imagen_local": "error-18-historico-cuenta-indice-bd.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-historico-cuenta-indice-bd.png",
+      "imagen_local": "error-16-historico-cuenta-indice-bd.png",
       "slack_file_id": "F0B4V48LQV8"
     },
     {
-      "numero": 19,
+      "numero": 17,
       "titulo": "Connectivity error: Unable to retrieve specific error information. Driver is probably out of resources",
       "modulo": "Finanzas / Comprobante de Egreso / Manager ERP",
       "frecuencia": "Media",
@@ -373,12 +373,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26 (reporte de Sylvia Fernandez)",
       "message_ts": "1779889123.064979",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-connectivity-error-driver-resources.png",
-      "imagen_local": "error-19-connectivity-error-driver-resources.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-17-connectivity-error-driver-resources.png",
+      "imagen_local": "error-17-connectivity-error-driver-resources.png",
       "slack_file_id": "F0B68T67FDY"
     },
     {
-      "numero": 20,
+      "numero": 18,
       "titulo": "Indicadores económicos CMF no se actualizan automáticamente",
       "modulo": "Parámetros / Integración CMF / Manager ERP",
       "frecuencia": "Baja",
@@ -400,7 +400,7 @@
       "slack_file_id": null
     },
     {
-      "numero": 21,
+      "numero": 19,
       "titulo": "550 — Mensaje rechazado: posible spoofing al enviar OC a proveedores",
       "modulo": "Compras / Órdenes de Compra / Envío por correo",
       "frecuencia": "Baja",
@@ -418,12 +418,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26, caso Intercom #215474453188524",
       "message_ts": "1779986555.392629",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
-      "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-oc-proveedores-spoofing-550.png",
+      "imagen_local": "error-19-oc-proveedores-spoofing-550.png",
       "slack_file_id": "F0B72QWUPS4"
     },
     {
-      "numero": 22,
+      "numero": 20,
       "titulo": "Usuario persiste como \"tomado\" — sesión activa que no se puede liberar desde el cliente",
       "modulo": "Acceso al sistema / Ramaflex / Gestión de sesiones",
       "frecuencia": "Baja",
@@ -434,7 +434,7 @@
       "solucion_pasos": [
         "Confirmar que nadie del equipo está usando ese usuario en ningún dispositivo ni pestaña abierta",
         "Limpiar cookies y caché en todos los equipos que usen esa cuenta y reintentar el ingreso",
-        "Si el error persiste: contactar a soporte PSI para solicitar el cierre forzado de la sesión del usuario",
+        "Si el error persiste: derivar a Plataforma para que realicen el cierre forzado de la sesión del usuario",
         "Indicar a soporte: nombre del usuario (formato empresa.usuarioXX) y nombre de la empresa",
         "Una vez que soporte confirme que la sesión fue liberada, reingresar con las credenciales normales"
       ],
@@ -445,7 +445,7 @@
       "slack_file_id": null
     },
     {
-      "numero": 23,
+      "numero": 21,
       "titulo": "Property USER_IDX is not found",
       "modulo": "Factura de Venta / Manager ERP (ASP / Ramaflex)",
       "frecuencia": "Baja",
@@ -463,12 +463,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Camila León, cliente Comercial Las Americas)",
       "message_ts": "1780319438.846839",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
-      "imagen_local": "error-23-property-user-idx-not-found.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-property-user-idx-not-found.png",
+      "imagen_local": "error-21-property-user-idx-not-found.png",
       "slack_file_id": "F0B6Y8WUKN1"
     },
     {
-      "numero": 24,
+      "numero": 22,
       "titulo": "OLE error code 0x8002000e: Invalid number of parameters",
       "modulo": "Facturación / Boletas al SII / Manager ERP (local)",
       "frecuencia": "Baja",
@@ -480,18 +480,18 @@
         "Confirmar que el error comenzó exactamente con la actualización a V.ABR 2026 — si era funcional antes, es un problema de la nueva versión",
         "Verificar que los componentes DLL del servicio transaccional (Acepta/SII) estén actualizados: revisar si hay una nueva versión del instalador de componentes para V.ABR 2026",
         "Ejecutar el instalador de componentes actualizado si está disponible, y reiniciar el equipo",
-        "Si no hay componentes nuevos disponibles, escalar a PSI indicando: error OLE 0x8002000e al enviar boletas, instalación local, versión V.ABR 2026",
-        "PSI determinará si se requiere un Service Pack o actualización de los componentes OLE para esta versión",
+        "Si no hay componentes nuevos disponibles, derivar a Plataforma indicando: error OLE 0x8002000e al enviar boletas, instalación local, versión V.ABR 2026",
+        "Plataforma determinará si se requiere un Service Pack o actualización de los componentes OLE para esta versión",
         "Workaround temporal mientras se resuelve: exportar la boleta desde Manager y subirla manualmente al SII"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Sylvia Fernandez, cliente bezma)",
       "message_ts": "1780319455.474749",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
-      "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-22-ole-error-0x8002000e-boleta-sii.png",
+      "imagen_local": "error-22-ole-error-0x8002000e-boleta-sii.png",
       "slack_file_id": "F0B7WSR8N56"
     },
     {
-      "numero": 25,
+      "numero": 23,
       "titulo": "Connectivity error — Infracción PRIMARY KEY 'PK_NOTDE_DB' al ingresar Nota de Venta",
       "modulo": "Notas de Venta / Facturación — Manager ERP (SQL Server, instalación local)",
       "frecuencia": "Baja",
@@ -510,12 +510,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-06-02 (reporte de Claudia Lavín, cliente Llantas del Pacífico)",
       "message_ts": "1780436553.740639",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-primary-key-notde-db.png",
-      "imagen_local": "error-25-primary-key-notde-db.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-primary-key-notde-db.png",
+      "imagen_local": "error-23-primary-key-notde-db.png",
       "slack_file_id": null
     },
     {
-      "numero": 26,
+      "numero": 24,
       "titulo": "Error al ejecutar consulta / faltan drivers — Manager instalado sin ejecutar el instalador oficial",
       "modulo": "Acceso al sistema / Manager ERP (instalación local)",
       "frecuencia": "Baja",
@@ -534,12 +534,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-06-03 (caso reportado por Claudia Lavín, diagnóstico de Osvaldo Anabalón y Oscar Olivares)",
       "message_ts": "1780520805.287289",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
-      "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-manager-falta-dll-sin-instalador.png",
+      "imagen_local": "error-24-manager-falta-dll-sin-instalador.png",
       "slack_file_id": null
     },
     {
-      "numero": 27,
+      "numero": 25,
       "titulo": "Factura de compra no se puede ingresar — moneda del documento no coincide con moneda de venta del producto",
       "modulo": "Compras / Factura de Compra — Manager ERP",
       "frecuencia": "Baja",
@@ -557,12 +557,12 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-06-03 (reporte de Claudia Lavín, solución de Isabel López)",
       "message_ts": "1780578390.075359",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-27-factura-compra-moneda-usd-origen.png",
-      "imagen_local": "error-27-factura-compra-moneda-usd-origen.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-factura-compra-moneda-usd-origen.png",
+      "imagen_local": "error-25-factura-compra-moneda-usd-origen.png",
       "slack_file_id": null
     },
     {
-      "numero": 28,
+      "numero": 26,
       "titulo": "Error al descargar informe — faltan componentes DLL por instalación incorrecta de Manager",
       "modulo": "Centro de Información / Consultas personalizadas — Manager ERP (instalación local)",
       "frecuencia": "Baja",
@@ -580,12 +580,12 @@
       ],
       "fuente": "caso Intercom #215474564872107 (Mundolab SA, 2026-06-03, operadora Isidora)",
       "message_ts": "1780581018.011439",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-28-descargar-informe-dll-faltante.png",
-      "imagen_local": "error-28-descargar-informe-dll-faltante.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-descargar-informe-dll-faltante.png",
+      "imagen_local": "error-26-descargar-informe-dll-faltante.png",
       "slack_file_id": "F0B7MTHHVJB"
     },
     {
-      "numero": 29,
+      "numero": 27,
       "titulo": "Folio pegado en Manager GO — no se puede emitir boleta",
       "modulo": "Manager GO / Emisión de Boletas",
       "frecuencia": "Baja",
@@ -603,12 +603,12 @@
       ],
       "fuente": "caso Intercom #215474564889962 (Swarovski, 2026-06-04, operadora Emilia)",
       "message_ts": "1780579590.617969",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-29-manager-go-folio-pegado.png",
-      "imagen_local": "error-29-manager-go-folio-pegado.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-27-manager-go-folio-pegado.png",
+      "imagen_local": "error-27-manager-go-folio-pegado.png",
       "slack_file_id": null
     },
     {
-      "numero": 30,
+      "numero": 28,
       "titulo": "Ruta de importación FTP no reconocida — unidad Y no visible en Parámetros Internos",
       "modulo": "Importación / Parámetros Internos — Manager ERP",
       "frecuencia": "Media",
@@ -630,7 +630,7 @@
       "slack_file_id": null
     },
     {
-      "numero": 31,
+      "numero": 29,
       "titulo": "Error al guardar documentos / no puede imprimir (intermitente) — caché del navegador",
       "modulo": "Ramaflex / Manager ERP Web — Impresión y guardado de documentos",
       "frecuencia": "Media",
@@ -654,7 +654,7 @@
       "slack_file_id": null
     },
     {
-      "numero": 32,
+      "numero": 30,
       "titulo": "DTE rechazado por SII — documento bloqueado, no puede eliminarse ni modificarse",
       "modulo": "Facturación / DTE — Manager ERP",
       "frecuencia": "Baja",
@@ -677,7 +677,7 @@
       "slack_file_id": null
     },
     {
-      "numero": 33,
+      "numero": 31,
       "titulo": "Connectivity error: HRESULT = 0x80040e19 — no se puede eliminar Factura de Compra vacía",
       "modulo": "Compras / Factura de Compra — Manager ERP (instalación local, SQL Server)",
       "frecuencia": "Baja",
@@ -688,19 +688,18 @@
       "solucion_pasos": [
         "Confirmar que la FC no tiene pagos ni documentos asociados (NC, pagos, etc.)",
         "El documento NO puede eliminarse desde la interfaz de Manager — requiere intervención directa en la base de datos",
-        "Conectarse remotamente al servidor SQL del cliente",
-        "Identificar el registro huérfano: buscar el encabezado de la FC en la tabla correspondiente y confirmar que no tiene líneas en la tabla de detalle",
-        "Ejecutar script SQL de eliminación del registro huérfano directamente sobre la BD de Manager (solicitar script a Plataforma/PSI si no se tiene disponible)",
-        "Verificar que la FC ya no aparece en Manager tras la eliminación"
+        "Derivar a Plataforma indicando: empresa, número y correlativo de la FC vacía, versión de Manager",
+        "Plataforma se conecta remotamente al servidor SQL del cliente y elimina el registro huérfano directamente en la base de datos",
+        "Confirmar con el cliente que la FC ya no aparece en Manager tras la corrección"
       ],
       "fuente": "caso Intercom #215474577523856 (Ingeniería y Construcción GGL Ltda., 2026-06-04, operadora Isidora / diagnóstico Oscar Olivares)",
       "message_ts": "1780956600.131129",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-factura-compra-vacia-hresult-0x80040e19.png",
-      "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-31-factura-compra-vacia-hresult-0x80040e19.png",
+      "imagen_local": "error-31-factura-compra-vacia-hresult-0x80040e19.png",
       "slack_file_id": "F0B8H6UQ9PW"
     },
     {
-      "numero": 34,
+      "numero": 32,
       "titulo": "Program Error: Field FECHA does not accept null values — Libro de Honorarios / BALFLEX",
       "modulo": "Finanzas / Informes Contables / Libro de Honorarios — Manager ERP (V.MAY 2026, BALFLEX)",
       "frecuencia": "Baja",
@@ -718,12 +717,12 @@
       ],
       "fuente": "caso Intercom #215474580363208 (Slack #customer-service-time, 2026-06-04, operadora Claudia Lavín)",
       "message_ts": "1780956615.292379",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null-balflex.png",
-      "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-32-libro-honorarios-fecha-null-balflex.png",
+      "imagen_local": "error-32-libro-honorarios-fecha-null-balflex.png",
       "slack_file_id": "F0B8AR14EJZ"
     },
     {
-      "numero": 35,
+      "numero": 33,
       "titulo": "Error: Fecha invalida en el campo <FchSalida> — GD no se envían (V.ABR 2026 + Facturación.CL)",
       "modulo": "Facturación / Guías de Despacho (DTE Tipo 52) — Manager ERP V.ABR 2026 + Facturador electrónico Facturación.CL (DTEPlanoWS)",
       "frecuencia": "Baja",
@@ -734,15 +733,15 @@
       "solucion_pasos": [
         "Confirmar que el error comenzó exactamente con la instalación de V.ABR 2026 y que con la versión anterior las GD se enviaban correctamente",
         "Workaround inmediato: si el negocio lo permite, revertir a la versión anterior de Manager hasta que exista corrección oficial",
-        "Escalar a PSI (equipo de desarrollo) indicando: versión V.ABR 2026, facturador DTEPlanoWS de Facturación.CL v4.3.3.4, DTE Tipo 52 (Guías de Despacho), error exacto en campo <FchSalida>",
+        "Escalar a Plataforma indicando: versión V.ABR 2026, facturador DTEPlanoWS de Facturación.CL v4.3.3.4, DTE Tipo 52 (Guías de Despacho), error exacto en campo <FchSalida>",
         "Es un bug de compatibilidad de V.ABR 2026 con el facturador externo — requiere corrección en el código de Manager",
         "Verificar también si Facturación.CL tiene alguna actualización del componente DTEPlanoWS compatible con V.ABR 2026",
-        "Una vez disponible el Service Pack o parche de PSI, aplicarlo y confirmar que las GD se envían correctamente"
+        "Una vez disponible el Service Pack o parche de Plataforma, aplicarlo y confirmar que las GD se envían correctamente"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-05 (reporte de Claudia Lavín)",
       "message_ts": "1780956632.918089",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
-      "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-fchsalida-fecha-invalida-gd-abril-2026.png",
+      "imagen_local": "error-33-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
     }
   ]
