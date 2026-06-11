@@ -689,8 +689,7 @@
         "Confirmar que la FC no tiene pagos ni documentos asociados (NC, pagos, etc.)",
         "El documento NO puede eliminarse desde la interfaz de Manager — requiere intervención directa en la base de datos",
         "Derivar a Plataforma indicando: empresa, número y correlativo de la FC vacía, versión de Manager",
-        "Plataforma se conecta remotamente al servidor SQL del cliente y elimina el registro huérfano directamente en la base de datos",
-        "Confirmar con el cliente que la FC ya no aparece en Manager tras la corrección"
+        "Confirmar con el cliente que la FC ya no aparece en Manager una vez resuelta la derivación"
       ],
       "fuente": "caso Intercom #215474577523856 (Ingeniería y Construcción GGL Ltda., 2026-06-04, operadora Isidora / diagnóstico Oscar Olivares)",
       "message_ts": "1780956600.131129",
