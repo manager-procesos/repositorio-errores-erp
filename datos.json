@@ -735,6 +735,26 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Variable 'P_NOMBRETABLA' is not found — Terminar con los Pendientes (Producción)",
+      "modulo": "Producción — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-12",
+      "sintoma": "Al ejecutar el proceso 'Terminar con los Pendientes' en el módulo de Producción, aparece un cuadro de diálogo técnico con el mensaje 'Variable P_NOMBRETABLA is not found', con botones Ignore y Help. Sucede durante el cierre masivo de Órdenes de Producción pendientes.",
+      "causa": "Error interno de programación del proceso 'Terminar con los Pendientes'; algunos documentos asociados a las OPs tienen campos sin completar al momento del cierre masivo. No impide que el proceso se complete.",
+      "solucion_pasos": [
+        "Hacer clic en 'Ignore' en el cuadro de diálogo que aparece",
+        "Esperar que el proceso termine de ejecutarse completamente",
+        "Verificar en el listado de Órdenes de Producción que se hayan cerrado correctamente (estado 'Terminadas')",
+        "Si el error persiste impidiendo el cierre, contactar al equipo de soporte de Manager"
+      ],
+      "fuente": "Intercom #215474665677456",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-variable-p_nombretabla-terminar-pend.png",
+      "imagen_local": "error-36-variable-p_nombretabla-terminar-pend.png",
+      "slack_file_id": null
     }
   ]
 }
