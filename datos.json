@@ -735,6 +735,27 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "El monto autorizado como máximo es X — no puede modificar OC",
+      "modulo": "Compras — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al intentar modificar una Orden de Compra (OC), aparece el mensaje '¡Disculpe! El monto que usted tiene autorizado como máximo es [valor]' y el sistema no permite guardar los cambios.",
+      "causa": "El usuario pertenece a un grupo de permisos que tiene configurado un 'Monto máximo aprobado' para documentos de compra. Cuando el valor de la OC supera ese límite, el sistema bloquea cualquier modificación.",
+      "solucion_pasos": [
+        "Ir a Configuración → Usuarios y Grupos → Grupos de Permisos.",
+        "Seleccionar el grupo al que pertenece el usuario afectado.",
+        "Buscar la sección de permisos de Documentos de Compra / Órdenes de Compra.",
+        "Localizar el campo 'Monto máximo aprobado' y desactivarlo (dejarlo en 'No').",
+        "Guardar cambios y pedir al usuario que reintente la modificación de la OC."
+      ],
+      "fuente": "Slack #customer-service-time (hilo del 2026-06-11, ts: 1781199476.819339)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-el-monto-autorizado-como-maxim.png",
+      "imagen_local": "error-36-el-monto-autorizado-como-maxim.png",
+      "slack_file_id": "F0B9HLF186T"
     }
   ]
 }
