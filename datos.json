@@ -735,6 +735,268 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Object LOGMANAGERTX is not found",
+      "modulo": "DTE — Manager ERP Local",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Ocurrió un error. Más detalles archivo log. // Object LOGMANAGERTX is not found'",
+      "causa": "DLL Acepta 2.0 instalada, incompatible con Manager ERP actual. Se requiere DLL Acepta 3.0.",
+      "solucion_pasos": [
+        "Verificar que el equipo tenga instalada la DLL Acepta 2.0.",
+        "Contactar al equipo de DTE para coordinar instalación de DLL Acepta 3.0.",
+        "Una vez instalada, intentar emitir el documento nuevamente."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-object-logmanagertx-is-not-fou-1.png",
+      "imagen_local": "error-36-object-logmanagertx-is-not-fou-1.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 37,
+      "titulo": "El XML enviado no tiene la sintaxis correcta",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Alta",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Error: El XML enviado no tiene la sintaxis correcta. API'",
+      "causa": "Algún campo de texto contiene un carácter especial inválido que rompe la sintaxis XML.",
+      "solucion_pasos": [
+        "Revisar descripción de productos o servicios.",
+        "Revisar campo Observación del documento.",
+        "Revisar datos de la ficha del cliente.",
+        "Eliminar caracteres especiales o símbolos inusuales.",
+        "Intentar emitir nuevamente."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-el-xml-enviado-no-tiene-la-sin.png",
+      "imagen_local": "error-37-el-xml-enviado-no-tiene-la-sin.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 38,
+      "titulo": "Parser error: input is not proper UTF-8 (genérico)",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Parser error: input is not proper UTF-8, indicate encoding ! Bytes: [código]'",
+      "causa": "Algún campo contiene un carácter incompatible con la codificación UTF-8 del SII.",
+      "solucion_pasos": [
+        "Leer el mensaje completo y notar la frase al final después de 'Bytes:'.",
+        "Esa frase indica el campo con el carácter inválido.",
+        "Corregir ese campo eliminando caracteres especiales.",
+        "Intentar emitir nuevamente."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-parser-error:-input-is-not-pro.png",
+      "imagen_local": "error-38-parser-error:-input-is-not-pro.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 39,
+      "titulo": "Parser error UTF-8 campo Contacto",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Parser error: input is not proper UTF-8, indicate encoding ! Bytes: <Contacto>'",
+      "causa": "El campo Contacto de la ficha del cliente contiene un carácter especial inválido.",
+      "solucion_pasos": [
+        "Ir a la ficha del cliente destinatario.",
+        "Buscar el campo Contacto y revisar su contenido.",
+        "Reescribir el nombre manualmente sin copiar/pegar.",
+        "Guardar e intentar emitir nuevamente."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-39-parser-error-utf-8-campo-conta.png",
+      "imagen_local": "error-39-parser-error-utf-8-campo-conta.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 40,
+      "titulo": "No se puede generar XML: tipo de moneda no definido",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'No se puede generar XML, ya que no se encuentra definido tipo de moneda'",
+      "causa": "El documento no tiene configurado el tipo de moneda en sus atributos.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Ir a Atributos del documento.",
+        "Seleccionar el Tipo de moneda (ej: Peso Chileno).",
+        "Guardar e intentar emitir nuevamente."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-40-no-se-puede-generar-xml:-tipo-.png",
+      "imagen_local": "error-40-no-se-puede-generar-xml:-tipo-.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 41,
+      "titulo": "TpoDocRef excede maxLength (3 caracteres)",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Error: Element TpoDocRef [facet maxLength]'",
+      "causa": "El Tipo de Documento Referenciado excede el máximo de 3 caracteres del SII.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Ir a documentos referenciados.",
+        "Verificar que el código de Tipo de Documento no supere 3 caracteres.",
+        "Corregir e intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-41-tpodocref-excede-maxlength-(3-.png",
+      "imagen_local": "error-41-tpodocref-excede-maxlength-(3-.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 42,
+      "titulo": "Field CONTACTO does not accept null values",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Alta",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Field CONTACTO does not accept null values.'",
+      "causa": "Los campos Contacto y/o Teléfono de la ficha del cliente están vacíos.",
+      "solucion_pasos": [
+        "Ir a la ficha del cliente.",
+        "Completar el campo Contacto.",
+        "Completar el campo Teléfono.",
+        "Guardar e intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-42-field-contacto-does-not-accept.png",
+      "imagen_local": "error-42-field-contacto-does-not-accept.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 43,
+      "titulo": "MontoItem valor negativo por descuento lineal",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Error: Element MontoItem'",
+      "causa": "El monto de una línea de detalle es negativo porque el descuento lineal supera el precio del ítem.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Revisar cada línea de detalle.",
+        "Identificar la línea donde el descuento supera el precio.",
+        "Corregir el descuento o precio.",
+        "Intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-43-montoitem-valor-negativo-por-d.png",
+      "imagen_local": "error-43-montoitem-valor-negativo-por-d.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 44,
+      "titulo": "No es posible obtener la llave privada para el RUT",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Alta",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Error: No es posible obtener la llave privada para el RUT: [número]'",
+      "causa": "El certificado digital del RUT está vencido o no cargado correctamente.",
+      "solucion_pasos": [
+        "Verificar si el certificado está vencido.",
+        "Si está vencido, adquirir uno nuevo.",
+        "Contactar al equipo de DTE para cargar el nuevo certificado.",
+        "Intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-44-no-es-posible-obtener-la-llave.png",
+      "imagen_local": "error-44-no-es-posible-obtener-la-llave.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 45,
+      "titulo": "NroLinRef inesperado: falta TpoDocRef",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Element NroLinRef: This element is not expected. Expected is TpoDocRef'",
+      "causa": "Falta el campo TpoDocRef en alguna referencia del documento.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Ir a la segunda ventana (referencias).",
+        "Completar el campo Tipo de Documento Referenciado en cada referencia.",
+        "Guardar e intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-45-nrolinref-inesperado:-falta-tp-1.png",
+      "imagen_local": "error-45-nrolinref-inesperado:-falta-tp-1.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 46,
+      "titulo": "FolioRef excede maxLength (18 caracteres)",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Error: Element FolioRef [facet maxLength]'",
+      "causa": "El folio referenciado excede los 18 caracteres permitidos por el SII.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Ir a documentos referenciados.",
+        "Verificar que ningún folio supere 18 caracteres.",
+        "Corregir e intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-46-folioref-excede-maxlength-(18-.png",
+      "imagen_local": "error-46-folioref-excede-maxlength-(18-.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 47,
+      "titulo": "TipoImp valor '0' no válido según SII",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir un DTE aparece: 'Error: Element TipoImp [facet enumeration] The value 0 is not an element of the set'",
+      "causa": "El campo TipoImp tiene valor '0', no válido en la enumeración del SII.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Revisar ítems con impuestos específicos o adicionales.",
+        "Corregir el código de tipo de impuesto por uno válido.",
+        "Si no corresponde impuesto adicional, eliminarlo de la ficha del producto.",
+        "Intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-47-tipoimp-valor-0-no-válido-se.png",
+      "imagen_local": "error-47-tipoimp-valor-0-no-válido-se.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 48,
+      "titulo": "DirPostal excede maxLength (70 caracteres)",
+      "modulo": "DTE — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al emitir una Guía de Despacho aparece error de dirección postal que excede 70 caracteres.",
+      "causa": "La dirección postal supera los 70 caracteres permitidos por el SII en el campo DirPostal.",
+      "solucion_pasos": [
+        "Abrir el documento.",
+        "Ir al botón 'Packin'.",
+        "Acortar la dirección Postal a máximo 70 caracteres.",
+        "Guardar e intentar emitir."
+      ],
+      "fuente": "Slack #equipo-dte-time — Excel Errores_XHoja",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-48-dirpostal-excede-maxlength-(70.png",
+      "imagen_local": "error-48-dirpostal-excede-maxlength-(70.png",
+      "slack_file_id": null
     }
   ]
 }
