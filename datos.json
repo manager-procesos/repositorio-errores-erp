@@ -997,6 +997,26 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-48-dirpostal-excede-maxlength-(70.png",
       "imagen_local": "error-48-dirpostal-excede-maxlength-(70.png",
       "slack_file_id": null
+    },
+    {
+      "numero": 49,
+      "titulo": "Program Error: Incorrect property name",
+      "modulo": "Órdenes de Producción / Documentos — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-17",
+      "sintoma": "Al abrir o trabajar con una Orden de Producción (u otro documento) que contiene un producto cuyo código o nombre incluye comillas dobles (\"), aparece el diálogo «Program Error: Incorrect property name.» que bloquea la operación.",
+      "causa": "Las comillas dobles (\") en el campo de código/nombre del producto rompen la evaluación dinámica de propiedades en FoxPro. Manager ERP usa evaluación dinámica de expresiones internamente; si el nombre del producto contiene comillas dobles sin escapar, el parser de FoxPro genera el error «Incorrect property name».",
+      "solucion_pasos": [
+        "Ir a Mantenedores > Productos y buscar el producto que contiene comillas dobles en su código o nombre.",
+        "Editar el producto y eliminar o reemplazar las comillas dobles (\") por otro carácter (ej: comilla simple ' o guion -).",
+        "Guardar el cambio y volver a abrir el documento que presentaba el error.",
+        "Si el problema persiste o no se puede editar el producto directamente, actualizar Manager ERP a la versión más reciente, donde este comportamiento está corregido."
+      ],
+      "fuente": "Slack #customer-service-time (TS: 1781647931.898159, 2026-06-16)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-49-program-error--incorrect-prope.png",
+      "imagen_local": "error-49-program-error--incorrect-prope.png",
+      "slack_file_id": "F0BB0DCM7BQ"
     }
   ]
 }
