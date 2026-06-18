@@ -735,25 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "Columna IVASAF aparece en exportación de Libro de Compra sin activo fijo",
-      "modulo": "Contabilidad — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-06-15",
-      "sintoma": "Al exportar el Libro de Compra desde Manager ERP, aparece la columna 'IVASAF' aunque el documento no tiene habilitado el check para clasificarlo como Activo Fijo.",
-      "causa": "Bug en versiones antiguas de Manager ERP (Marzo 2026 o anteriores) que genera la columna IVASAF de forma incorrecta en documentos sin clasificación de activo fijo.",
-      "solucion_pasos": [
-        "Verificar la versión actual de Manager ERP del cliente.",
-        "Actualizar Manager ERP a la última versión disponible (posterior a Marzo 2026).",
-        "Volver a exportar el Libro de Compra y verificar que la columna IVASAF ya no aparece en documentos sin activo fijo."
-      ],
-      "fuente": "Slack #customer-service-time 2026-06-15",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-columna-ivasaf-aparece-en-export.png",
-      "imagen_local": "error-36-columna-ivasaf-aparece-en-export.png",
-      "slack_file_id": null
     }
   ]
 }
