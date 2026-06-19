@@ -735,6 +735,27 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "El monto que usted tiene autorizado como máximo es [monto] — no puede modificar OC",
+      "modulo": "Compras — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-19",
+      "sintoma": "Al intentar modificar una Orden de Compra (OC), aparece el mensaje \"El monto que usted tiene autorizado como máximo es [monto]\" y el sistema no permite proceder con la modificación.",
+      "causa": "El usuario pertenece a uno o más grupos de permisos donde el campo \"Monto Max. Aprobado\" está habilitado en el módulo Órdenes de Compra. Si el monto de la OC supera ese tope configurado, el sistema bloquea la acción de modificar.",
+      "solucion_pasos": [
+        "Ir a Parámetros del Sistema → Perfiles/Grupos de Usuarios.",
+        "Identificar el o los grupos a los que pertenece el usuario afectado (puede tener más de uno).",
+        "En el módulo 'Órdenes de Compra', localizar el campo 'Monto Max. Aprobado'.",
+        "Cambiar el valor a 'No' para desactivar el límite de monto, o bien ajustar el monto al valor requerido.",
+        "Guardar los cambios y volver a intentar modificar la OC."
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-06-11)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-el-monto-que-usted-tiene-autor.png",
+      "imagen_local": "error-36-el-monto-que-usted-tiene-autor.png",
+      "slack_file_id": "F0B9HLF186T"
     }
   ]
 }
