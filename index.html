@@ -279,6 +279,7 @@ footer span { color: #7c3aed; font-weight: 700; }
 }
 .export-btn:hover { background: #6d28d9; }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
 
@@ -308,7 +309,7 @@ footer span { color: #7c3aed; font-weight: 700; }
   <button class="filter-btn active" data-filter="todos">Todos</button>
   <button class="filter-btn" data-filter="Resuelto">✅ Resueltos</button>
   <button class="filter-btn" data-filter="Pendiente">🔴 Pendientes</button>
-  <button class="export-btn" id="btn-export" onclick="exportarCSV()">⬇️ Exportar CSV</button>
+  <button class="export-btn" id="btn-export" onclick="exportarCSV()">⬇️ Exportar Excel</button>
 </div>
 
 <div class="grid" id="grid">
@@ -463,23 +464,44 @@ document.getElementById('lightbox').addEventListener('click', () => {
 });
 
 
-// EXPORTAR CSV
+// EXPORTAR EXCEL
 function exportarCSV() {
   if (!todosLosErrores.length) { alert('Aún no hay datos cargados.'); return; }
-  const cols = ['numero','titulo','modulo','frecuencia','estado','fecha','sintoma','causa','solucion_pasos','fuente','imagen_github'];
+
   const headers = ['#','Título','Módulo','Frecuencia','Estado','Fecha','Síntoma','Causa','Solución (pasos)','Fuente','URL Imagen'];
-  const esc = v => '"' + String(v || '').replace(/"/g, '""') + '"';
-  const rows = [headers.map(esc).join(',')];
-  for (const e of todosLosErrores) {
-    const pasos = (e.solucion_pasos || []).join(' | ');
-    rows.push(cols.map((c, i) => esc(c === 'solucion_pasos' ? pasos : e[c])).join(','));
+  const rows = todosLosErrores.map(e => [
+    e.numero,
+    e.titulo || '',
+    e.modulo || '',
+    e.frecuencia || '',
+    e.estado || '',
+    e.fecha || '',
+    e.sintoma || '',
+    e.causa || '',
+    (e.solucion_pasos || []).join(' | '),
+    e.fuente || '',
+    e.imagen_github || ''
+  ]);
+
+  const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
+
+  // Column widths
+  ws['!cols'] = [
+    {wch:5},{wch:55},{wch:30},{wch:12},{wch:12},{wch:12},
+    {wch:60},{wch:60},{wch:80},{wch:40},{wch:50}
+  ];
+
+  // Style header row bold (basic)
+  const range = XLSX.utils.decode_range(ws['!ref']);
+  for (let C = range.s.c; C <= range.e.c; C++) {
+    const cell = ws[XLSX.utils.encode_cell({r:0, c:C})];
+    if (cell) { cell.s = { font: { bold: true }, fill: { fgColor: { rgb: 'EDE9FE' } } }; }
   }
-  const bom = '\uFEFF';
-  const blob = new Blob([bom + rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); a.href = url;
-  a.download = 'errores-erp-' + new Date().toISOString().slice(0,10) + '.csv';
-  a.click(); URL.revokeObjectURL(url);
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Errores ERP');
+
+  XLSX.writeFile(wb, 'errores-erp-' + new Date().toISOString().slice(0,10) + '.xlsx');
 }
 
 cargarDatos();
