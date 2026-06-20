@@ -735,6 +735,25 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "PDF de factura enviado al SII no coincide con el documento en Manager",
+      "modulo": "Facturación — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-20",
+      "sintoma": "El PDF de la factura enviado al SII muestra información diferente a la registrada en Manager ERP para el mismo documento (descripción, montos o datos distintos)",
+      "causa": "Intermitencia en el sistema o problema de conectividad a internet durante la emisión del DTE, generando inconsistencia entre el PDF registrado en Manager y el enviado al SII",
+      "solucion_pasos": [
+        "Ejecutar en la base de datos: update docu_db set e_enviado=0, impresa=0 where numreg = 'NUMREG_FACTURA' (reemplazar NUMREG_FACTURA con el número de registro del documento afectado). Esto libera el documento para corrección.",
+        "Editar el documento en Manager para que su contenido coincida exactamente con lo que quedó registrado en el SII.",
+        "Si corresponde, emitir una Nota de Crédito de Compra para anular o ajustar la diferencia."
+      ],
+      "fuente": "Intercom #215474711188680",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-pdf-de-factura-enviado-al-sii-.png",
+      "imagen_local": "error-36-pdf-de-factura-enviado-al-sii-.png",
+      "slack_file_id": null
     }
   ]
 }
