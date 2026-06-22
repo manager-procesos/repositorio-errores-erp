@@ -735,27 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "Al modificar OC aparece monto máximo autorizado",
-      "modulo": "Órdenes de Compra — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-06-22",
-      "sintoma": "Al intentar modificar una Orden de Compra, aparece ventana de aviso: 'El monto que usted tiene autorizado como máximo es 999,999,999' y no permite continuar con la modificación.",
-      "causa": "El perfil o grupo del usuario tiene configurado un monto máximo de aprobación en los permisos de Órdenes de Compra (campo 'Monto Max. Aprobado' con valor numérico habilitado).",
-      "solucion_pasos": [
-        "Ingresar al módulo de Seguridad o Administración de Perfiles en Manager ERP.",
-        "Buscar el perfil o grupo al que pertenece el usuario afectado.",
-        "Ubicar la sección 'ORDENES DE COMPRA' dentro de los permisos.",
-        "En el campo 'Monto Max. Aprobado', cambiar el valor a 'No' para desactivar el límite.",
-        "Guardar los cambios y solicitar al usuario que intente nuevamente modificar la OC."
-      ],
-      "fuente": "Slack #customer-service-time 2026-06-11 / hilo 1781199476.819339",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-al-modificar-oc-aparece-monto-max.png",
-      "imagen_local": "error-36-al-modificar-oc-aparece-monto-max.png",
-      "slack_file_id": "F0B9HLF186T"
     }
   ]
 }
