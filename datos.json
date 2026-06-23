@@ -735,6 +735,26 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Program Error: Incorrect property name — comillas dobles en nombre de producto",
+      "modulo": "Producción / Inventario — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-16",
+      "sintoma": "Al abrir o trabajar con una Orden de Producción, aparece el error \"Program Error: Incorrect property name.\" que bloquea la operación.",
+      "causa": "El nombre o descripción del producto contiene comillas dobles (\"), por ejemplo: 2963-WSO-UNA1-0058-18\"-IH SPOOL 1. FoxPro evalúa dinámicamente ese valor en controles del formulario y las comillas dobles rompen la evaluación de propiedades.",
+      "solucion_pasos": [
+        "Identificar el producto que tiene comillas dobles (\") en su nombre o descripción (visible en el campo Producto de la Orden de Producción).",
+        "Ir a Inventario → Productos, buscar el producto afectado y editar su nombre.",
+        "Reemplazar las comillas dobles (\") por otro carácter equivalente, por ejemplo: el símbolo de pulgadas dobles (″) o dos comillas simples ('').",
+        "Guardar el cambio y volver a abrir la Orden de Producción o la ventana que generaba el error."
+      ],
+      "fuente": "Slack #customer-service-time (2026-06-16, Sylvia Fernandez, file_id: F0BB0DCM7BQ)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-program-error-incorrect-property.png",
+      "imagen_local": "error-36-program-error-incorrect-property.png",
+      "slack_file_id": "F0BB0DCM7BQ"
     }
   ]
 }
