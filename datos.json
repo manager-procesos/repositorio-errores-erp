@@ -735,6 +735,27 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Clientes duplicados — RUT con espacio registrado como nuevo registro",
+      "modulo": "Módulo Clientes — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-24",
+      "sintoma": "El sistema muestra clientes con el mismo RUT pero con NREGUIST (código interno) distintos. Al intentar unificar o fusionar los registros duplicados, el sistema no lo permite directamente.",
+      "causa": "El RUT de uno de los registros fue ingresado con un espacio al final. Manager lo interpreta como un RUT diferente y crea un nuevo registro con un NREGUIST distinto.",
+      "solucion_pasos": [
+        "Ir a Manager → Tablas Generales → Clientes y buscar los registros con el RUT duplicado.",
+        "Verificar cuál de los registros tiene un espacio al final en el campo RUT (el incorrecto).",
+        "Si son pocos registros duplicados: marcar el registro incorrecto (con el espacio en el RUT) como 'Eliminado' directamente en Manager.",
+        "Si hay muchos registros afectados: contactar al equipo de soporte de Manager para solicitar la ejecución de un script de unificación.",
+        "Confirmar que las transacciones históricas queden correctamente asociadas al registro con el RUT válido."
+      ],
+      "fuente": "Slack #customer-service-time (18-19/06/2026) + Intercom #215474761301614",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-clientes-duplicados-rut-con.png",
+      "imagen_local": "error-36-clientes-duplicados-rut-con.png",
+      "slack_file_id": null
     }
   ]
 }
