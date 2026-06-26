@@ -735,6 +735,26 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Validation failure exception — NC no puede referenciar GD electrónica",
+      "modulo": "Notas de Crédito — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-26",
+      "sintoma": "Al intentar enviar una Nota de Crédito (NC), el sistema muestra el error 'Error en envío de documento: Error: Validation failure exception Notas no pueden referenciar guias de despacho electronicas'.",
+      "causa": "La Nota de Crédito tiene referenciada una Guía de Despacho electrónica (tipo 52) en la sección de referencias a otros documentos. El sistema de facturación electrónica no permite que las NC referencien directamente guías de despacho electrónicas.",
+      "solucion_pasos": [
+        "Abrir la Nota de Crédito afectada en modo Modificar.",
+        "En la segunda ventana de referencias ('Referencias a otros documentos'), localizar la referencia a la Guía de Despacho electrónica.",
+        "Eliminar la referencia a la Guía de Despacho de dicha sección.",
+        "Guardar los cambios y reintentar el envío del documento."
+      ],
+      "fuente": "Slack #customer-service-time — hilo de Claudia Lavin Luque, 2026-06-19",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-validation-failure-exception-.png",
+      "imagen_local": "error-36-validation-failure-exception-.png",
+      "slack_file_id": "F0BBSD0BDN1"
     }
   ]
 }
