@@ -735,28 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "OLE IDispatch exception code 0 from msxml6.dll — integración caída",
-      "modulo": "Integración Web Service — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-06-28",
-      "sintoma": "Al intentar iniciar sesión en Manager ERP (en la segunda autenticación), aparece 'Program Error: OLE IDispatch exception code 0 from msxml6.dll: The operation timed out' o 'The data necessary to complete this operation is not yet available'. Todos los usuarios del cliente quedan sin acceso al sistema.",
-      "causa": "El cliente tiene configurada una integración con un web service externo a través de Manager ERP. Cuando el endpoint del servicio externo está caído o no disponible, Manager ERP no puede completar la conexión al autenticar y lanza el error desde msxml6.dll (librería de procesamiento XML/HTTP). El problema es del proveedor de la integración, no de la infraestructura de Manager.",
-      "solucion_pasos": [
-        "Identificar que el error está vinculado a una integración de web service configurada en la base de datos del cliente (no es un problema de los servidores de Manager ERP).",
-        "Escalar el caso al equipo de Plataforma/Desarrollo de Manager para que accedan al motor SQL de la base de datos del cliente.",
-        "Ejecutar directamente en SQL la instrucción para desactivar la integración con el endpoint externo caído.",
-        "Una vez desactivada la integración, verificar que los usuarios puedan ingresar con normalidad a Manager ERP.",
-        "Informar al cliente que la causa fue la caída del endpoint de su integración externa, que es responsabilidad del proveedor del servicio integrado.",
-        "Coordinar con el cliente la reactivación de la integración una vez que su proveedor restablezca el servicio."
-      ],
-      "fuente": "Slack #customer-service-time (2026-06-26) + Intercom #215470943303174",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-ole-idispatch-exception-code-0.png",
-      "imagen_local": "error-36-ole-idispatch-exception-code-0.png",
-      "slack_file_id": "F0BE91NMMFS"
     }
   ]
 }
