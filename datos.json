@@ -735,6 +735,27 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Program Error: OLE IDispatch exception code 0 from msxml6.dll — integración web service caída",
+      "modulo": "Integración Web Service — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-26",
+      "sintoma": "Aparecen múltiples ventanas de 'Program Error' con mensajes 'OLE IDispatch exception code 0 from msxml6.dll: The operation timed out' y 'The data necessary to complete this operation is not yet available.' al intentar ingresar a Manager ERP (al ingresar la segunda clave).",
+      "causa": "El cliente tiene configurada una integración con un web service externo (ej: proveedor DDB7). Cuando el endpoint de dicha integración se cae o no responde, Manager ERP intenta conectarse vía msxml6.dll y falla con timeout o datos no disponibles, bloqueando el acceso al sistema.",
+      "solucion_pasos": [
+        "Escalar de inmediato al equipo de Plataforma/Infraestructura indicando que el cliente no puede ingresar a Manager ERP.",
+        "El equipo de Plataforma ejecuta un comando SQL directo en la base de datos del cliente para desactivar temporalmente la integración web service.",
+        "Verificar con el cliente que ya puede ingresar a Manager ERP con normalidad.",
+        "Notificar al cliente que el problema se originó porque el endpoint de su integración (proveedor externo) estaba caído, y que deben contactar a dicho proveedor para restablecer el servicio.",
+        "Una vez que el proveedor restablezca el endpoint, el equipo de Plataforma puede volver a activar la integración via SQL."
+      ],
+      "fuente": "Slack #customer-service-time (2026-06-26) + Intercom #215470943303174",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-ole-idispatch-msxml6-timeout.png",
+      "imagen_local": "error-36-ole-idispatch-msxml6-timeout.png",
+      "slack_file_id": "F0BE91NMMFS"
     }
   ]
 }
