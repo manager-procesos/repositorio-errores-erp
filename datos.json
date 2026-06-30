@@ -735,6 +735,27 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Program Error: OLE IDispatch exception code 0 from msxml6.dll — endpoint integración caído",
+      "modulo": "APIs y Webservices — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-30",
+      "sintoma": "Al ingresar la segunda clave en Manager ERP, todos los usuarios reciben un Program Error: 'OLE IDispatch exception code 0 from msxml6.dll: The operation timed out' o 'The data necessary to complete this operation is not yet available'. El sistema es inaccesible para todos los usuarios.",
+      "causa": "El endpoint del web service / integración de terceros configurado en Manager ERP está caído. Manager ERP intenta conectarse al endpoint durante la autenticación y falla con timeout o indisponibilidad. Es responsabilidad del proveedor de integración del cliente restablecer el servicio.",
+      "solucion_pasos": [
+        "Confirmar si el error es masivo (todos los usuarios) y verificar si el cliente tiene una integración de web service activa en Manager ERP.",
+        "Escalar urgentemente al equipo de Plataforma/Desarrollo de Manager.",
+        "El equipo de Plataforma ejecuta un comando SQL directo en la base de datos para desactivar la integración caída.",
+        "Verificar que los usuarios puedan volver a ingresar al sistema.",
+        "Notificar al cliente que debe contactar a su proveedor de integración para restablecer el endpoint caído."
+      ],
+      "fuente": "Slack #customer-service-time 2026-06-26 / Intercom #215470943303174",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-program-error-ole-idispatch-e.png",
+      "imagen_local": "error-36-program-error-ole-idispatch-e.png",
+      "slack_file_id": "F0BE91NMMFS"
     }
   ]
 }
