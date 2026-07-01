@@ -756,6 +756,47 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-program-error-ole-idispatch-e.png",
       "imagen_local": "error-36-program-error-ole-idispatch-e.png",
       "slack_file_id": "F0BE91NMMFS"
+    },
+    {
+      "numero": 37,
+      "titulo": "IDK Invalido al cargar folio electrónico",
+      "modulo": "Facturación Electrónica — Carga de Folios — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-06-25",
+      "sintoma": "Al cargar un folio (CAF) en Manager Time aparece el error \"IDK Invalido\" y el folio no se puede procesar.",
+      "causa": "El archivo cargado no corresponde al XML de folios (CAF) descargado directamente del SII, se están cargando varios tipos de documento a la vez, la Versión Acepta no está configurada en 2.0, o —en escritorio remoto— el archivo no fue subido primero al servidor (Web File) antes de seleccionarlo.",
+      "solucion_pasos": [
+        "Verificar que el archivo sea el XML de folios (CAF) descargado directamente desde el SII.",
+        "Cargar un solo tipo de documento a la vez (por ejemplo, primero facturas y luego boletas).",
+        "Confirmar que la Versión Acepta esté configurada en 2.0.",
+        "Si se trabaja por escritorio remoto, subir primero el XML al servidor (Web File) y luego seleccionarlo desde ahí.",
+        "Reintentar la carga del folio."
+      ],
+      "fuente": "Intercom #215474850223132",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-idk-invalido-al-cargar-folio-e.png",
+      "imagen_local": "error-37-idk-invalido-al-cargar-folio-e.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 38,
+      "titulo": "OC queda pendiente de aprobar aunque el usuario tenga el nivel correcto",
+      "modulo": "Órdenes de Compra — Flujo de Aprobación — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-06-24",
+      "sintoma": "En un flujo de aprobación de tres niveles, al escalar una Orden de Compra hasta el nivel 3 y modificar el nivel de autorización del usuario a dicho nivel, la OC se mantiene como pendiente de aprobar.",
+      "causa": "El campo \"Nivel de Autorización\" propio de la Orden de Compra no fue ajustado a 0; mientras la OC conserve un nivel distinto de 0, el sistema la sigue mostrando como pendiente aunque el usuario ya tenga el nivel de aprobación correcto.",
+      "solucion_pasos": [
+        "Abrir la Orden de Compra que quedó pendiente de aprobar.",
+        "Ubicar el campo \"Nivel de Autorización\" en la parte inferior del documento.",
+        "Cambiar el valor de ese campo a 0.",
+        "Guardar la OC y verificar que quede autorizada."
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-06-24)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-oc-pendiente-de-aprobar-pese-a.png",
+      "imagen_local": "error-38-oc-pendiente-de-aprobar-pese-a.png",
+      "slack_file_id": null
     }
   ]
 }
