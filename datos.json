@@ -240,12 +240,12 @@
     },
     {
       "numero": 12,
-      "titulo": "Tiene otra sesión activa — no puede ingresar a Ramaflex",
-      "modulo": "Acceso al sistema / Ramaflex (Manager ERP web)",
+      "titulo": "Tiene otra sesión activa — no puede ingresar a Manager ERP (Web)",
+      "modulo": "Acceso al sistema / Manager ERP (Web) (Manager ERP web)",
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-05-13",
-      "sintoma": "Al intentar ingresar a Ramaflex, el sistema carga por unos segundos y luego desconecta al usuario mostrando un mensaje de que ya existe otra sesión activa.",
+      "sintoma": "Al intentar ingresar a Manager ERP (Web), el sistema carga por unos segundos y luego desconecta al usuario mostrando un mensaje de que ya existe otra sesión activa.",
       "causa": "Otro usuario del equipo está utilizando las mismas credenciales simultáneamente, o quedó una sesión activa anterior en el navegador (cookies/caché).",
       "solucion_pasos": [
         "Limpiar cookies y caché del navegador (Ctrl+Shift+Del → seleccionar 'Todos los tiempos' → Eliminar)",
@@ -287,11 +287,11 @@
     {
       "numero": 16,
       "titulo": "\"File access is denied\" — Error al imprimir (intermitente, varios usuarios)",
-      "modulo": "Impresión / Archivos compartidos / FTP / Ramaflex",
+      "modulo": "Impresión / Archivos compartidos / FTP / Manager ERP (Web)",
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-05-25",
-      "sintoma": "Al presionar el botón imprimir en Ramaflex, aparece el error 'File access is denied'. El error es intermitente: afecta a varios usuarios simultáneamente y se resuelve solo a los pocos minutos.",
+      "sintoma": "Al presionar el botón imprimir en Manager ERP (Web), aparece el error 'File access is denied'. El error es intermitente: afecta a varios usuarios simultáneamente y se resuelve solo a los pocos minutos.",
       "causa": "El archivo que Manager intenta usar para la impresión está bloqueado por otro usuario o proceso activo en una carpeta compartida de red (FTP u otro recurso compartido).",
       "solucion_pasos": [
         "Esperar unos minutos y reintentar la impresión (en la mayoría de casos se resuelve solo)",
@@ -368,7 +368,7 @@
         "Si sigue ocurriendo: verificar que no haya otras sesiones de Manager abiertas en el mismo equipo o servidor",
         "Si es recurrente tras actualizar a ABR 2026: contactar a soporte para revisión de configuración de conexiones"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-26 (reporte de Sylvia Fernandez)",
+      "fuente": "Slack #customer-service-time — 2026-05-26",
       "message_ts": "1779889123.064979",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-connectivity-error-driver-resources.png",
       "imagen_local": "error-19-connectivity-error-driver-resources.png",
@@ -412,7 +412,7 @@
         "Una vez actualizada la configuración DNS (puede tardar 24-48 horas), volver a probar el envío de OC desde Manager",
         "Confirmar con el proveedor que recibió correctamente la OC"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-26, caso Intercom #215474453188524",
+      "fuente": "Slack #customer-service-time — 2026-05-26",
       "message_ts": "1779986555.392629",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
       "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
@@ -421,12 +421,12 @@
     {
       "numero": 22,
       "titulo": "Usuario persiste como \"tomado\" — sesión activa que no se puede liberar desde el cliente",
-      "modulo": "Acceso al sistema / Ramaflex / Gestión de sesiones",
+      "modulo": "Acceso al sistema / Manager ERP (Web) / Gestión de sesiones",
       "frecuencia": "Baja",
       "estado": "Resuelto",
       "fecha": "2026-05-29",
-      "sintoma": "Un usuario de Ramaflex aparece como 'tomado' (sesión activa) pero ningún miembro del equipo está efectivamente usando ese acceso. Limpiar cookies y caché del navegador no resuelve el problema.",
-      "causa": "La sesión del usuario quedó activa en el servidor de Ramaflex sin cerrarse correctamente (por cierre forzado del navegador, desconexión de red o corte de energía). La sesión persiste en el backend y no puede liberarse desde el lado del cliente.",
+      "sintoma": "Un usuario de Manager ERP (Web) aparece como 'tomado' (sesión activa) pero ningún miembro del equipo está efectivamente usando ese acceso. Limpiar cookies y caché del navegador no resuelve el problema.",
+      "causa": "La sesión del usuario quedó activa en el servidor de Manager ERP (Web) sin cerrarse correctamente (por cierre forzado del navegador, desconexión de red o corte de energía). La sesión persiste en el backend y no puede liberarse desde el lado del cliente.",
       "solucion_pasos": [
         "Confirmar que nadie del equipo está usando ese usuario en ningún dispositivo ni pestaña abierta",
         "Limpiar cookies y caché en todos los equipos que usen esa cuenta y reintentar el ingreso",
@@ -434,7 +434,7 @@
         "Indicar a soporte: nombre del usuario (formato empresa.usuarioXX) y nombre de la empresa",
         "Una vez que soporte confirme que la sesión fue liberada, reingresar con las credenciales normales"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-27 (reporte de Camila León)",
+      "fuente": "Slack #customer-service-time — 2026-05-27",
       "message_ts": "1780061992.729669",
       "imagen_github": null,
       "imagen_local": null,
@@ -443,7 +443,7 @@
     {
       "numero": 23,
       "titulo": "Property USER_IDX is not found",
-      "modulo": "Factura de Venta / Manager ERP (ASP / Ramaflex)",
+      "modulo": "Factura de Venta / Manager ERP (ASP / Manager ERP (Web))",
       "frecuencia": "Baja",
       "estado": "En análisis",
       "fecha": "2026-06-01",
@@ -456,7 +456,7 @@
         "Si el error persiste en todos los documentos: contactar a soporte indicando el ambiente (ASP) y que el error es 'Property USER_IDX is not found'",
         "Soporte revisará la configuración del usuario en la base de datos"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Camila León, cliente Comercial Las Americas)",
+      "fuente": "Slack #customer-service-time — 2026-05-29",
       "message_ts": "1780319438.846839",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
       "imagen_local": "error-23-property-user-idx-not-found.png",
@@ -525,7 +525,7 @@
         "Volver a ingresar a Manager con las credenciales habituales",
         "Si el error persiste: contactar a soporte para diagnóstico remoto"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-03 (caso reportado por Claudia Lavín, diagnóstico de Osvaldo Anabalón y Oscar Olivares)",
+      "fuente": "Slack #customer-service-time — 2026-06-03",
       "message_ts": "1780520805.287289",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
       "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
@@ -548,7 +548,7 @@
         "Guardar los cambios",
         "Volver a ingresar la factura de compra — ya debe procesarse correctamente"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-03 (reporte de Claudia Lavín, solución de Isabel López)",
+      "fuente": "Slack #customer-service-time — 2026-06-03",
       "message_ts": "1780578390.075359",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-27-factura-compra-moneda-usd-origen.png",
       "imagen_local": "error-27-factura-compra-moneda-usd-origen.png",
@@ -571,7 +571,7 @@
         "Volver a ingresar a Manager y repetir la operación en Centro de Información",
         "Si el error persiste: contactar a soporte para diagnóstico remoto"
       ],
-      "fuente": "caso Intercom #215474564872107 (Mundolab SA, 2026-06-03, operadora Isidora)",
+      "fuente": "caso Intercom #215474564872107 — 2026-06-03",
       "message_ts": "1780581018.011439",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-28-descargar-informe-dll-faltante.png",
       "imagen_local": "error-28-descargar-informe-dll-faltante.png",
@@ -594,7 +594,7 @@
         "Se corrige la KNA y el folio se da por consumido",
         "Una vez corregido, el sistema permite emitir nuevas boletas con normalidad"
       ],
-      "fuente": "caso Intercom #215474564889962 (Swarovski, 2026-06-04, operadora Emilia)",
+      "fuente": "caso Intercom #215474564889962 — 2026-06-04",
       "message_ts": "1780579590.617969",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-29-manager-go-folio-pegado.png",
       "imagen_local": "error-29-manager-go-folio-pegado.png",
@@ -616,7 +616,7 @@
         "Si el problema persiste tras el nuevo login: levantar ticket a IT indicando que la unidad Y no es visible en Parámetros Internos",
         "Equipo Plataforma aplica solución definitiva a nivel de servidor"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-01 (reporte de Alejandro Vera, ticket 260601-00003, solución de Eduardo Jofré / equipo Plataforma)",
+      "fuente": "Slack #customer-service-time — 2026-06-01",
       "message_ts": "1780581007.380049",
       "imagen_github": null,
       "imagen_local": null,
@@ -625,11 +625,11 @@
     {
       "numero": 31,
       "titulo": "Error al guardar documentos / no puede imprimir (intermitente) — caché del navegador",
-      "modulo": "Ramaflex / Manager ERP Web — Impresión y guardado de documentos",
+      "modulo": "Manager ERP (Web) / Manager ERP Web — Impresión y guardado de documentos",
       "frecuencia": "Media",
       "estado": "Resuelto",
       "fecha": "2026-06-04",
-      "sintoma": "Al intentar guardar o imprimir documentos en Manager ERP (versión web / Ramaflex), aparece un error de forma intermitente varias veces durante el día. En algunos momentos el sistema funciona con normalidad y en otros falla al intentar guardar o imprimir.",
+      "sintoma": "Al intentar guardar o imprimir documentos en Manager ERP (versión web / Manager ERP (Web)), aparece un error de forma intermitente varias veces durante el día. En algunos momentos el sistema funciona con normalidad y en otros falla al intentar guardar o imprimir.",
       "causa": "Se acumula información (caché y cookies) en el navegador web que impide que el sistema pueda guardar o imprimir documentos correctamente. El problema es intermitente porque el caché se va llenando gradualmente durante el día de trabajo.",
       "solucion_pasos": [
         "Abrir una nueva pestaña en Chrome",
@@ -640,7 +640,7 @@
         "Hacer clic en 'Borrar datos'",
         "Volver a ingresar al sistema Manager — el error debe resolverse"
       ],
-      "fuente": "caso Intercom #215474566679525 (Le Creuset, 2026-06-03/04, operadora Emilia)",
+      "fuente": "caso Intercom #215474566679525 — 2026-06-03",
       "message_ts": "1780600050.232219",
       "imagen_github": null,
       "imagen_local": null,
@@ -663,7 +663,7 @@
         "Soporte confirma al cliente que el documento fue desbloqueado",
         "El cliente elimina o modifica el documento, corrige el error y reenvía al SII"
       ],
-      "fuente": "caso Intercom #215474567694548 (Blunding, 2026-06-03/04, operadora Isidora)",
+      "fuente": "caso Intercom #215474567694548 — 2026-06-03",
       "message_ts": "1780600065.467779",
       "imagen_github": null,
       "imagen_local": null,
@@ -703,7 +703,7 @@
       "solucion_pasos": [
         "Ir a Manager → Parámetros → Período habilitado de ingreso de datos",
         "Confirmar que las fechas del período incluyen el rango que se intenta generar (ej: 01/05/2026 a 31/05/2026)",
-        "Si el período está correcto y el error persiste: contactar a soporte indicando versión V.MAY 2026 BALFLEX y el error exacto",
+        "Si el período está correcto y el error persiste: contactar a soporte indicando versión V.MAY 2026 y el error exacto",
         "Soporte revisará la base de datos para identificar registros de honorarios con campo FECHA nulo",
         "Soporte ejecutará script correctivo para asignar fecha válida o eliminar registros inválidos",
         "Reintentar generar el Libro de Honorarios tras la corrección"
@@ -730,7 +730,7 @@
         "Verificar si existe actualización de DTEPlanoWS en Facturación.CL compatible con V.ABR 2026",
         "Esperar Service Pack o parche de PSI que corrija la generación del campo <FchSalida> en el XML de GD"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-05 (reporte de Claudia Lavín)",
+      "fuente": "Slack #customer-service-time — 2026-06-05",
       "message_ts": "1780956632.918089",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
