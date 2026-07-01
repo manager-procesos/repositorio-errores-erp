@@ -278,7 +278,7 @@
         "Esperar que el servicio inicie completamente",
         "Volver a intentar acceder a Manager ERP desde los equipos clientes"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-05 (cliente ARIDOS CAMARENA)",
+      "fuente": "Slack #customer-service-time — 2026-05-05",
       "message_ts": "1778679242.094449",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-13-sql-no-ejecuta.png",
       "imagen_local": "error-13-sql-no-ejecuta.png",
@@ -479,7 +479,7 @@
         "Soporte determinará si corresponde instalar un Service Pack o actualizar los componentes OLE",
         "Como workaround temporal: exportar la boleta desde Manager y enviarla manualmente al SII"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Sylvia Fernandez, cliente bezma)",
+      "fuente": "Slack #customer-service-time — 2026-05-29",
       "message_ts": "1780319455.474749",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
       "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
@@ -502,7 +502,7 @@
         "Soporte deberá revisar el correlativo de la tabla NOTDE_DB y corregir el valor desincronizado en SQL Server",
         "Confirmar si hay algún WS o proceso automático generando registros en NOTDE_DB"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-02 (reporte de Claudia Lavín, cliente Llantas del Pacífico)",
+      "fuente": "Slack #customer-service-time — 2026-06-02",
       "message_ts": "1780436553.740639",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-primary-key-notde-db.png",
       "imagen_local": "error-25-primary-key-notde-db.png",
@@ -685,7 +685,7 @@
         "Soporte se conecta remotamente y ejecuta script SQL para eliminar el registro huérfano directamente en la base de datos",
         "Verificar que la eliminación fue exitosa buscando el documento en Manager"
       ],
-      "fuente": "caso Intercom #215474577523856 (Ingeniería y Construcción GGL Ltda., 2026-06-04, operadora Isidora / diagnóstico Oscar Olivares)",
+      "fuente": "caso Intercom #215474577523856 — 2026-06-04",
       "message_ts": "1780956600.131129",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-factura-compra-vacia-hresult-0x80040e19.png",
       "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
@@ -693,12 +693,12 @@
     },
     {
       "numero": 34,
-      "titulo": "Program Error: Field FECHA does not accept null values — Libro de Honorarios / BALFLEX",
-      "modulo": "Finanzas / Informes Contables / Libro de Honorarios — Manager ERP (V.MAY 2026, BALFLEX)",
+      "titulo": "Program Error: Field FECHA does not accept null values — Libro de Honorarios",
+      "modulo": "Finanzas / Informes Contables / Libro de Honorarios — Manager ERP (V.MAY 2026)",
       "frecuencia": "Baja",
       "estado": "En análisis",
       "fecha": "2026-06-08",
-      "sintoma": "Al intentar generar el Libro de Honorarios desde Informes Contables en Manager versión V.MAY 2026 (EXE SP00/0529, BALFLEX), aparece: 'Program Error: Field FECHA does not accept null values.' El sistema puede bloquearse o cerrar el módulo (_BALFLEX) tras el error.",
+      "sintoma": "Al intentar generar el Libro de Honorarios desde Informes Contables en Manager versión V.MAY 2026 (EXE SP00/0529), aparece: 'Program Error: Field FECHA does not accept null values.' El sistema puede bloquearse o cerrar el módulo tras el error.",
       "causa": "Existe al menos un registro de honorarios en la base de datos con el campo FECHA vacío o nulo. El proceso de generación del Libro de Honorarios requiere que todos los registros tengan una fecha válida. También puede ocurrir si el período habilitado de ingreso de datos no incluye el rango de fechas solicitado.",
       "solucion_pasos": [
         "Ir a Manager → Parámetros → Período habilitado de ingreso de datos",
@@ -708,10 +708,10 @@
         "Soporte ejecutará script correctivo para asignar fecha válida o eliminar registros inválidos",
         "Reintentar generar el Libro de Honorarios tras la corrección"
       ],
-      "fuente": "caso Intercom #215474580363208 (Slack #customer-service-time, 2026-06-04, operadora Claudia Lavín)",
+      "fuente": "caso Intercom #215474580363208 — 2026-06-04",
       "message_ts": "1780956615.292379",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null-balflex.png",
-      "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null.png",
+      "imagen_local": "error-34-libro-honorarios-fecha-null.png",
       "slack_file_id": "F0B8AR14EJZ"
     },
     {
