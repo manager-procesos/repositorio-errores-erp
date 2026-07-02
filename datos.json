@@ -735,46 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "IDK Invalido al cargar Folio CAF en Manager Time",
-      "modulo": "Facturación Electrónica — Manager Time / Ramaflex",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-06-27",
-      "sintoma": "Al cargar el Folio (CAF) en Manager Time / Ramaflex el sistema muestra el error \"IDK Invalido\" y no permite completar la carga.",
-      "causa": "El archivo cargado no corresponde al XML del CAF descargado directamente desde el SII, se está cargando más de un tipo de documento a la vez, la versión de Acepta no está en 2.0, o (en escritorio remoto) el XML no fue subido primero al servidor (Web File) antes de seleccionarlo.",
-      "solucion_pasos": [
-        "Verificar que el archivo a cargar sea el XML (CAF) descargado directamente desde el sitio del SII.",
-        "Cargar un solo tipo de documento a la vez (por ejemplo, primero todas las facturas, luego las boletas, etc.).",
-        "Confirmar que la Versión Acepta configurada quede en 2.0.",
-        "Si se trabaja en escritorio remoto, subir primero el XML al servidor (Web File) y luego seleccionarlo desde ahí antes de cargar el folio."
-      ],
-      "fuente": "Intercom #215474850223132",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-idk-invalido-al-cargar-folio-c.png",
-      "imagen_local": "error-36-idk-invalido-al-cargar-folio-c.png",
-      "slack_file_id": null
-    },
-    {
-      "numero": 37,
-      "titulo": "Correos de usuario desaparecen — usuarios marcados como eliminados en BD",
-      "modulo": "Administración de Usuarios — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-01",
-      "sintoma": "El cliente reporta que ya no aparecen todos los correos/usuarios que tenía ingresados anteriormente (por ejemplo, de 16 registrados ahora solo se ven 3).",
-      "causa": "Varios registros de la tabla de usuarios (user_db) quedaron marcados con el campo \"eliminado = 1\", ocultándolos de los listados aunque la información original no se perdió.",
-      "solucion_pasos": [
-        "Ingresar a la base de datos del cliente afectado.",
-        "Identificar los registros de usuarios marcados incorrectamente como eliminados en la tabla user_db.",
-        "Ejecutar un script de actualización para reactivarlos: UPDATE user_db SET eliminado = 0 WHERE eliminado = 1 (ajustando el filtro a los registros correspondientes).",
-        "Validar con el cliente que los correos/usuarios vuelvan a aparecer correctamente en el sistema."
-      ],
-      "fuente": "Slack #customer-service-time / hilo 2026-07-01",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-correos-de-usuario-desaparecen.png",
-      "imagen_local": "error-37-correos-de-usuario-desaparecen.png",
-      "slack_file_id": null
     }
   ]
 }
