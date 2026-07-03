@@ -735,6 +735,66 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "FolioRef excede largo máximo (18 caracteres) al emitir DTE",
+      "modulo": "Facturación Electrónica — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-03",
+      "sintoma": "Al facturar una Nota de Venta (u otro documento con referencia), el SII rechaza el DTE con un error de validación XML sobre el campo FolioRef indicando que excede el largo máximo permitido (facet 'maxLength').",
+      "causa": "El campo FolioRef (folio del documento referenciado) debe tener 18 caracteres o menos según el esquema XML del SII. Cuando el folio referenciado tiene más de 18 caracteres, el SII rechaza el envío con el error de 'maxLength'.",
+      "solucion_pasos": [
+        "Abrir el documento (NV/Factura) que está fallando al emitir.",
+        "Ir a la sección de documentos referenciados del documento.",
+        "Revisar el Folio del documento referenciado y verificar que tenga 18 caracteres o menos.",
+        "Corregir el folio referenciado y volver a intentar emitir el documento."
+      ],
+      "fuente": "caso Intercom #215474916614978 (Comercial Totalpack Ltda., 2026-07-01, respuesta Fin AI — artículo ya publicado en Centro de Ayuda)",
+      "imagen_local": "error-36-folioref-excede-largo-maximo-18-.png",
+      "slack_file_id": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-folioref-excede-largo-maximo-18-.png"
+    },
+    {
+      "numero": 37,
+      "titulo": "Error en carga masiva de NV — forma de pago Cuenta Corriente no registrada",
+      "modulo": "Ventas — Importación / Carga Masiva",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-03",
+      "sintoma": "Al realizar una carga masiva de Notas de Venta desde Excel, el importador arroja un error de validación en la columna de forma de pago y no permite completar la importación.",
+      "causa": "El método de pago \"Cuenta Corriente\" indicado en el archivo Excel no está registrado/activo como forma de pago válida en el ERP, por lo que el importador no puede validar la columna 26 (Forma de Pago) del archivo.",
+      "solucion_pasos": [
+        "Ir a Ventas → Tablas → Formas de Pago.",
+        "Crear o activar la forma de pago \"Cuenta Corriente\" (método de pago especial).",
+        "En el archivo Excel de importación, ingresar en la columna 26 el código de la forma de pago ya creada en el ERP.",
+        "Volver a ejecutar la carga masiva de Notas de Venta."
+      ],
+      "fuente": "caso Intercom #215474918954799 (Genera S.A., 2026-07-01, respuesta Fin AI — Marcus)",
+      "imagen_local": "error-37-error-en-carga-masiva-de-nv-form.png",
+      "slack_file_id": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-error-en-carga-masiva-de-nv-form.png"
+    },
+    {
+      "numero": 38,
+      "titulo": "Connectivity error — desbordamiento aritmético tipo int en NV con muchas líneas",
+      "modulo": "Ventas — Notas de Venta / Facturación",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-03",
+      "sintoma": "Al emitir una Nota de Venta con muchas líneas de detalle (ej. 126 líneas), aparece: \"Connectivity error: [Microsoft][ODBC SQL Server Driver][SQL Server] Error de desbordamiento aritmético para el tipo int\".",
+      "causa": "Un cálculo interno acumulado (relacionado al total del documento) supera el valor máximo soportado por el tipo INT de SQL Server cuando el documento tiene demasiadas líneas. Adicionalmente, el SII permite un máximo de 20 detalles por documento para efectos de facturación electrónica.",
+      "solucion_pasos": [
+        "Verificar la cantidad de líneas de detalle del documento.",
+        "Si se va a facturar (DTE) y el documento supera 20 líneas, dividirlo en varias Notas de Venta o Facturas con máximo 20 detalles cada una, según el límite del SII.",
+        "Volver a emitir el documento con el número de líneas reducido.",
+        "Si el error de desbordamiento persiste incluso con pocas líneas, escalar a Plataforma para revisar el cálculo que genera el desbordamiento aritmético."
+      ],
+      "fuente": "Slack #customer-service-time — 2026-07-02 (reporte de Ximena Gamboa, cliente Laugher, solución de Manuel Contreras)",
+      "imagen_local": "error-38-connectivity-error-desbordamient.png",
+      "slack_file_id": "F0BEDEV1P2T (imagen rechazada — mostraba nombre de cliente en la barra de título; se usó placeholder)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-connectivity-error-desbordamient.png"
     }
   ]
 }
