@@ -735,6 +735,64 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Error al emitir Boleta de Venta — \"No es posible generar XML\" por falta de código Medio de Pago",
+      "modulo": "Ventas — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-06",
+      "sintoma": "Al emitir una Boleta de Venta específica (con una forma de pago puntual, ej. Tarjeta de Crédito), el sistema muestra: \"No es posible generar XML debido a falta de información. Favor ingresar código 'Medio de Pago Boletas' en: Menú de Ventas -> Tablas, Formas de Pago de Ventas.\" El error ocurre solo con ese documento/forma de pago, no con otros.",
+      "causa": "La Forma de Pago utilizada en la boleta no tiene configurado el código de 'Medio de Pago Boletas' que exige el SII para poder generar el XML del DTE.",
+      "solucion_pasos": [
+        "Ir a Menú de Ventas -> Tablas -> Formas de Pago de Ventas.",
+        "Ubicar la forma de pago usada en el documento con error (ej. Tarjeta de Crédito).",
+        "Ingresar el código de 'Medio de Pago Boletas' correspondiente según el SII.",
+        "Guardar los cambios y volver a generar/emitir la boleta."
+      ],
+      "fuente": "Slack #customer-service-time (06-07-2026)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-al-emitir-boleta-de-vent.png",
+      "imagen_local": "error-36-error-al-emitir-boleta-de-vent.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 37,
+      "titulo": "Connectivity error: desbordamiento aritmético (tipo int) al emitir Nota de Venta con muchas líneas de detalle",
+      "modulo": "Ventas — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-02",
+      "sintoma": "Al facturar/emitir una Nota de Venta con una gran cantidad de líneas de detalle (ej. 126 ítems), el sistema muestra: \"Connectivity error: [Microsoft][ODBC SQL Server Driver][SQL Server] Error de desbordamiento aritmético para el tipo int, valor = ...\".",
+      "causa": "El documento supera el máximo de detalles/glosas permitidos por el SII para documentos tributarios electrónicos (máximo 20 detalles por Factura), lo que provoca un desbordamiento en el cálculo interno del total al intentar generar el DTE.",
+      "solucion_pasos": [
+        "Verificar la cantidad de líneas de detalle del documento a facturar.",
+        "Si el documento supera los 20 detalles permitidos por el SII, dividirlo en varias Facturas.",
+        "Reintentar la emisión/facturación con los documentos ya divididos."
+      ],
+      "fuente": "Slack #customer-service-time (02-07-2026)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-connectivity-error-desbordami.png",
+      "imagen_local": "error-37-connectivity-error-desbordami.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 38,
+      "titulo": "Correos de contacto de usuario desaparecen — usuarios marcados como eliminados en base de datos",
+      "modulo": "Administración / Usuarios — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-01",
+      "sintoma": "Un cliente reporta que ya no ve todos los correos/usuarios de contacto que tenía ingresados anteriormente (de aprox. 16 solo aparecen 3) en la ventana de selección de usuario al ingresar a Manager ERP.",
+      "causa": "Varios registros de usuario quedaron marcados como eliminados (campo eliminado=1) en la tabla USER_DB, lo que los oculta del listado de usuarios/correos disponibles al iniciar sesión.",
+      "solucion_pasos": [
+        "Revisar en la tabla USER_DB si existen usuarios marcados con eliminado=1 que deberían estar activos.",
+        "Ejecutar el script: UPDATE USER_DB SET eliminado=0 WHERE eliminado=1 (ajustando el filtro a los usuarios afectados).",
+        "Validar que los correos/usuarios vuelvan a aparecer correctamente en el listado de acceso."
+      ],
+      "fuente": "Slack #customer-service-time (01-07-2026)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-correos-de-contacto-de-usuario.png",
+      "imagen_local": "error-38-correos-de-contacto-de-usuario.png",
+      "slack_file_id": null
     }
   ]
 }
