@@ -735,6 +735,44 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "DTE rechazado por SII — campo \"Tipo Venta\" con valor 0 en Factura de Exportación (FEXP)",
+      "modulo": "Facturación de Exportación — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-07",
+      "sintoma": "Al emitir una Factura de Venta Exportación (FEXP), el DTE es rechazado por el SII y el documento no se puede timbrar ni enviar.",
+      "causa": "El campo \"Tipo Venta\" (modalidad de venta), ubicado en la parte inferior izquierda del documento, queda con valor 0, lo cual el SII rechaza como valor inválido en el XML del documento.",
+      "solucion_pasos": [
+        "Ir al documento FEXP y revisar el campo \"Tipo Venta\" / \"Modalidad de Venta\" (parte inferior izquierda del formulario).",
+        "Verificar que tenga seleccionada una opción válida — no debe quedar en 0.",
+        "Si no aplica ningún tipo de venta, dejar el campo vacío en lugar de seleccionar 0.",
+        "Guardar el documento y reintentar el envío/timbraje ante el SII."
+      ],
+      "fuente": "Slack #customer-service-time / Intercom #215474996375340",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-dte-rechazado-por-sii-—-campo-.png",
+      "imagen_local": "error-36-dte-rechazado-por-sii-—-campo-.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 37,
+      "titulo": "PDF de documento de venta se genera en blanco en TS Plus — licencia de Adobe no aceptada",
+      "modulo": "TS Plus / Impresión — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-06",
+      "sintoma": "Tras una actualización del sistema, al generar guías, facturas o notas de crédito en TS Plus el PDF se genera en blanco, y aparece una pantalla de inicio de sesión inesperada.",
+      "causa": "En cada inicio de sesión de TS Plus queda pendiente aceptar el contrato/licencia de Adobe; si no se acepta, el sistema no completa la generación del PDF.",
+      "solucion_pasos": [
+        "Al iniciar sesión en TS Plus, aceptar el diálogo de contrato de licencia de Adobe cuando aparezca.",
+        "Reintentar la generación/impresión del documento."
+      ],
+      "fuente": "Intercom #215474981252689",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-pdf-de-documento-de-venta-se-g.png",
+      "imagen_local": "error-37-pdf-de-documento-de-venta-se-g.png",
+      "slack_file_id": null
     }
   ]
 }
