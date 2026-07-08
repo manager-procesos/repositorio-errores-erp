@@ -793,6 +793,44 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-correos-de-contacto-de-usuario.png",
       "imagen_local": "error-38-correos-de-contacto-de-usuario.png",
       "slack_file_id": null
+    },
+    {
+      "numero": 39,
+      "titulo": "Boleta de Venta (BOV) bloqueada por integración Manager GO — no se libera",
+      "modulo": "Manager GO / Facturación",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-07",
+      "sintoma": "Una Boleta de Venta (BOV) generada a través de Manager GO queda bloqueada/tomada y no se puede liberar ni reutilizar el folio desde el cliente.",
+      "causa": "El documento queda marcado internamente como perteneciente a Manager GO (campo DOCU_GO=1 en la tabla DOCU_DB_AUX) y esa marca no se libera automáticamente, impidiendo operar sobre el documento.",
+      "solucion_pasos": [
+        "Identificar el número de documento (NUMREGDOCU) de la BOV afectada",
+        "Ejecutar en la base de datos: UPDATE DOCU_DB_AUX SET DOCU_GO=0 WHERE NUMREGDOCU=<numero>",
+        "Verificar que el documento quede liberado y el cliente pueda operar con normalidad"
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-07-07)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-39-boleta-de-venta-(bov)-bloquead.png",
+      "imagen_local": "error-39-boleta-de-venta-(bov)-bloquead.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 40,
+      "titulo": "Error \"No se puede eliminar este registro\" al modificar una cuenta contable imputable",
+      "modulo": "Contabilidad / Plan de Cuentas Contables",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-07",
+      "sintoma": "Al intentar quitar el check de 'Imputable' en una cuenta del Plan de Cuentas Contables, el sistema muestra: 'No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él.' y no permite guardar el cambio.",
+      "causa": "La cuenta tiene cuentas hijas o contenedoras asociadas en el Plan de Cuentas (nivel jerárquico), por lo que el sistema bloquea la modificación de su condición de imputable mientras mantenga esa estructura.",
+      "solucion_pasos": [
+        "Revisar el nivel jerárquico de la cuenta en el Plan de Cuentas Contables",
+        "Dejar la cuenta en nivel 0 o 1 (nivel superior) en lugar de un nivel inferior con cuentas asociadas",
+        "Guardar nuevamente el cambio de Imputable"
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-07-07)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-40-error-'no-se-puede-eliminar-es.png",
+      "imagen_local": "error-40-error-'no-se-puede-eliminar-es.png",
+      "slack_file_id": null
     }
   ]
 }
