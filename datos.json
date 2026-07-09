@@ -735,64 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "DTE rechazado por SII — campo \"Tipo Venta\" con valor 0 en Factura de Exportación (FEXP)",
-      "modulo": "Facturación de Exportación — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-07-07",
-      "sintoma": "Al emitir una Factura de Venta Exportación (FEXP), el DTE es rechazado por el SII y el documento no se puede timbrar ni enviar.",
-      "causa": "El campo \"Tipo Venta\" (modalidad de venta), ubicado en la parte inferior izquierda del documento, queda con valor 0, lo cual el SII rechaza como valor inválido en el XML del documento.",
-      "solucion_pasos": [
-        "Ir al documento FEXP y revisar el campo \"Tipo Venta\" / \"Modalidad de Venta\" (parte inferior izquierda del formulario).",
-        "Verificar que tenga seleccionada una opción válida — no debe quedar en 0.",
-        "Si no aplica ningún tipo de venta, dejar el campo vacío en lugar de seleccionar 0.",
-        "Guardar el documento y reintentar el envío/timbraje ante el SII."
-      ],
-      "fuente": "Slack #customer-service-time / Intercom #215474996375340",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-dte-rechazado-por-sii-—-campo-.png",
-      "imagen_local": "error-36-dte-rechazado-por-sii-—-campo-.png",
-      "slack_file_id": null
-    },
-    {
-      "numero": 37,
-      "titulo": "PDF de documento de venta se genera en blanco en TS Plus — licencia de Adobe no aceptada",
-      "modulo": "TS Plus / Impresión — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-06",
-      "sintoma": "Tras una actualización del sistema, al generar guías, facturas o notas de crédito en TS Plus el PDF se genera en blanco, y aparece una pantalla de inicio de sesión inesperada.",
-      "causa": "En cada inicio de sesión de TS Plus queda pendiente aceptar el contrato/licencia de Adobe; si no se acepta, el sistema no completa la generación del PDF.",
-      "solucion_pasos": [
-        "Al iniciar sesión en TS Plus, aceptar el diálogo de contrato de licencia de Adobe cuando aparezca.",
-        "Reintentar la generación/impresión del documento."
-      ],
-      "fuente": "Intercom #215474981252689",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-pdf-de-documento-de-venta-se-g.png",
-      "imagen_local": "error-37-pdf-de-documento-de-venta-se-g.png",
-      "slack_file_id": null
-    },
-    {
-      "numero": 38,
-      "titulo": "No se puede desmarcar \"Imputable\" en una cuenta contable — bloqueado por cuentas contenedoras asociadas",
-      "modulo": "Contabilidad — Plan de Cuentas — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-07-08",
-      "sintoma": "Al desmarcar el check \"Imputable\" en una cuenta del Plan de Cuentas Contables y guardar, el sistema no permite el cambio: aparece un mensaje de error indicando que no se puede modificar/eliminar el registro porque tiene cuentas contenedoras asociadas que descienden de él.",
-      "causa": "La cuenta contable tiene subcuentas (cuentas contenedoras) asociadas dentro de la jerarquía del plan de cuentas, por lo que Manager ERP bloquea desde la interfaz el cambio del estado \"Imputable\" para preservar la consistencia de la estructura contable.",
-      "solucion_pasos": [
-        "Identificar el código de la cuenta contable que se necesita marcar como no imputable.",
-        "Si el cambio no se guarda desde la interfaz (Plan de Cuentas Contables → desmarcar Imputable → OK), escalar a Soporte/Desarrollo para ejecutar directamente en la base de datos: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=<código de la cuenta>.",
-        "Verificar en el sistema que la cuenta quedó correctamente marcada como no imputable.",
-        "Confirmar con el cliente que ya puede operar con la cuenta sin el mensaje de error."
-      ],
-      "fuente": "Slack #customer-service-time / hilo 2026-07-07 al 2026-07-08",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-no-se-puede-quitar-imputable-d.png",
-      "imagen_local": "error-38-no-se-puede-quitar-imputable-d.png",
-      "slack_file_id": null
     }
   ]
 }
