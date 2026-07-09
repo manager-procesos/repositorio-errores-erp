@@ -773,6 +773,26 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-pdf-de-documento-de-venta-se-g.png",
       "imagen_local": "error-37-pdf-de-documento-de-venta-se-g.png",
       "slack_file_id": null
+    },
+    {
+      "numero": 38,
+      "titulo": "No se puede desmarcar \"Imputable\" en una cuenta contable — bloqueado por cuentas contenedoras asociadas",
+      "modulo": "Contabilidad — Plan de Cuentas — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-08",
+      "sintoma": "Al desmarcar el check \"Imputable\" en una cuenta del Plan de Cuentas Contables y guardar, el sistema no permite el cambio: aparece un mensaje de error indicando que no se puede modificar/eliminar el registro porque tiene cuentas contenedoras asociadas que descienden de él.",
+      "causa": "La cuenta contable tiene subcuentas (cuentas contenedoras) asociadas dentro de la jerarquía del plan de cuentas, por lo que Manager ERP bloquea desde la interfaz el cambio del estado \"Imputable\" para preservar la consistencia de la estructura contable.",
+      "solucion_pasos": [
+        "Identificar el código de la cuenta contable que se necesita marcar como no imputable.",
+        "Si el cambio no se guarda desde la interfaz (Plan de Cuentas Contables → desmarcar Imputable → OK), escalar a Soporte/Desarrollo para ejecutar directamente en la base de datos: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=<código de la cuenta>.",
+        "Verificar en el sistema que la cuenta quedó correctamente marcada como no imputable.",
+        "Confirmar con el cliente que ya puede operar con la cuenta sin el mensaje de error."
+      ],
+      "fuente": "Slack #customer-service-time / hilo 2026-07-07 al 2026-07-08",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-no-se-puede-quitar-imputable-d.png",
+      "imagen_local": "error-38-no-se-puede-quitar-imputable-d.png",
+      "slack_file_id": null
     }
   ]
 }
