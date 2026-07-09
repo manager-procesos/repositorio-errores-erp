@@ -735,6 +735,25 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "No se puede eliminar este registro. Tiene cuentas contenedoras asociadas — error al desmarcar Imputable en cuenta contable",
+      "modulo": "Contabilidad / Plan de Cuentas — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-08",
+      "sintoma": "Al intentar desmarcar el check 'Imputable' de una cuenta del plan de cuentas que posee cuentas contenedoras (subcuentas) asociadas, el sistema muestra el mensaje 'Disculpe Soporte: No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él' y no permite guardar el cambio, aunque el cliente indica que la cuenta no debe ser imputable.",
+      "causa": "Manager ERP valida la jerarquía del plan de cuentas: una cuenta que mantiene cuentas contenedoras (subcuentas) asociadas no puede modificar su atributo de imputabilidad desde la interfaz mientras conserve esa estructura, aun cuando la acción del usuario no sea una eliminación explícita del registro.",
+      "solucion_pasos": [
+        "Intentar bajar el nivel de la cuenta a 0 o 1 dentro del plan de cuentas y volver a guardar el cambio.",
+        "Si el error persiste (clientes con instalación local), solicitar al equipo de Base de Datos ejecutar la siguiente consulta SQL indicando el código de la cuenta afectada: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=xxxxx",
+        "Verificar en Manager que la cuenta ya no aparece marcada como imputable."
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-07-07 a 2026-07-08)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-no-se-puede-eliminar-este-regi.png",
+      "imagen_local": "error-36-no-se-puede-eliminar-este-regi.png",
+      "slack_file_id": null
     }
   ]
 }
