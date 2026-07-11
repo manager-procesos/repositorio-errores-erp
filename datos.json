@@ -735,6 +735,46 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Error CodModVenta = 0 no válido — Factura de Exportación (FEXP) rechazada por SII",
+      "modulo": "Facturación / Documentos de Exportación — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-11",
+      "sintoma": "Al emitir una Factura de Exportación (FEXP), el documento es rechazado por el SII con un error relacionado al campo CodModVenta del XML, cuyo valor queda en 0.",
+      "causa": "El campo 'Tipo Venta' del documento de exportación queda seleccionado en 0 (valor no válido) en lugar de una opción de venta válida o vacío, generando un CodModVenta=0 en el XML enviado al SII.",
+      "solucion_pasos": [
+        "Ir al documento y revisar el campo Tipo Venta",
+        "Verificar que tenga seleccionada una opción válida — no debe quedar en 0",
+        "Si no aplica ningún tipo de venta, dejar el campo vacío en lugar de seleccionar 0",
+        "Guardar el documento y reintentar el envío al SII"
+      ],
+      "fuente": "Intercom conversación #215474996375340 (Isidora / Lucas, 2026-07-08)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-codmodventa-=-0-no-válid.png",
+      "imagen_local": "error-36-error-codmodventa-=-0-no-válid.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 37,
+      "titulo": "No se puede guardar cambio al desmarcar Imputable en una cuenta — cuentas contenedoras asociadas",
+      "modulo": "Contabilidad / Plan de Cuentas Contables — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-11",
+      "sintoma": "Al intentar quitar el check de 'Imputable' a una cuenta contable en el Plan de Cuentas, el sistema muestra el mensaje 'No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él.' y no permite guardar el cambio.",
+      "causa": "La cuenta contable tiene un nivel jerárquico o cuentas contenedoras asociadas que impiden modificar el atributo Imputable desde la interfaz; en clientes locales, cambiar el nivel a 0 o 1 no resuelve el bloqueo y se requiere actualizar el campo directamente en base de datos.",
+      "solucion_pasos": [
+        "Intentar dejar la cuenta en nivel 0 o 1 desde la interfaz y probar guardar nuevamente",
+        "Si el problema persiste, contactar a soporte indicando el código de la cuenta",
+        "Soporte ejecuta la consulta SQL: update PLAN_DB set IMPUTABLE=0 where CODIGO=xxxxx",
+        "Confirmar con el cliente que la cuenta ya no es imputable y que el cambio se guardó correctamente"
+      ],
+      "fuente": "Slack #customer-service-time (Manuel Contreras / Sylvia Fernandez, 2026-07-07/08)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-no-se-puede-guardar-cambio-al-.png",
+      "imagen_local": "error-37-no-se-puede-guardar-cambio-al-.png",
+      "slack_file_id": "F0BFXAV82A0"
     }
   ]
 }
