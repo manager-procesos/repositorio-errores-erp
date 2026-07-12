@@ -735,6 +735,26 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "Error al emitir Factura de Exportación (FEXP) — campo Tipo Venta en 0",
+      "modulo": "Finanzas — Facturación de Exportación (FEXP)",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-07",
+      "sintoma": "Al emitir una Factura de Venta Exportación (FEXP), el documento es rechazado por el SII. El sistema reporta un error indicando que el campo CodModVenta llega con valor 0 en el XML de exportación.",
+      "causa": "El campo 'Tipo Venta' / 'Modalidad de Vta' del documento FEXP queda en 0 (no se seleccionó una modalidad de venta válida). El SII no acepta el valor 0 como código de modalidad de venta (CodModVenta) para documentos de exportación.",
+      "solucion_pasos": [
+        "Ir al documento de Factura de Venta Exportación y revisar el campo Tipo Venta / Modalidad de Vta",
+        "Verificar que tenga seleccionada una opción válida — no debe quedar en 0",
+        "Si no aplica ningún tipo de venta, dejar el campo vacío en lugar de seleccionar 0",
+        "Guardar el documento y reintentar el envío al SII"
+      ],
+      "fuente": "Intercom #215474996375340 / Slack #customer-service-time",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-al-emitir-factura-de-exp.png",
+      "imagen_local": "error-36-error-al-emitir-factura-de-exp.png",
+      "slack_file_id": null
     }
   ]
 }
