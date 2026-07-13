@@ -755,6 +755,45 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-al-emitir-factura-de-exp.png",
       "imagen_local": "error-36-error-al-emitir-factura-de-exp.png",
       "slack_file_id": null
+    },
+    {
+      "numero": 37,
+      "titulo": "XML de documento electrónico no llega al proveedor DTE — se envía al FTP del cliente en vez de a Acepta",
+      "modulo": "Facturación Electrónica — Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-08",
+      "sintoma": "Al emitir un documento tributario electrónico (ej. Guía de Despacho), el cliente indica que el documento no se genera/recibe; al consultar la validez en el sitio del SII aparece 'Documento no recibido por el SII'.",
+      "causa": "La configuración de parámetros de facturación del cliente tiene habilitado el envío del XML por FTP en lugar de enviarlo directamente al proveedor de facturación electrónica (Acepta), por lo que el documento no llega automáticamente a Acepta ni al SII.",
+      "solucion_pasos": [
+        "Verificar en Manager → Parámetros de Facturación si el cliente tiene configurado el envío del XML por FTP.",
+        "Si está configurado por FTP, solicitar que se rescate manualmente el XML generado desde el servidor FTP del cliente.",
+        "Cargar/enviar el XML rescatado al proveedor DTE (Acepta) para su procesamiento.",
+        "Confirmar en el sitio del SII (Consulta de Validez de Documento) que el documento ya fue recibido."
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-07-08, Claudia Lavín / Manuel Contreras)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-xml-de-documento-electrónico-n.png",
+      "imagen_local": "error-37-xml-de-documento-electrónico-n.png",
+      "slack_file_id": null
+    },
+    {
+      "numero": 38,
+      "titulo": "No se puede desmarcar \"Imputable\" en una cuenta contable con cuentas hijas asociadas",
+      "modulo": "Finanzas — Plan de Cuentas Contables",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-08",
+      "sintoma": "Al intentar quitar el check \"Imputable\" de una cuenta del Plan de Cuentas, el sistema no permite guardar el cambio y muestra el mensaje: \"No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él.\"",
+      "causa": "La cuenta contable tiene cuentas hijas (contenedoras) asociadas que descienden de ella, por lo que Manager ERP bloquea la modificación del atributo Imputable desde la interfaz normal.",
+      "solucion_pasos": [
+        "Confirmar que la cuenta contable presenta cuentas hijas asociadas en el Plan de Cuentas.",
+        "Si el cambio es indispensable, ejecutar directamente en base de datos: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=<código de la cuenta>.",
+        "Verificar en el sistema que el cambio se refleje correctamente tras la actualización."
+      ],
+      "fuente": "Slack #customer-service-time (hilo 2026-07-07/08, Sylvia Fernández / Manuel Contreras)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-no-se-puede-desmarcar-imputabl.png",
+      "imagen_local": "error-38-no-se-puede-desmarcar-imputabl.png",
+      "slack_file_id": null
     }
   ]
 }
