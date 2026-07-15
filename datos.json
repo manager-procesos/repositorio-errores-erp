@@ -735,6 +735,25 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
+    },
+    {
+      "numero": 36,
+      "titulo": "No se puede eliminar cuenta contable — tiene cuentas contenedoras asociadas",
+      "modulo": "Finanzas — Plan de Cuentas (Manager ERP)",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-08",
+      "sintoma": "Al intentar modificar el check \"Imputable\" o eliminar una cuenta contable en el Plan de Cuentas, el sistema muestra el mensaje \"No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él.\", impidiendo continuar.",
+      "causa": "La cuenta contable tiene cuentas hijas/contenedoras asociadas que descienden de ella en el plan de cuentas, lo que bloquea el cambio de nivel o la eliminación directamente desde la interfaz.",
+      "solucion_pasos": [
+        "Intentar dejar la cuenta en nivel 0 o 1 en el Plan de Cuentas y volver a probar el cambio.",
+        "Si el error persiste, solicitar a Plataforma/Soporte ejecutar en la base de datos del cliente: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=<código de la cuenta>",
+        "Verificar que la cuenta quede correctamente marcada como no imputable en el Plan de Cuentas."
+      ],
+      "fuente": "Slack #customer-service-time (hilo 07-08/07/2026)",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-no-se-puede-eliminar-cuenta-co.png",
+      "imagen_local": "error-36-no-se-puede-eliminar-cuenta-co.png",
+      "slack_file_id": null
     }
   ]
 }
