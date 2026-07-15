@@ -22,7 +22,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-01-ciudad-origen.png",
       "imagen_local": "error-01-ciudad-origen.png",
       "slack_file_id": "F0ATP4T59H6",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ATP4T59H6"
     },
     {
       "numero": 2,
@@ -44,7 +45,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-02-acceso-zoom.png",
       "imagen_local": "error-02-acceso-zoom.png",
       "slack_file_id": "F0ASDD7NHBR",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ASDD7NHBR"
     },
     {
       "numero": 3,
@@ -66,7 +68,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-03-impresion.png",
       "imagen_local": "error-03-impresion.png",
       "slack_file_id": "F0ASREZKJ21",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ASREZKJ21"
     },
     {
       "numero": 4,
@@ -89,7 +92,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-04-caracter-invalido-xml.png",
       "imagen_local": "error-04-caracter-invalido-xml.png",
       "slack_file_id": "F0ATP8K191N",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ATP8K191N"
     },
     {
       "numero": 5,
@@ -112,7 +116,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-05-gd-caracter-especial.png",
       "imagen_local": "error-05-gd-caracter-especial.png",
       "slack_file_id": "F0ASSUE2W6S",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ASSUE2W6S"
     },
     {
       "numero": 6,
@@ -134,7 +139,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-06-dll-acepta.png",
       "imagen_local": "error-06-dll-acepta.png",
       "slack_file_id": "F0ASYJCAY8L",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ASYJCAY8L"
     },
     {
       "numero": 7,
@@ -155,7 +161,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-07-gd-sesion.png",
       "imagen_local": "error-07-gd-sesion.png",
       "slack_file_id": "F0ASSUFCBC6",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0ASSUFCBC6"
     },
     {
       "numero": 8,
@@ -179,7 +186,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-08-certificado-rdp.png",
       "imagen_local": "error-08-certificado-rdp.png",
       "slack_file_id": "F0AUPKE77JQ",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0AUPKE77JQ"
     },
     {
       "numero": 9,
@@ -201,7 +209,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-09-boh-too-many-args.png",
       "imagen_local": "error-09-boh-too-many-args.png",
       "slack_file_id": "F0AUERW6AFM",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0AUERW6AFM"
     },
     {
       "numero": 10,
@@ -224,7 +233,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-10-ya-existe-tipo-doc.png",
       "imagen_local": "error-10-ya-existe-tipo-doc.png",
       "slack_file_id": "F0AV0A78FGR",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0AV0A78FGR"
     },
     {
       "numero": 11,
@@ -247,7 +257,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-11-excel-no-existe.png",
       "imagen_local": "error-11-excel-no-existe.png",
       "slack_file_id": "F0AUKFKLSLE",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0AUKFKLSLE"
     },
     {
       "numero": 12,
@@ -271,7 +282,8 @@
       "imagen_github": null,
       "imagen_local": "error-12-otra-sesion-activa.png",
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-c1189f84150c"
     },
     {
       "numero": 13,
@@ -295,7 +307,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-13-sql-no-ejecuta.png",
       "imagen_local": "error-13-sql-no-ejecuta.png",
       "slack_file_id": "F0B3Y573QBW",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B3Y573QBW"
     },
     {
       "numero": 14,
@@ -319,7 +332,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-17-c0000005-importar-comprobante.png",
       "imagen_local": "error-17-c0000005-importar-comprobante.png",
       "slack_file_id": "F0B50EF0VRA",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B50EF0VRA"
     },
     {
       "numero": 15,
@@ -342,7 +356,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-18-historico-cuenta-indice-bd.png",
       "imagen_local": "error-18-historico-cuenta-indice-bd.png",
       "slack_file_id": "F0B4V48LQV8",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B4V48LQV8"
     },
     {
       "numero": 16,
@@ -365,7 +380,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-file-access-denied-imprimir.png",
       "imagen_local": "error-16-file-access-denied-imprimir.png",
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-74580acd8c90"
     },
     {
       "numero": 17,
@@ -389,7 +405,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-connectivity-error-driver-resources.png",
       "imagen_local": "error-19-connectivity-error-driver-resources.png",
       "slack_file_id": "F0B68T67FDY",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B68T67FDY"
     },
     {
       "numero": 18,
@@ -412,7 +429,8 @@
       "imagen_github": null,
       "imagen_local": null,
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-58cfa708af72"
     },
     {
       "numero": 19,
@@ -435,7 +453,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
       "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
       "slack_file_id": "F0B72QWUPS4",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B72QWUPS4"
     },
     {
       "numero": 20,
@@ -458,7 +477,8 @@
       "imagen_github": null,
       "imagen_local": null,
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-cb39b6c8911e"
     },
     {
       "numero": 21,
@@ -481,7 +501,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
       "imagen_local": "error-23-property-user-idx-not-found.png",
       "slack_file_id": "F0B6Y8WUKN1",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B6Y8WUKN1"
     },
     {
       "numero": 22,
@@ -505,7 +526,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
       "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
       "slack_file_id": "F0B7WSR8N56",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B7WSR8N56"
     },
     {
       "numero": 23,
@@ -529,7 +551,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-primary-key-notde-db.png",
       "imagen_local": "error-25-primary-key-notde-db.png",
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-591e82546ea1"
     },
     {
       "numero": 24,
@@ -553,7 +576,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
       "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-03a1b0c2e8ed"
     },
     {
       "numero": 25,
@@ -577,7 +601,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-27-factura-compra-moneda-usd-origen.png",
       "imagen_local": "error-27-factura-compra-moneda-usd-origen.png",
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-de2a64879b56"
     },
     {
       "numero": 26,
@@ -601,7 +626,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-28-descargar-informe-dll-faltante.png",
       "imagen_local": "error-28-descargar-informe-dll-faltante.png",
       "slack_file_id": "F0B7MTHHVJB",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B7MTHHVJB"
     },
     {
       "numero": 27,
@@ -625,7 +651,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-29-manager-go-folio-pegado.png",
       "imagen_local": "error-29-manager-go-folio-pegado.png",
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-8256127c83d8"
     },
     {
       "numero": 28,
@@ -648,7 +675,8 @@
       "imagen_github": null,
       "imagen_local": null,
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-ca5a594277f2"
     },
     {
       "numero": 29,
@@ -673,7 +701,8 @@
       "imagen_github": null,
       "imagen_local": null,
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-ffffbb15e6cc"
     },
     {
       "numero": 30,
@@ -697,7 +726,8 @@
       "imagen_github": null,
       "imagen_local": null,
       "slack_file_id": null,
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "baseline-924e505fe880"
     },
     {
       "numero": 31,
@@ -720,7 +750,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-factura-compra-vacia-hresult-0x80040e19.png",
       "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
       "slack_file_id": "F0B8H6UQ9PW",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B8H6UQ9PW"
     },
     {
       "numero": 32,
@@ -744,7 +775,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null-balflex.png",
       "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
       "slack_file_id": "F0B8AR14EJZ",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B8AR14EJZ"
     },
     {
       "numero": 33,
@@ -767,7 +799,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H",
-      "intercom_article_id": null
+      "intercom_article_id": null,
+      "stable_key": "slack-F0B84DKP57H"
     },
     {
       "numero": 34,
@@ -788,7 +821,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-columna-ivasaf-aparece-al-expo.png",
       "imagen_local": "error-36-columna-ivasaf-aparece-al-expo.png",
       "slack_file_id": "F0BA9022XU7",
-      "intercom_article_id": "15580769"
+      "intercom_article_id": "15580769",
+      "stable_key": "intercom-15580769"
     },
     {
       "numero": 35,
@@ -810,7 +844,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-clientes-duplicados-rut-con.png",
       "imagen_local": "error-36-clientes-duplicados-rut-con.png",
       "slack_file_id": null,
-      "intercom_article_id": "15620987"
+      "intercom_article_id": "15620987",
+      "stable_key": "intercom-15620987"
     },
     {
       "numero": 36,
@@ -831,7 +866,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-oc-pendiente-de-aprobar-pese-a.png",
       "imagen_local": "error-38-oc-pendiente-de-aprobar-pese-a.png",
       "slack_file_id": null,
-      "intercom_article_id": "15768720"
+      "intercom_article_id": "15768720",
+      "stable_key": "intercom-15768720"
     },
     {
       "numero": 37,
@@ -853,7 +889,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-idk-invalido-al-cargar-folio-e.png",
       "imagen_local": "error-37-idk-invalido-al-cargar-folio-e.png",
       "slack_file_id": null,
-      "intercom_article_id": "15805715"
+      "intercom_article_id": "15805715",
+      "stable_key": "intercom-15805715"
     },
     {
       "numero": 38,
@@ -874,7 +911,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-validation-failure-exception-.png",
       "imagen_local": "error-36-validation-failure-exception-.png",
       "slack_file_id": "F0BBSD0BDN1",
-      "intercom_article_id": "15655569"
+      "intercom_article_id": "15655569",
+      "stable_key": "intercom-15655569"
     },
     {
       "numero": 39,
@@ -895,7 +933,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-correos-de-usuario-desaparecen.png",
       "imagen_local": "error-37-correos-de-usuario-desaparecen.png",
       "slack_file_id": null,
-      "intercom_article_id": "15805716"
+      "intercom_article_id": "15805716",
+      "stable_key": "intercom-15805716"
     },
     {
       "numero": 40,
@@ -915,7 +954,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-connectivity-error-desbordami.png",
       "imagen_local": "error-37-connectivity-error-desbordami.png",
       "slack_file_id": null,
-      "intercom_article_id": "15860971"
+      "intercom_article_id": "15860971",
+      "stable_key": "intercom-15860971"
     },
     {
       "numero": 41,
@@ -936,7 +976,8 @@
       "imagen_local": "error-37-error-en-carga-masiva-de-nv-form.png",
       "slack_file_id": null,
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-error-en-carga-masiva-de-nv-form.png",
-      "intercom_article_id": "15820466"
+      "intercom_article_id": "15820466",
+      "stable_key": "intercom-15820466"
     },
     {
       "numero": 42,
@@ -957,7 +998,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-al-emitir-boleta-de-vent.png",
       "imagen_local": "error-36-error-al-emitir-boleta-de-vent.png",
       "slack_file_id": null,
-      "intercom_article_id": "15860970"
+      "intercom_article_id": "15860970",
+      "stable_key": "intercom-15860970"
     },
     {
       "numero": 43,
@@ -976,7 +1018,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-pdf-de-documento-de-venta-se-g.png",
       "imagen_local": "error-37-pdf-de-documento-de-venta-se-g.png",
       "slack_file_id": null,
-      "intercom_article_id": "15880963"
+      "intercom_article_id": "15880963",
+      "stable_key": "intercom-15880963"
     },
     {
       "numero": 44,
@@ -996,7 +1039,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-39-boleta-de-venta-(bov)-bloquead.png",
       "imagen_local": "error-39-boleta-de-venta-(bov)-bloquead.png",
       "slack_file_id": null,
-      "intercom_article_id": "15871388"
+      "intercom_article_id": "15871388",
+      "stable_key": "intercom-15871388"
     },
     {
       "numero": 45,
@@ -1016,7 +1060,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-40-error-'no-se-puede-eliminar-es.png",
       "imagen_local": "error-40-error-'no-se-puede-eliminar-es.png",
       "slack_file_id": null,
-      "intercom_article_id": "15871389"
+      "intercom_article_id": "15871389",
+      "stable_key": "intercom-15871389"
     },
     {
       "numero": 46,
@@ -1037,7 +1082,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-dte-rechazado-por-sii-—-campo-.png",
       "imagen_local": "error-36-dte-rechazado-por-sii-—-campo-.png",
       "slack_file_id": null,
-      "intercom_article_id": "15880964"
+      "intercom_article_id": "15880964",
+      "stable_key": "intercom-15880964"
     },
     {
       "numero": 47,
@@ -1057,7 +1103,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-no-se-puede-eliminar-este-reg.png",
       "imagen_local": "error-37-no-se-puede-eliminar-este-reg.png",
       "slack_file_id": null,
-      "intercom_article_id": "15887720"
+      "intercom_article_id": "15887720",
+      "stable_key": "intercom-15887720"
     },
     {
       "numero": 48,
@@ -1078,7 +1125,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-xml-no-se-transmite-al-sii-y-d.png",
       "imagen_local": "error-36-xml-no-se-transmite-al-sii-y-d.png",
       "slack_file_id": null,
-      "intercom_article_id": "15934732"
+      "intercom_article_id": "15934732",
+      "stable_key": "intercom-15934732"
     },
     {
       "numero": 49,
@@ -1099,7 +1147,8 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-comprobante-de-apertura-genera.png",
       "imagen_local": "error-38-comprobante-de-apertura-genera.png",
       "slack_file_id": null,
-      "intercom_article_id": "15934733"
+      "intercom_article_id": "15934733",
+      "stable_key": "intercom-15934733"
     }
   ]
 }
