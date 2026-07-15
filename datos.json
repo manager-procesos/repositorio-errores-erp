@@ -735,68 +735,6 @@
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "slack_file_id": "F0B84DKP57H"
-    },
-    {
-      "numero": 36,
-      "titulo": "XML no se transmite al SII y documento queda bloqueado para edición/reenvío",
-      "modulo": "Facturación Electrónica — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-07-09",
-      "sintoma": "Una factura de venta (FAV) no transmite el XML al SII y el sistema no permite reenviarla ni eliminarla para corregirla; queda bloqueada como si ya hubiese sido enviada e impresa.",
-      "causa": "El registro del documento en la tabla docu_db mantiene los flags e_enviado=1 e impresa=1 aunque el envío al SII nunca se completó, lo que bloquea la edición/reenvío desde la interfaz de Manager.",
-      "solucion_pasos": [
-        "Confirmar el número de registro (numreg) del documento afectado.",
-        "Ejecutar en base de datos: UPDATE docu_db SET e_enviado=0, impresa=0 WHERE numreg='<numreg>'.",
-        "Verificar que el documento quedó editable en Manager.",
-        "Corregir/reenviar o eliminar y reemitir el documento según corresponda."
-      ],
-      "fuente": "Intercom #215475020948512",
-      "nombre_imagen": "error-36-xml-no-se-transmite-al-sii-y-d.png",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-xml-no-se-transmite-al-sii-y-d.png",
-      "imagen_local": "error-36-xml-no-se-transmite-al-sii-y-d.png",
-      "slack_file_id": null
-    },
-    {
-      "numero": 37,
-      "titulo": "\"No se puede eliminar este registro. Tiene cuentas contenedoras asociadas\" al desmarcar Imputable",
-      "modulo": "Contabilidad — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-07",
-      "sintoma": "Al quitar el check \"Imputable\" de una cuenta del Plan de Cuentas Contables y guardar, aparece el mensaje \"No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él\", impidiendo guardar el cambio.",
-      "causa": "La validación de guardado del atributo Imputable dispara la misma regla usada para eliminar cuentas contenedoras (cuentas con hijos en la jerarquía del plan), bloqueando el cambio desde la interfaz.",
-      "solucion_pasos": [
-        "Intentar bajar la cuenta a nivel 0 o 1 en la jerarquía y reintentar guardar (workaround parcial).",
-        "Si persiste el bloqueo, ejecutar en base de datos: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=<código de la cuenta>.",
-        "Verificar en el Plan de Cuentas que la cuenta ya no figura como imputable."
-      ],
-      "fuente": "Slack #customer-service-time",
-      "nombre_imagen": "error-37-no-se-puede-eliminar-este-reg.png",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-no-se-puede-eliminar-este-reg.png",
-      "imagen_local": "error-37-no-se-puede-eliminar-este-reg.png",
-      "slack_file_id": null
-    },
-    {
-      "numero": 38,
-      "titulo": "Comprobante de Apertura genera solo una línea sin datos (Resultado Acumulado)",
-      "modulo": "Contabilidad — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-13",
-      "sintoma": "Al generar el Comprobante de Apertura del nuevo ejercicio, el sistema solo registra una línea (cuenta Resultado Acumulado) sin montos, ignorando el resto de las cuentas, pese a que el Balance Tributario del ejercicio anterior tiene todos los saldos.",
-      "causa": "El plan de cuentas no está correctamente clasificado en su jerarquía, lo que impide que el proceso de apertura arrastre los saldos de todas las cuentas del ejercicio anterior.",
-      "solucion_pasos": [
-        "Revisar el plan de cuentas del ejercicio para detectar cuentas mal clasificadas jerárquicamente.",
-        "Ejecutar el proceso de \"Clasificación Jerárquica\" del plan de cuentas.",
-        "Ejecutar un recálculo de saldos.",
-        "Regenerar el Comprobante de Apertura y validar que ahora incluya todas las cuentas con montos."
-      ],
-      "fuente": "Slack #customer-service-time",
-      "nombre_imagen": "error-38-comprobante-de-apertura-genera.png",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-comprobante-de-apertura-genera.png",
-      "imagen_local": "error-38-comprobante-de-apertura-genera.png",
-      "slack_file_id": null
     }
   ]
 }
