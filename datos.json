@@ -21,8 +21,7 @@
       "message_ts": "1776184827.323129",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-01-ciudad-origen.png",
       "imagen_local": "error-01-ciudad-origen.png",
-      "slack_file_id": "F0ATP4T59H6",
-      "intercom_article_id": null
+      "slack_file_id": "F0ATP4T59H6"
     },
     {
       "numero": 2,
@@ -43,8 +42,7 @@
       "message_ts": "1776184891.563169",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-02-acceso-zoom.png",
       "imagen_local": "error-02-acceso-zoom.png",
-      "slack_file_id": "F0ASDD7NHBR",
-      "intercom_article_id": null
+      "slack_file_id": "F0ASDD7NHBR"
     },
     {
       "numero": 3,
@@ -65,8 +63,7 @@
       "message_ts": "1776184950.970559",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-03-impresion.png",
       "imagen_local": "error-03-impresion.png",
-      "slack_file_id": "F0ASREZKJ21",
-      "intercom_article_id": null
+      "slack_file_id": "F0ASREZKJ21"
     },
     {
       "numero": 4,
@@ -88,8 +85,7 @@
       "message_ts": "1776185743.911139",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-04-caracter-invalido-xml.png",
       "imagen_local": "error-04-caracter-invalido-xml.png",
-      "slack_file_id": "F0ATP8K191N",
-      "intercom_article_id": null
+      "slack_file_id": "F0ATP8K191N"
     },
     {
       "numero": 5,
@@ -111,8 +107,7 @@
       "message_ts": "1776185810.443459",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-05-gd-caracter-especial.png",
       "imagen_local": "error-05-gd-caracter-especial.png",
-      "slack_file_id": "F0ASSUE2W6S",
-      "intercom_article_id": null
+      "slack_file_id": "F0ASSUE2W6S"
     },
     {
       "numero": 6,
@@ -133,8 +128,7 @@
       "message_ts": "1776185840.178189",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-06-dll-acepta.png",
       "imagen_local": "error-06-dll-acepta.png",
-      "slack_file_id": "F0ASYJCAY8L",
-      "intercom_article_id": null
+      "slack_file_id": "F0ASYJCAY8L"
     },
     {
       "numero": 7,
@@ -154,8 +148,7 @@
       "message_ts": "1776185869.474169",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-07-gd-sesion.png",
       "imagen_local": "error-07-gd-sesion.png",
-      "slack_file_id": "F0ASSUFCBC6",
-      "intercom_article_id": null
+      "slack_file_id": "F0ASSUFCBC6"
     },
     {
       "numero": 8,
@@ -178,8 +171,7 @@
       "message_ts": "1776869180.408589",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-08-certificado-rdp.png",
       "imagen_local": "error-08-certificado-rdp.png",
-      "slack_file_id": "F0AUPKE77JQ",
-      "intercom_article_id": null
+      "slack_file_id": "F0AUPKE77JQ"
     },
     {
       "numero": 9,
@@ -200,8 +192,7 @@
       "message_ts": "1776877205.002739",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-09-boh-too-many-args.png",
       "imagen_local": "error-09-boh-too-many-args.png",
-      "slack_file_id": "F0AUERW6AFM",
-      "intercom_article_id": null
+      "slack_file_id": "F0AUERW6AFM"
     },
     {
       "numero": 10,
@@ -223,8 +214,7 @@
       "message_ts": "1776878571.461359",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-10-ya-existe-tipo-doc.png",
       "imagen_local": "error-10-ya-existe-tipo-doc.png",
-      "slack_file_id": "F0AV0A78FGR",
-      "intercom_article_id": null
+      "slack_file_id": "F0AV0A78FGR"
     },
     {
       "numero": 11,
@@ -246,8 +236,7 @@
       "message_ts": "1776879748.839389",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-11-excel-no-existe.png",
       "imagen_local": "error-11-excel-no-existe.png",
-      "slack_file_id": "F0AUKFKLSLE",
-      "intercom_article_id": null
+      "slack_file_id": "F0AUKFKLSLE"
     },
     {
       "numero": 12,
@@ -270,8 +259,7 @@
       "message_ts": "1778679225.396419",
       "imagen_github": null,
       "imagen_local": "error-12-otra-sesion-activa.png",
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
       "numero": 13,
@@ -294,55 +282,7 @@
       "message_ts": "1778679242.094449",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-13-sql-no-ejecuta.png",
       "imagen_local": "error-13-sql-no-ejecuta.png",
-      "slack_file_id": "F0B3Y573QBW",
-      "intercom_article_id": null
-    },
-    {
-      "numero": 14,
-      "titulo": "Program Error C0000005 — Crash al importar comprobante",
-      "modulo": "Importación / Comprobantes / Manager ERP",
-      "frecuencia": "Media",
-      "estado": "En análisis",
-      "fecha": "2026-05-19",
-      "sintoma": "Al intentar importar un comprobante en Manager ERP, la aplicación muestra un cuadro 'Program Error' con el código C0000005 y se cierra inesperadamente.",
-      "causa": "El código C0000005 en FoxPro indica acceso inválido a memoria. Causas frecuentes: impresoras redirigidas activas, sesión RDP colgada, archivos temporales dañados o microcortes de red.",
-      "solucion_pasos": [
-        "Cerrar sesión correctamente desde Manager → Archivo → Salir (NO cerrar con la X) y volver a ingresar",
-        "Verificar si hay impresoras redirigidas activas y desactivarlas temporalmente",
-        "Si usa escritorio remoto: cerrar la sesión RDP completamente y reconectar",
-        "Limpiar archivos temporales del sistema (carpeta %TEMP%)",
-        "Volver a intentar la importación del comprobante",
-        "Si el error persiste: contactar a soporte para diagnóstico con conexión remota"
-      ],
-      "fuente": "Slack #customer-service-time — 2026-05-19",
-      "message_ts": "1779739607.040869",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-17-c0000005-importar-comprobante.png",
-      "imagen_local": "error-17-c0000005-importar-comprobante.png",
-      "slack_file_id": "F0B50EF0VRA",
-      "intercom_article_id": null
-    },
-    {
-      "numero": 15,
-      "titulo": "Error al buscar histórico de cuenta — falta índice en base de datos",
-      "modulo": "Consultas / Histórico de cuentas / Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-05-19",
-      "sintoma": "Al realizar una búsqueda de histórico de una cuenta en Manager ERP, aparece un mensaje de error. Ocurre solo en bases de datos en versión Octubre.",
-      "causa": "Falta un índice en la base de datos. La tabla de histórico de cuentas no tiene el índice necesario para ejecutar la búsqueda en esa versión.",
-      "solucion_pasos": [
-        "Identificar que el problema ocurre solo al buscar histórico de cuenta",
-        "Confirmar que la base de datos está en versión Octubre",
-        "Contactar a soporte técnico — requiere ejecutar un script de creación del índice faltante en la BD",
-        "Soporte ejecuta el script de reparación del índice en el servidor",
-        "Volver a intentar la búsqueda de histórico"
-      ],
-      "fuente": "Slack #customer-service-time — 2026-05-19",
-      "message_ts": "1779739622.390329",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-18-historico-cuenta-indice-bd.png",
-      "imagen_local": "error-18-historico-cuenta-indice-bd.png",
-      "slack_file_id": "F0B4V48LQV8",
-      "intercom_article_id": null
+      "slack_file_id": "F0B3Y573QBW"
     },
     {
       "numero": 16,
@@ -364,11 +304,55 @@
       "message_ts": "1779734500.424869",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-file-access-denied-imprimir.png",
       "imagen_local": "error-16-file-access-denied-imprimir.png",
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
       "numero": 17,
+      "titulo": "Program Error C0000005 — Crash al importar comprobante",
+      "modulo": "Importación / Comprobantes / Manager ERP",
+      "frecuencia": "Media",
+      "estado": "En análisis",
+      "fecha": "2026-05-19",
+      "sintoma": "Al intentar importar un comprobante en Manager ERP, la aplicación muestra un cuadro 'Program Error' con el código C0000005 y se cierra inesperadamente.",
+      "causa": "El código C0000005 en FoxPro indica acceso inválido a memoria. Causas frecuentes: impresoras redirigidas activas, sesión RDP colgada, archivos temporales dañados o microcortes de red.",
+      "solucion_pasos": [
+        "Cerrar sesión correctamente desde Manager → Archivo → Salir (NO cerrar con la X) y volver a ingresar",
+        "Verificar si hay impresoras redirigidas activas y desactivarlas temporalmente",
+        "Si usa escritorio remoto: cerrar la sesión RDP completamente y reconectar",
+        "Limpiar archivos temporales del sistema (carpeta %TEMP%)",
+        "Volver a intentar la importación del comprobante",
+        "Si el error persiste: contactar a soporte para diagnóstico con conexión remota"
+      ],
+      "fuente": "Slack #customer-service-time — 2026-05-19",
+      "message_ts": "1779739607.040869",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-17-c0000005-importar-comprobante.png",
+      "imagen_local": "error-17-c0000005-importar-comprobante.png",
+      "slack_file_id": "F0B50EF0VRA"
+    },
+    {
+      "numero": 18,
+      "titulo": "Error al buscar histórico de cuenta — falta índice en base de datos",
+      "modulo": "Consultas / Histórico de cuentas / Manager ERP",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-05-19",
+      "sintoma": "Al realizar una búsqueda de histórico de una cuenta en Manager ERP, aparece un mensaje de error. Ocurre solo en bases de datos en versión Octubre.",
+      "causa": "Falta un índice en la base de datos. La tabla de histórico de cuentas no tiene el índice necesario para ejecutar la búsqueda en esa versión.",
+      "solucion_pasos": [
+        "Identificar que el problema ocurre solo al buscar histórico de cuenta",
+        "Confirmar que la base de datos está en versión Octubre",
+        "Contactar a soporte técnico — requiere ejecutar un script de creación del índice faltante en la BD",
+        "Soporte ejecuta el script de reparación del índice en el servidor",
+        "Volver a intentar la búsqueda de histórico"
+      ],
+      "fuente": "Slack #customer-service-time — 2026-05-19",
+      "message_ts": "1779739622.390329",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-18-historico-cuenta-indice-bd.png",
+      "imagen_local": "error-18-historico-cuenta-indice-bd.png",
+      "slack_file_id": "F0B4V48LQV8"
+    },
+    {
+      "numero": 19,
       "titulo": "Connectivity error: Unable to retrieve specific error information. Driver is probably out of resources",
       "modulo": "Finanzas / Comprobante de Egreso / Manager ERP",
       "frecuencia": "Media",
@@ -388,11 +372,10 @@
       "message_ts": "1779889123.064979",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-connectivity-error-driver-resources.png",
       "imagen_local": "error-19-connectivity-error-driver-resources.png",
-      "slack_file_id": "F0B68T67FDY",
-      "intercom_article_id": null
+      "slack_file_id": "F0B68T67FDY"
     },
     {
-      "numero": 18,
+      "numero": 20,
       "titulo": "Indicadores económicos CMF no se actualizan automáticamente",
       "modulo": "Parámetros / Integración CMF / Manager ERP",
       "frecuencia": "Baja",
@@ -411,11 +394,10 @@
       "message_ts": "1779986577.118689",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 19,
+      "numero": 21,
       "titulo": "550 — Mensaje rechazado: posible spoofing al enviar OC a proveedores",
       "modulo": "Compras / Órdenes de Compra / Envío por correo",
       "frecuencia": "Baja",
@@ -434,11 +416,10 @@
       "message_ts": "1779986555.392629",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
       "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
-      "slack_file_id": "F0B72QWUPS4",
-      "intercom_article_id": null
+      "slack_file_id": "F0B72QWUPS4"
     },
     {
-      "numero": 20,
+      "numero": 22,
       "titulo": "Usuario persiste como \"tomado\" — sesión activa que no se puede liberar desde el cliente",
       "modulo": "Acceso al sistema / Ramaflex / Gestión de sesiones",
       "frecuencia": "Baja",
@@ -457,11 +438,10 @@
       "message_ts": "1780061992.729669",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 21,
+      "numero": 23,
       "titulo": "Property USER_IDX is not found",
       "modulo": "Factura de Venta / Manager ERP (ASP / Ramaflex)",
       "frecuencia": "Baja",
@@ -480,11 +460,10 @@
       "message_ts": "1780319438.846839",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
       "imagen_local": "error-23-property-user-idx-not-found.png",
-      "slack_file_id": "F0B6Y8WUKN1",
-      "intercom_article_id": null
+      "slack_file_id": "F0B6Y8WUKN1"
     },
     {
-      "numero": 22,
+      "numero": 24,
       "titulo": "OLE error code 0x8002000e: Invalid number of parameters",
       "modulo": "Facturación / Boletas al SII / Manager ERP (local)",
       "frecuencia": "Baja",
@@ -504,11 +483,10 @@
       "message_ts": "1780319455.474749",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
       "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
-      "slack_file_id": "F0B7WSR8N56",
-      "intercom_article_id": null
+      "slack_file_id": "F0B7WSR8N56"
     },
     {
-      "numero": 23,
+      "numero": 25,
       "titulo": "Connectivity error — Infracción PRIMARY KEY 'PK_NOTDE_DB' al ingresar Nota de Venta",
       "modulo": "Notas de Venta / Facturación — Manager ERP (SQL Server, instalación local)",
       "frecuencia": "Baja",
@@ -528,11 +506,10 @@
       "message_ts": "1780436553.740639",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-primary-key-notde-db.png",
       "imagen_local": "error-25-primary-key-notde-db.png",
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 24,
+      "numero": 26,
       "titulo": "Error al ejecutar consulta / faltan drivers — Manager instalado sin ejecutar el instalador oficial",
       "modulo": "Acceso al sistema / Manager ERP (instalación local)",
       "frecuencia": "Baja",
@@ -552,11 +529,10 @@
       "message_ts": "1780520805.287289",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
       "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 25,
+      "numero": 27,
       "titulo": "Factura de compra no se puede ingresar — moneda del documento no coincide con moneda de venta del producto",
       "modulo": "Compras / Factura de Compra — Manager ERP",
       "frecuencia": "Baja",
@@ -576,11 +552,10 @@
       "message_ts": "1780578390.075359",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-27-factura-compra-moneda-usd-origen.png",
       "imagen_local": "error-27-factura-compra-moneda-usd-origen.png",
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 26,
+      "numero": 28,
       "titulo": "Error al descargar informe — faltan componentes DLL por instalación incorrecta de Manager",
       "modulo": "Centro de Información / Consultas personalizadas — Manager ERP (instalación local)",
       "frecuencia": "Baja",
@@ -600,11 +575,10 @@
       "message_ts": "1780581018.011439",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-28-descargar-informe-dll-faltante.png",
       "imagen_local": "error-28-descargar-informe-dll-faltante.png",
-      "slack_file_id": "F0B7MTHHVJB",
-      "intercom_article_id": null
+      "slack_file_id": "F0B7MTHHVJB"
     },
     {
-      "numero": 27,
+      "numero": 29,
       "titulo": "Folio pegado en Manager GO — no se puede emitir boleta",
       "modulo": "Manager GO / Emisión de Boletas",
       "frecuencia": "Baja",
@@ -624,11 +598,10 @@
       "message_ts": "1780579590.617969",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-29-manager-go-folio-pegado.png",
       "imagen_local": "error-29-manager-go-folio-pegado.png",
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 28,
+      "numero": 30,
       "titulo": "Ruta de importación FTP no reconocida — unidad Y no visible en Parámetros Internos",
       "modulo": "Importación / Parámetros Internos — Manager ERP",
       "frecuencia": "Media",
@@ -647,11 +620,10 @@
       "message_ts": "1780581007.380049",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 29,
+      "numero": 31,
       "titulo": "Error al guardar documentos / no puede imprimir (intermitente) — caché del navegador",
       "modulo": "Ramaflex / Manager ERP Web — Impresión y guardado de documentos",
       "frecuencia": "Media",
@@ -672,11 +644,10 @@
       "message_ts": "1780600050.232219",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 30,
+      "numero": 32,
       "titulo": "DTE rechazado por SII — documento bloqueado, no puede eliminarse ni modificarse",
       "modulo": "Facturación / DTE — Manager ERP",
       "frecuencia": "Baja",
@@ -696,11 +667,10 @@
       "message_ts": "1780600065.467779",
       "imagen_github": null,
       "imagen_local": null,
-      "slack_file_id": null,
-      "intercom_article_id": null
+      "slack_file_id": null
     },
     {
-      "numero": 31,
+      "numero": 33,
       "titulo": "Connectivity error: HRESULT = 0x80040e19 — no se puede eliminar Factura de Compra vacía",
       "modulo": "Compras / Factura de Compra — Manager ERP (instalación local, SQL Server)",
       "frecuencia": "Baja",
@@ -719,11 +689,10 @@
       "message_ts": "1780956600.131129",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-factura-compra-vacia-hresult-0x80040e19.png",
       "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
-      "slack_file_id": "F0B8H6UQ9PW",
-      "intercom_article_id": null
+      "slack_file_id": "F0B8H6UQ9PW"
     },
     {
-      "numero": 32,
+      "numero": 34,
       "titulo": "Program Error: Field FECHA does not accept null values — Libro de Honorarios / BALFLEX",
       "modulo": "Finanzas / Informes Contables / Libro de Honorarios — Manager ERP (V.MAY 2026, BALFLEX)",
       "frecuencia": "Baja",
@@ -743,11 +712,10 @@
       "message_ts": "1780956615.292379",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null-balflex.png",
       "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
-      "slack_file_id": "F0B8AR14EJZ",
-      "intercom_article_id": null
+      "slack_file_id": "F0B8AR14EJZ"
     },
     {
-      "numero": 33,
+      "numero": 35,
       "titulo": "Error: Fecha invalida en el campo <FchSalida> — GD no se envían (V.ABR 2026 + Facturación.CL)",
       "modulo": "Facturación / Guías de Despacho (DTE Tipo 52) — Manager ERP V.ABR 2026 + Facturador electrónico Facturación.CL (DTEPlanoWS)",
       "frecuencia": "Baja",
@@ -766,340 +734,7 @@
       "message_ts": "1780956632.918089",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
-      "slack_file_id": "F0B84DKP57H",
-      "intercom_article_id": null
-    },
-    {
-      "numero": 34,
-      "titulo": "Columna IVASAF aparece al exportar libro de compras",
-      "modulo": "Libro de Compras — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-06-21",
-      "sintoma": "Al exportar el libro de compras, aparece la columna 'IVASAF' (IVA Activo Fijo) aunque el documento no tiene marcado el check de Activo Fijo en su diseño",
-      "causa": "Bug en versiones anteriores de Manager ERP (Marzo 2026 y anteriores): la columna IVASAF se genera en la exportación de forma incorrecta, independientemente de la configuración del documento",
-      "solucion_pasos": [
-        "Verificar la versión de Manager ERP instalada (debe ser Abril 2026 o posterior)",
-        "Solicitar al equipo de soporte la actualización a la versión más reciente de Manager ERP",
-        "Una vez actualizado, volver a exportar el libro de compras",
-        "Confirmar que la columna IVASAF ya no aparece en documentos sin Activo Fijo"
-      ],
-      "fuente": "Slack #customer-service-time (TS: 1781544353.594189)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-columna-ivasaf-aparece-al-expo.png",
-      "imagen_local": "error-36-columna-ivasaf-aparece-al-expo.png",
-      "slack_file_id": "F0BA9022XU7",
-      "intercom_article_id": "15580769"
-    },
-    {
-      "numero": 35,
-      "titulo": "Clientes duplicados — RUT con espacio registrado como nuevo registro",
-      "modulo": "Módulo Clientes — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-06-24",
-      "sintoma": "El sistema muestra clientes con el mismo RUT pero con NREGUIST (código interno) distintos. Al intentar unificar o fusionar los registros duplicados, el sistema no lo permite directamente.",
-      "causa": "El RUT de uno de los registros fue ingresado con un espacio al final. Manager lo interpreta como un RUT diferente y crea un nuevo registro con un NREGUIST distinto.",
-      "solucion_pasos": [
-        "Ir a Manager → Tablas Generales → Clientes y buscar los registros con el RUT duplicado.",
-        "Verificar cuál de los registros tiene un espacio al final en el campo RUT (el incorrecto).",
-        "Si son pocos registros duplicados: marcar el registro incorrecto (con el espacio en el RUT) como 'Eliminado' directamente en Manager.",
-        "Si hay muchos registros afectados: contactar al equipo de soporte de Manager para solicitar la ejecución de un script de unificación.",
-        "Confirmar que las transacciones históricas queden correctamente asociadas al registro con el RUT válido."
-      ],
-      "fuente": "Slack #customer-service-time (18-19/06/2026) + Intercom #215474761301614",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-clientes-duplicados-rut-con.png",
-      "imagen_local": "error-36-clientes-duplicados-rut-con.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15620987"
-    },
-    {
-      "numero": 36,
-      "titulo": "OC queda pendiente de aprobar aunque el usuario tenga el nivel correcto",
-      "modulo": "Órdenes de Compra — Flujo de Aprobación — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-06-24",
-      "sintoma": "En un flujo de aprobación de tres niveles, al escalar una Orden de Compra hasta el nivel 3 y modificar el nivel de autorización del usuario a dicho nivel, la OC se mantiene como pendiente de aprobar.",
-      "causa": "El campo \"Nivel de Autorización\" propio de la Orden de Compra no fue ajustado a 0; mientras la OC conserve un nivel distinto de 0, el sistema la sigue mostrando como pendiente aunque el usuario ya tenga el nivel de aprobación correcto.",
-      "solucion_pasos": [
-        "Abrir la Orden de Compra que quedó pendiente de aprobar.",
-        "Ubicar el campo \"Nivel de Autorización\" en la parte inferior del documento.",
-        "Cambiar el valor de ese campo a 0.",
-        "Guardar la OC y verificar que quede autorizada."
-      ],
-      "fuente": "Slack #customer-service-time (hilo 2026-06-24)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-oc-pendiente-de-aprobar-pese-a.png",
-      "imagen_local": "error-38-oc-pendiente-de-aprobar-pese-a.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15768720"
-    },
-    {
-      "numero": 37,
-      "titulo": "IDK Invalido al cargar folio electrónico",
-      "modulo": "Facturación Electrónica — Carga de Folios — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-06-25",
-      "sintoma": "Al cargar un folio (CAF) en Manager Time aparece el error \"IDK Invalido\" y el folio no se puede procesar.",
-      "causa": "El archivo cargado no corresponde al XML de folios (CAF) descargado directamente del SII, se están cargando varios tipos de documento a la vez, la Versión Acepta no está configurada en 2.0, o —en escritorio remoto— el archivo no fue subido primero al servidor (Web File) antes de seleccionarlo.",
-      "solucion_pasos": [
-        "Verificar que el archivo sea el XML de folios (CAF) descargado directamente desde el SII.",
-        "Cargar un solo tipo de documento a la vez (por ejemplo, primero facturas y luego boletas).",
-        "Confirmar que la Versión Acepta esté configurada en 2.0.",
-        "Si se trabaja por escritorio remoto, subir primero el XML al servidor (Web File) y luego seleccionarlo desde ahí.",
-        "Reintentar la carga del folio."
-      ],
-      "fuente": "Intercom #215474850223132",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-idk-invalido-al-cargar-folio-e.png",
-      "imagen_local": "error-37-idk-invalido-al-cargar-folio-e.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15805715"
-    },
-    {
-      "numero": 38,
-      "titulo": "Validation failure exception — NC no puede referenciar GD electrónica",
-      "modulo": "Notas de Crédito — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-06-26",
-      "sintoma": "Al intentar enviar una Nota de Crédito (NC), el sistema muestra el error 'Error en envío de documento: Error: Validation failure exception Notas no pueden referenciar guias de despacho electronicas'.",
-      "causa": "La Nota de Crédito tiene referenciada una Guía de Despacho electrónica (tipo 52) en la sección de referencias a otros documentos. El sistema de facturación electrónica no permite que las NC referencien directamente guías de despacho electrónicas.",
-      "solucion_pasos": [
-        "Abrir la Nota de Crédito afectada en modo Modificar.",
-        "En la segunda ventana de referencias ('Referencias a otros documentos'), localizar la referencia a la Guía de Despacho electrónica.",
-        "Eliminar la referencia a la Guía de Despacho de dicha sección.",
-        "Guardar los cambios y reintentar el envío del documento."
-      ],
-      "fuente": "Slack #customer-service-time — hilo de Claudia Lavin Luque, 2026-06-19",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-validation-failure-exception-.png",
-      "imagen_local": "error-36-validation-failure-exception-.png",
-      "slack_file_id": "F0BBSD0BDN1",
-      "intercom_article_id": "15655569"
-    },
-    {
-      "numero": 39,
-      "titulo": "Correos de usuario desaparecen — usuarios marcados como eliminados en BD",
-      "modulo": "Administración de Usuarios — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-01",
-      "sintoma": "El cliente reporta que ya no aparecen todos los correos/usuarios que tenía ingresados anteriormente (por ejemplo, de 16 registrados ahora solo se ven 3).",
-      "causa": "Varios registros de la tabla de usuarios (user_db) quedaron marcados con el campo \"eliminado = 1\", ocultándolos de los listados aunque la información original no se perdió.",
-      "solucion_pasos": [
-        "Ingresar a la base de datos del cliente afectado.",
-        "Identificar los registros de usuarios marcados incorrectamente como eliminados en la tabla user_db.",
-        "Ejecutar un script de actualización para reactivarlos: UPDATE user_db SET eliminado = 0 WHERE eliminado = 1 (ajustando el filtro a los registros correspondientes).",
-        "Validar con el cliente que los correos/usuarios vuelvan a aparecer correctamente en el sistema."
-      ],
-      "fuente": "Slack #customer-service-time / hilo 2026-07-01",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-correos-de-usuario-desaparecen.png",
-      "imagen_local": "error-37-correos-de-usuario-desaparecen.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15805716"
-    },
-    {
-      "numero": 40,
-      "titulo": "Connectivity error: desbordamiento aritmético (tipo int) al emitir Nota de Venta con muchas líneas de detalle",
-      "modulo": "Ventas — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-02",
-      "sintoma": "Al facturar/emitir una Nota de Venta con una gran cantidad de líneas de detalle (ej. 126 ítems), el sistema muestra: \"Connectivity error: [Microsoft][ODBC SQL Server Driver][SQL Server] Error de desbordamiento aritmético para el tipo int, valor = ...\".",
-      "causa": "El documento supera el máximo de detalles/glosas permitidos por el SII para documentos tributarios electrónicos (máximo 20 detalles por Factura), lo que provoca un desbordamiento en el cálculo interno del total al intentar generar el DTE.",
-      "solucion_pasos": [
-        "Verificar la cantidad de líneas de detalle del documento a facturar.",
-        "Si el documento supera los 20 detalles permitidos por el SII, dividirlo en varias Facturas.",
-        "Reintentar la emisión/facturación con los documentos ya divididos."
-      ],
-      "fuente": "Slack #customer-service-time (02-07-2026)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-connectivity-error-desbordami.png",
-      "imagen_local": "error-37-connectivity-error-desbordami.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15860971"
-    },
-    {
-      "numero": 41,
-      "titulo": "Error en carga masiva de NV — forma de pago Cuenta Corriente no registrada",
-      "modulo": "Ventas — Importación / Carga Masiva",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-03",
-      "sintoma": "Al realizar una carga masiva de Notas de Venta desde Excel, el importador arroja un error de validación en la columna de forma de pago y no permite completar la importación.",
-      "causa": "El método de pago \"Cuenta Corriente\" indicado en el archivo Excel no está registrado/activo como forma de pago válida en el ERP, por lo que el importador no puede validar la columna 26 (Forma de Pago) del archivo.",
-      "solucion_pasos": [
-        "Ir a Ventas → Tablas → Formas de Pago.",
-        "Crear o activar la forma de pago \"Cuenta Corriente\" (método de pago especial).",
-        "En el archivo Excel de importación, ingresar en la columna 26 el código de la forma de pago ya creada en el ERP.",
-        "Volver a ejecutar la carga masiva de Notas de Venta."
-      ],
-      "fuente": "caso Intercom #215474918954799 (Genera S.A., 2026-07-01, respuesta Fin AI — Marcus)",
-      "imagen_local": "error-37-error-en-carga-masiva-de-nv-form.png",
-      "slack_file_id": null,
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-error-en-carga-masiva-de-nv-form.png",
-      "intercom_article_id": "15820466"
-    },
-    {
-      "numero": 42,
-      "titulo": "Error al emitir Boleta de Venta — \"No es posible generar XML\" por falta de código Medio de Pago",
-      "modulo": "Ventas — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-07-06",
-      "sintoma": "Al emitir una Boleta de Venta específica (con una forma de pago puntual, ej. Tarjeta de Crédito), el sistema muestra: \"No es posible generar XML debido a falta de información. Favor ingresar código 'Medio de Pago Boletas' en: Menú de Ventas -> Tablas, Formas de Pago de Ventas.\" El error ocurre solo con ese documento/forma de pago, no con otros.",
-      "causa": "La Forma de Pago utilizada en la boleta no tiene configurado el código de 'Medio de Pago Boletas' que exige el SII para poder generar el XML del DTE.",
-      "solucion_pasos": [
-        "Ir a Menú de Ventas -> Tablas -> Formas de Pago de Ventas.",
-        "Ubicar la forma de pago usada en el documento con error (ej. Tarjeta de Crédito).",
-        "Ingresar el código de 'Medio de Pago Boletas' correspondiente según el SII.",
-        "Guardar los cambios y volver a generar/emitir la boleta."
-      ],
-      "fuente": "Slack #customer-service-time (06-07-2026)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-al-emitir-boleta-de-vent.png",
-      "imagen_local": "error-36-error-al-emitir-boleta-de-vent.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15860970"
-    },
-    {
-      "numero": 43,
-      "titulo": "PDF de documento de venta se genera en blanco en TS Plus — licencia de Adobe no aceptada",
-      "modulo": "TS Plus / Impresión — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-06",
-      "sintoma": "Tras una actualización del sistema, al generar guías, facturas o notas de crédito en TS Plus el PDF se genera en blanco, y aparece una pantalla de inicio de sesión inesperada.",
-      "causa": "En cada inicio de sesión de TS Plus queda pendiente aceptar el contrato/licencia de Adobe; si no se acepta, el sistema no completa la generación del PDF.",
-      "solucion_pasos": [
-        "Al iniciar sesión en TS Plus, aceptar el diálogo de contrato de licencia de Adobe cuando aparezca.",
-        "Reintentar la generación/impresión del documento."
-      ],
-      "fuente": "Intercom #215474981252689",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-pdf-de-documento-de-venta-se-g.png",
-      "imagen_local": "error-37-pdf-de-documento-de-venta-se-g.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15880963"
-    },
-    {
-      "numero": 44,
-      "titulo": "Boleta de Venta (BOV) bloqueada por integración Manager GO — no se libera",
-      "modulo": "Manager GO / Facturación",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-07",
-      "sintoma": "Una Boleta de Venta (BOV) generada a través de Manager GO queda bloqueada/tomada y no se puede liberar ni reutilizar el folio desde el cliente.",
-      "causa": "El documento queda marcado internamente como perteneciente a Manager GO (campo DOCU_GO=1 en la tabla DOCU_DB_AUX) y esa marca no se libera automáticamente, impidiendo operar sobre el documento.",
-      "solucion_pasos": [
-        "Identificar el número de documento (NUMREGDOCU) de la BOV afectada",
-        "Ejecutar en la base de datos: UPDATE DOCU_DB_AUX SET DOCU_GO=0 WHERE NUMREGDOCU=<numero>",
-        "Verificar que el documento quede liberado y el cliente pueda operar con normalidad"
-      ],
-      "fuente": "Slack #customer-service-time (hilo 2026-07-07)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-39-boleta-de-venta-(bov)-bloquead.png",
-      "imagen_local": "error-39-boleta-de-venta-(bov)-bloquead.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15871388"
-    },
-    {
-      "numero": 45,
-      "titulo": "Error \"No se puede eliminar este registro\" al modificar una cuenta contable imputable",
-      "modulo": "Contabilidad / Plan de Cuentas Contables",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-07",
-      "sintoma": "Al intentar quitar el check de 'Imputable' en una cuenta del Plan de Cuentas Contables, el sistema muestra: 'No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él.' y no permite guardar el cambio.",
-      "causa": "La cuenta tiene cuentas hijas o contenedoras asociadas en el Plan de Cuentas (nivel jerárquico), por lo que el sistema bloquea la modificación de su condición de imputable mientras mantenga esa estructura.",
-      "solucion_pasos": [
-        "Revisar el nivel jerárquico de la cuenta en el Plan de Cuentas Contables",
-        "Dejar la cuenta en nivel 0 o 1 (nivel superior) en lugar de un nivel inferior con cuentas asociadas",
-        "Guardar nuevamente el cambio de Imputable"
-      ],
-      "fuente": "Slack #customer-service-time (hilo 2026-07-07)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-40-error-'no-se-puede-eliminar-es.png",
-      "imagen_local": "error-40-error-'no-se-puede-eliminar-es.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15871389"
-    },
-    {
-      "numero": 46,
-      "titulo": "DTE rechazado por SII — campo \"Tipo Venta\" con valor 0 en Factura de Exportación (FEXP)",
-      "modulo": "Facturación de Exportación — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-07-07",
-      "sintoma": "Al emitir una Factura de Venta Exportación (FEXP), el DTE es rechazado por el SII y el documento no se puede timbrar ni enviar.",
-      "causa": "El campo \"Tipo Venta\" (modalidad de venta), ubicado en la parte inferior izquierda del documento, queda con valor 0, lo cual el SII rechaza como valor inválido en el XML del documento.",
-      "solucion_pasos": [
-        "Ir al documento FEXP y revisar el campo \"Tipo Venta\" / \"Modalidad de Venta\" (parte inferior izquierda del formulario).",
-        "Verificar que tenga seleccionada una opción válida — no debe quedar en 0.",
-        "Si no aplica ningún tipo de venta, dejar el campo vacío en lugar de seleccionar 0.",
-        "Guardar el documento y reintentar el envío/timbraje ante el SII."
-      ],
-      "fuente": "Slack #customer-service-time / Intercom #215474996375340",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-dte-rechazado-por-sii-—-campo-.png",
-      "imagen_local": "error-36-dte-rechazado-por-sii-—-campo-.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15880964"
-    },
-    {
-      "numero": 47,
-      "titulo": "\"No se puede eliminar este registro. Tiene cuentas contenedoras asociadas\" al desmarcar Imputable",
-      "modulo": "Contabilidad — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-07",
-      "sintoma": "Al quitar el check \"Imputable\" de una cuenta del Plan de Cuentas Contables y guardar, aparece el mensaje \"No se puede eliminar este registro. Tiene cuentas contenedoras asociadas que descienden de él\", impidiendo guardar el cambio.",
-      "causa": "La validación de guardado del atributo Imputable dispara la misma regla usada para eliminar cuentas contenedoras (cuentas con hijos en la jerarquía del plan), bloqueando el cambio desde la interfaz.",
-      "solucion_pasos": [
-        "Intentar bajar la cuenta a nivel 0 o 1 en la jerarquía y reintentar guardar (workaround parcial).",
-        "Si persiste el bloqueo, ejecutar en base de datos: UPDATE PLAN_DB SET IMPUTABLE=0 WHERE CODIGO=<código de la cuenta>.",
-        "Verificar en el Plan de Cuentas que la cuenta ya no figura como imputable."
-      ],
-      "fuente": "Slack #customer-service-time",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-no-se-puede-eliminar-este-reg.png",
-      "imagen_local": "error-37-no-se-puede-eliminar-este-reg.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15887720"
-    },
-    {
-      "numero": 48,
-      "titulo": "XML no se transmite al SII y documento queda bloqueado para edición/reenvío",
-      "modulo": "Facturación Electrónica — Manager ERP",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-07-09",
-      "sintoma": "Una factura de venta (FAV) no transmite el XML al SII y el sistema no permite reenviarla ni eliminarla para corregirla; queda bloqueada como si ya hubiese sido enviada e impresa.",
-      "causa": "El registro del documento en la tabla docu_db mantiene los flags e_enviado=1 e impresa=1 aunque el envío al SII nunca se completó, lo que bloquea la edición/reenvío desde la interfaz de Manager.",
-      "solucion_pasos": [
-        "Confirmar el número de registro (numreg) del documento afectado.",
-        "Ejecutar en base de datos: UPDATE docu_db SET e_enviado=0, impresa=0 WHERE numreg='<numreg>'.",
-        "Verificar que el documento quedó editable en Manager.",
-        "Corregir/reenviar o eliminar y reemitir el documento según corresponda."
-      ],
-      "fuente": "Intercom #215475020948512",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-xml-no-se-transmite-al-sii-y-d.png",
-      "imagen_local": "error-36-xml-no-se-transmite-al-sii-y-d.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15934732"
-    },
-    {
-      "numero": 49,
-      "titulo": "Comprobante de Apertura genera solo una línea sin datos (Resultado Acumulado)",
-      "modulo": "Contabilidad — Manager ERP",
-      "frecuencia": "Baja",
-      "estado": "Resuelto",
-      "fecha": "2026-07-13",
-      "sintoma": "Al generar el Comprobante de Apertura del nuevo ejercicio, el sistema solo registra una línea (cuenta Resultado Acumulado) sin montos, ignorando el resto de las cuentas, pese a que el Balance Tributario del ejercicio anterior tiene todos los saldos.",
-      "causa": "El plan de cuentas no está correctamente clasificado en su jerarquía, lo que impide que el proceso de apertura arrastre los saldos de todas las cuentas del ejercicio anterior.",
-      "solucion_pasos": [
-        "Revisar el plan de cuentas del ejercicio para detectar cuentas mal clasificadas jerárquicamente.",
-        "Ejecutar el proceso de \"Clasificación Jerárquica\" del plan de cuentas.",
-        "Ejecutar un recálculo de saldos.",
-        "Regenerar el Comprobante de Apertura y validar que ahora incluya todas las cuentas con montos."
-      ],
-      "fuente": "Slack #customer-service-time",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-comprobante-de-apertura-genera.png",
-      "imagen_local": "error-38-comprobante-de-apertura-genera.png",
-      "slack_file_id": null,
-      "intercom_article_id": "15934733"
+      "slack_file_id": "F0B84DKP57H"
     }
   ]
 }
