@@ -1149,6 +1149,30 @@
       "slack_file_id": null,
       "intercom_article_id": "15934733",
       "stable_key": "intercom-15934733"
+    },
+    {
+      "numero": 50,
+      "titulo": "Guías de Despacho rechazadas por Artikos — esquema SII de transporte/destino no soportado",
+      "modulo": "Facturación Electrónica / Guías de Despacho (DTE Tipo 52) — Integración con facturador Artikos",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-07-15",
+      "sintoma": "Al enviar Guías de Despacho (GDV) hacia el facturador electrónico Artikos, el documento es rechazado con error 1032 (esquema XML inválido), señalando campos de transporte y destino faltantes (RUTTrans, Chofer, DirDest, ComunaDest, CiudadDest). Al completar esos campos y reenviar, Artikos vuelve a rechazar el documento, esta vez indicando que esos mismos campos no debiesen ir.",
+      "causa": "Manager ERP actualizó la generación del XML de Guías de Despacho para cumplir con la nueva exigencia del SII (vigente desde mayo 2026, con plazo de adecuación hasta noviembre 2026) que agrega campos obligatorios de transporte y destino. El facturador electrónico Artikos, usado por este cliente, aún no había implementado soporte para el nuevo esquema, por lo que rechaza los documentos que incluyen esos campos nuevos.",
+      "solucion_pasos": [
+        "Confirmar que el rechazo corresponde al código 1032 y que el XML generado por Manager cumple con la nueva normativa SII de Guías de Despacho (mayo 2026, plazo de adecuación hasta noviembre 2026).",
+        "Solicitar a soporte que libere los documentos bloqueados por el rechazo (Autorizaciones → Ventas → Guía de Despacho → marcar autorización de modificar → Aceptar), o pedirlo directamente por chat si el cliente no tiene acceso a Ramaflex.",
+        "Confirmar con Artikos si ya soportan el nuevo esquema SII; si aún no, esa es la causa real del rechazo (no es un bug de Manager).",
+        "Como contingencia mientras Artikos actualiza su integración, solicitar a soporte Manager agendar la baja temporal de versión del cliente a una versión anterior sin los campos nuevos (ej. Febrero 2026) para permitir el envío de guías sin rechazo.",
+        "Reenviar las guías liberadas y confirmar en Artikos que fueron aceptadas por el SII.",
+        "Hacer seguimiento con Artikos sobre su cronograma de actualización para restaurar la versión estándar de Manager cuando corresponda."
+      ],
+      "fuente": "Intercom #215475098343649",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-50-guías-de-despacho-rechazadas-p.png",
+      "imagen_local": "error-50-guías-de-despacho-rechazadas-p.png",
+      "slack_file_id": null,
+      "intercom_article_id": "16041097",
+      "stable_key": "intercom-16041097"
     }
   ]
 }
