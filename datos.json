@@ -785,8 +785,8 @@
         "Confirmar que la columna IVASAF ya no aparece en documentos sin Activo Fijo"
       ],
       "fuente": "Slack #customer-service-time (TS: 1781544353.594189)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-columna-ivasaf-aparece-al-expo.png",
-      "imagen_local": "error-36-columna-ivasaf-aparece-al-expo.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": "F0BA9022XU7",
       "intercom_article_id": "15580769",
       "stable_key": "intercom-15580769"
@@ -853,8 +853,8 @@
         "Reintentar la carga del folio."
       ],
       "fuente": "Intercom #215474850223132",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-idk-invalido-al-cargar-folio-e.png",
-      "imagen_local": "error-37-idk-invalido-al-cargar-folio-e.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15805715",
       "stable_key": "intercom-15805715"
@@ -875,8 +875,8 @@
         "Guardar los cambios y reintentar el envío del documento."
       ],
       "fuente": "Slack #customer-service-time — hilo de Claudia Lavin Luque, 2026-06-19",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-validation-failure-exception-.png",
-      "imagen_local": "error-36-validation-failure-exception-.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": "F0BBSD0BDN1",
       "intercom_article_id": "15655569",
       "stable_key": "intercom-15655569"
@@ -940,9 +940,9 @@
         "Volver a ejecutar la carga masiva de Notas de Venta."
       ],
       "fuente": "caso Intercom #215474918954799 (Genera S.A., 2026-07-01, respuesta Fin AI — Marcus)",
-      "imagen_local": "error-37-error-en-carga-masiva-de-nv-form.png",
+      "imagen_local": null,
       "slack_file_id": null,
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-error-en-carga-masiva-de-nv-form.png",
+      "imagen_github": null,
       "intercom_article_id": "15820466",
       "stable_key": "intercom-15820466"
     },
@@ -962,8 +962,8 @@
         "Guardar los cambios y volver a generar/emitir la boleta."
       ],
       "fuente": "Slack #customer-service-time (06-07-2026)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-error-al-emitir-boleta-de-vent.png",
-      "imagen_local": "error-36-error-al-emitir-boleta-de-vent.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15860970",
       "stable_key": "intercom-15860970"
@@ -982,8 +982,8 @@
         "Reintentar la generación/impresión del documento."
       ],
       "fuente": "Intercom #215474981252689",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-pdf-de-documento-de-venta-se-g.png",
-      "imagen_local": "error-37-pdf-de-documento-de-venta-se-g.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15880963",
       "stable_key": "intercom-15880963"
@@ -1003,8 +1003,8 @@
         "Verificar que el documento quede liberado y el cliente pueda operar con normalidad"
       ],
       "fuente": "Slack #customer-service-time (hilo 2026-07-07)",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-39-boleta-de-venta-(bov)-bloquead.png",
-      "imagen_local": "error-39-boleta-de-venta-(bov)-bloquead.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15871388",
       "stable_key": "intercom-15871388"
@@ -1046,8 +1046,8 @@
         "Guardar el documento y reintentar el envío/timbraje ante el SII."
       ],
       "fuente": "Slack #customer-service-time / Intercom #215474996375340",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-dte-rechazado-por-sii-—-campo-.png",
-      "imagen_local": "error-36-dte-rechazado-por-sii-—-campo-.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15880964",
       "stable_key": "intercom-15880964"
@@ -1067,8 +1067,8 @@
         "Verificar en el Plan de Cuentas que la cuenta ya no figura como imputable."
       ],
       "fuente": "Slack #customer-service-time",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-no-se-puede-eliminar-este-reg.png",
-      "imagen_local": "error-37-no-se-puede-eliminar-este-reg.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15887720",
       "stable_key": "intercom-15887720"
@@ -1089,8 +1089,8 @@
         "Corregir/reenviar o eliminar y reemitir el documento según corresponda."
       ],
       "fuente": "Intercom #215475020948512",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-xml-no-se-transmite-al-sii-y-d.png",
-      "imagen_local": "error-36-xml-no-se-transmite-al-sii-y-d.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "15934732",
       "stable_key": "intercom-15934732"
@@ -1135,8 +1135,8 @@
         "Hacer seguimiento con Artikos sobre su cronograma de actualización para restaurar la versión estándar de Manager cuando corresponda."
       ],
       "fuente": "Intercom #215475098343649",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-50-guías-de-despacho-rechazadas-p.png",
-      "imagen_local": "error-50-guías-de-despacho-rechazadas-p.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "intercom_article_id": "16041097",
       "stable_key": "intercom-16041097"
