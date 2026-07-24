@@ -1015,8 +1015,8 @@
         "Reintentar la generación/impresión del documento."
       ],
       "fuente": "Intercom #215474981252689",
-      "imagen_github": null,
-      "imagen_local": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-43-pdf-venta-blanco-ts-plus-adobe.png",
+      "imagen_local": "error-43-pdf-venta-blanco-ts-plus-adobe.png",
       "slack_file_id": null,
       "intercom_article_id": "15880963",
       "stable_key": "intercom-15880963"
