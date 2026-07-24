@@ -533,8 +533,7 @@
         "No forzar el cierre de Manager — cerrar siempre desde Archivo → Salir (nunca con la X)",
         "Verificar que no haya múltiples usuarios o procesos accediendo simultáneamente a la misma Nota de Venta",
         "Reiniciar Manager correctamente y reintentar",
-        "Si persiste: este error requiere revisar y corregir en SQL Server el correlativo desincronizado de la tabla NOTDE_DB (acción de base de datos, no ejecutable desde la interfaz de Manager) — registrar versión V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales",
-        "Confirmar si hay algún WS o proceso automático generando registros en NOTDE_DB"
+        "PENDIENTE DE INVESTIGAR: si persiste, requeriría revisar y corregir en SQL Server el correlativo desincronizado de la tabla NOTDE_DB, pero no hay un script confirmado ni una via de escalamiento verificada — solo la hipotesis de causa. No publicado en el articulo de Intercom porque no es una solucion real. Registrar version V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales, para dar seguimiento si vuelve a ocurrir."
       ],
       "fuente": "Slack #customer-service-time — 2026-06-02",
       "message_ts": "1780436553.740639",
@@ -718,15 +717,14 @@
       "titulo": "Connectivity error: HRESULT = 0x80040e19 — no se puede eliminar Factura de Compra vacía",
       "modulo": "Compras / Factura de Compra — Manager ERP (instalación local, SQL Server)",
       "frecuencia": "Baja",
-      "estado": "Resuelto (requiere soporte)",
+      "estado": "En análisis",
       "fecha": "2026-06-08",
       "sintoma": "Al intentar eliminar una Factura de Compra en Manager Time ERP (V.ABR 2026, SP00/0430), aparece: 'Connectivity error: [Microsoft][ODBC SQL Server Driver][SQL Server]Error del procesador de consultas interno: el procesador de consultas detectó un error inesperado durante la ejecución (HRESULT = 0x80040e19).' La Factura de Compra tiene encabezado pero sin líneas de detalle.",
       "causa": "La FC existe en la tabla de encabezados de la base de datos pero no tiene líneas de detalle asociadas (registro huérfano). Al intentar eliminarla, SQL Server no puede completar la operación porque el motor de consultas encuentra una inconsistencia de integridad.",
       "solucion_pasos": [
         "Confirmar que el documento no tiene pagos ni documentos asociados",
         "El usuario no puede eliminar el registro directamente desde la interfaz de Manager",
-        "Este error requiere acceso a la base de datos: eliminar el registro huérfano (encabezado sin líneas de detalle) directamente en SQL Server — registrar empresa, número de FC, correlativo y versión de Manager para el seguimiento",
-        "Verificar que la eliminación fue exitosa buscando el documento en Manager"
+        "PENDIENTE DE INVESTIGAR: el registro huerfano (encabezado de FC sin lineas de detalle) requeriria eliminarse directamente en SQL Server, pero no hay un script confirmado ni una via de escalamiento verificada. No publicado en el articulo de Intercom porque no es una solucion real. Registrar numero de FC, correlativo y version de Manager para dar seguimiento si vuelve a ocurrir."
       ],
       "fuente": "Intercom #215474577523856 — 2026-06-04",
       "message_ts": "1780956600.131129",
@@ -748,8 +746,7 @@
       "solucion_pasos": [
         "Ir a Manager → Parámetros → Período habilitado de ingreso de datos",
         "Confirmar que las fechas del período incluyen el rango que se intenta generar (ej: 01/05/2026 a 31/05/2026)",
-        "Si el período está correcto y el error persiste: este error requiere revisar en la base de datos los registros de honorarios con campo FECHA nulo y corregirlos (asignar fecha válida o eliminar el registro inválido) — acción de backend, registrar versión V.MAY 2026 BALFLEX y el error exacto para el seguimiento",
-        "Reintentar generar el Libro de Honorarios tras la corrección"
+        "PENDIENTE DE INVESTIGAR: si el periodo esta correcto y el error persiste, requeriria revisar en la base de datos los registros de honorarios con campo FECHA nulo, pero no hay un script confirmado ni una via de escalamiento verificada. No publicado en el articulo de Intercom porque no es una solucion real. Registrar version V.MAY 2026 BALFLEX y el error exacto para dar seguimiento si vuelve a ocurrir."
       ],
       "fuente": "Intercom #215474580363208 / Slack #customer-service-time — 2026-06-04",
       "message_ts": "1780956615.292379",
