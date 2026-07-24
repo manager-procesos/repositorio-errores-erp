@@ -785,8 +785,8 @@
         "Confirmar que la columna IVASAF ya no aparece en documentos sin Activo Fijo"
       ],
       "fuente": "Slack #customer-service-time (TS: 1781544353.594189)",
-      "imagen_github": null,
-      "imagen_local": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-columna-ivasaf-aparece-al-exportar.png",
+      "imagen_local": "error-34-columna-ivasaf-aparece-al-exportar.png",
       "slack_file_id": "F0BA9022XU7",
       "intercom_article_id": "15580769",
       "stable_key": "intercom-15580769"
@@ -875,8 +875,8 @@
         "Guardar los cambios y reintentar el envío del documento."
       ],
       "fuente": "Slack #customer-service-time — hilo de Claudia Lavin Luque, 2026-06-19",
-      "imagen_github": null,
-      "imagen_local": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-validation-failure-nc-referencia-gd.png",
+      "imagen_local": "error-38-validation-failure-nc-referencia-gd.png",
       "slack_file_id": "F0BBSD0BDN1",
       "intercom_article_id": "15655569",
       "stable_key": "intercom-15655569"
@@ -1046,8 +1046,8 @@
         "Guardar el documento y reintentar el envío/timbraje ante el SII."
       ],
       "fuente": "Slack #customer-service-time / Intercom #215474996375340",
-      "imagen_github": null,
-      "imagen_local": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-46-dte-rechazado-tipo-venta-cero.png",
+      "imagen_local": "error-46-dte-rechazado-tipo-venta-cero.png",
       "slack_file_id": null,
       "intercom_article_id": "15880964",
       "stable_key": "intercom-15880964"
@@ -1067,8 +1067,8 @@
         "Verificar en el Plan de Cuentas que la cuenta ya no figura como imputable."
       ],
       "fuente": "Slack #customer-service-time",
-      "imagen_github": null,
-      "imagen_local": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-47-no-se-puede-eliminar-imputable.png",
+      "imagen_local": "error-47-no-se-puede-eliminar-imputable.png",
       "slack_file_id": null,
       "intercom_article_id": "15887720",
       "stable_key": "intercom-15887720"
