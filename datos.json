@@ -853,8 +853,8 @@
         "Reintentar la carga del folio."
       ],
       "fuente": "Intercom #215474850223132",
-      "imagen_github": null,
-      "imagen_local": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-37-idk-invalido-al-cargar-folio-caf.png",
+      "imagen_local": "error-37-idk-invalido-al-cargar-folio-caf.png",
       "slack_file_id": null,
       "intercom_article_id": "15805715",
       "stable_key": "intercom-15805715"
