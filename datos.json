@@ -940,9 +940,9 @@
         "Volver a ejecutar la carga masiva de Notas de Venta."
       ],
       "fuente": "Intercom #215474918954799 — 2026-07-01",
-      "imagen_local": null,
+      "imagen_local": "error-41-carga-masiva-nv-cuenta-corriente.png",
       "slack_file_id": null,
-      "imagen_github": null,
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-41-carga-masiva-nv-cuenta-corriente.png",
       "intercom_article_id": "15820466",
       "stable_key": "intercom-15820466"
     },
