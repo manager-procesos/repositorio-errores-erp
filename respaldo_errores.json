@@ -486,7 +486,7 @@
         "Confirmar si el PDF del documento se generó y si el DTE aparece en el SII — si es así, el documento ya fue procesado correctamente a pesar del cuadro de error.",
         "Indicar al usuario que presione 'Ignore' en el cuadro de error para seguir operando con normalidad; el error es una advertencia de interfaz, no bloquea la emisión.",
         "Pedir al usuario que cierre sesión desde Manager → Archivo → Salir (NO con la X de la ventana) y vuelva a ingresar. Esto resuelve el error en la mayoría de los casos reportados.",
-        "Si el error persiste en TODOS los documentos de ese usuario después de reingresar: escalar a Desarrollo/DBA con el ambiente (ASP/Ramaflex) y el mensaje exacto 'Property USER_IDX is not found', para que revisen la inicialización de esa propiedad en la configuración del usuario en base de datos."
+        "Si el error persiste en TODOS los documentos de ese usuario después de reingresar: esto indica que la propiedad USER_IDX no quedó inicializada correctamente en la configuración de ese usuario en la base de datos — es una acción de backend, no resoluble desde la interfaz de Manager. Registrar el ambiente (ASP/Ramaflex) y el mensaje exacto 'Property USER_IDX is not found' para el seguimiento."
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29",
       "message_ts": "1780319438.846839",
