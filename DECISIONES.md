@@ -4,7 +4,7 @@ Este documento es la **fuente única de verdad** de todas las decisiones y regla
 
 **Regla para cualquier sesión de Claude/Cowork que trabaje en este proyecto: lee este archivo primero. Si algo aquí contradice lo que crees recordar de un chat, este archivo tiene prioridad — está confirmado con evidencia, no con memoria.**
 
-Última actualización: 23/07/2026.
+Última actualización: 24/07/2026.
 
 ---
 
@@ -56,3 +56,10 @@ Este documento es la **fuente única de verdad** de todas las decisiones y regla
 - **"Subida de articulos a Intercom"** (30/06/2026): origen de la regla de imágenes y de "published sin colección".
 - **"Repo errores Erp Consolidado Intercom Articulos"** (15/07/2026): corrigió la regla de imágenes en la tarea real, reactivó `auditoria-pipeline-errores-erp`.
 - **Este chat** (23/07/2026): auto-reparación en vivo, creación de `auto-repair-datos-json`, intento de GitHub Action (bloqueado por scope), confirmación de la limitación de imágenes de Intercom, creación de este documento.
+
+## 9. Reglas de contenido — reconfirmadas el 24/07/2026 (se habían perdido, no volver a perderlas)
+
+- **Campo `fuente`: nunca nombrar personas.** Ni agentes de soporte (Claudia, Osvaldo, Isabel, Sylvia, Camila, etc.), ni operadoras de Intercom, ni nombres de cliente/empresa. El campo `fuente` solo debe contener: sistema (Slack/Intercom), canal, fecha, y número de caso/ticket si existe. Ejemplo correcto: `"Slack #customer-service-time — 2026-06-03"`. Ejemplo incorrecto: `"Slack #customer-service-time — 2026-06-03 (reporte de Claudia Lavín, cliente Llantas del Pacífico)"`.
+- **`solucion_pasos` no puede ser "mandar a soporte".** El público de este repositorio ES soporte (alimenta a Fin AI para el equipo de soporte). Un paso como "contactar a soporte" sin más detalle es inútil y circular para quien lo lee. Cada ficha debe describir la acción técnica real (qué revisar, qué configurar, qué script ejecutar) o, si la ejecuta un rol específico (Plataforma, DBA, PSI/desarrollo), decirlo así en vez de "soporte" genérico.
+- **Imágenes: la regla de la sección 1 aplica siempre, sin excepción, incluso a imágenes ya subidas hace tiempo.** No solo a las nuevas. Se han encontrado repetidamente violaciones en imágenes antiguas (nombres de personas en conversaciones de Intercom, nombres de cliente/empresa en títulos de ventana, RUTs visibles, notas físicas fotografiadas con datos de terceros). Cualquier sesión que trabaje en este repo debe re-auditar visualmente las imágenes existentes cuando haga cambios cerca, no asumir que ya están bien porque se subieron en el pasado.
+- **Riesgo estructural identificado el 24/07/2026**: el proceso externo `subir-imagenes-erp` (sección 5) re-sube archivos de imagen con el mismo nombre de archivo días después, sobrescribiendo cualquier redacción manual hecha sobre esa imagen. Esto fue la causa más probable de que redacciones ya confirmadas por Olga (nombres, RUTs, nombres de ambiente) reaparecieran sin tapar. **Mientras no se resuelva de raíz** (idealmente Olga desactiva o ajusta ese proceso externo para que no reescriba imágenes que este pipeline ya corrigió), cualquier sesión que redacte una imagen debe asumir que puede ser sobrescrita y, si Olga reporta que una imagen "ya corregida" volvió a mostrar datos sin tapar, la primera hipótesis a revisar es este proceso externo, no un error de la sesión actual.

@@ -302,7 +302,7 @@
         "Esperar que el servicio inicie completamente",
         "Volver a intentar acceder a Manager ERP desde los equipos clientes"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-05 (cliente ARIDOS CAMARENA)",
+      "fuente": "Slack #customer-service-time — 2026-05-05",
       "message_ts": "1778679242.094449",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-13-sql-no-ejecuta.png",
       "imagen_local": "error-13-sql-no-ejecuta.png",
@@ -375,7 +375,7 @@
         "Cerrar sesión correctamente desde Manager → Archivo → Salir y volver a ingresar",
         "Si el error es recurrente: contactar a soporte para revisar la configuración de la carpeta compartida"
       ],
-      "fuente": "Intercom #215474350431361 — cliente Insytec, 2026-05-18",
+      "fuente": "Intercom #215474350431361 — 2026-05-18",
       "message_ts": "1779734500.424869",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-16-file-access-denied-imprimir.png",
       "imagen_local": "error-16-file-access-denied-imprimir.png",
@@ -400,7 +400,7 @@
         "Si sigue ocurriendo: verificar que no haya otras sesiones de Manager abiertas en el mismo equipo o servidor",
         "Si es recurrente tras actualizar a ABR 2026: contactar a soporte para revisión de configuración de conexiones"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-26 (reporte de Sylvia Fernandez)",
+      "fuente": "Slack #customer-service-time — 2026-05-26",
       "message_ts": "1779889123.064979",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-connectivity-error-driver-resources.png",
       "imagen_local": "error-19-connectivity-error-driver-resources.png",
@@ -472,7 +472,7 @@
         "Indicar a soporte: nombre del usuario (formato empresa.usuarioXX) y nombre de la empresa",
         "Una vez que soporte confirme que la sesión fue liberada, reingresar con las credenciales normales"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-27 (reporte de Camila León)",
+      "fuente": "Slack #customer-service-time — 2026-05-27",
       "message_ts": "1780061992.729669",
       "imagen_github": null,
       "imagen_local": null,
@@ -496,7 +496,7 @@
         "Si el error persiste en todos los documentos: contactar a soporte indicando el ambiente (ASP) y que el error es 'Property USER_IDX is not found'",
         "Soporte revisará la configuración del usuario en la base de datos"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Camila León, cliente Comercial Las Americas)",
+      "fuente": "Slack #customer-service-time — 2026-05-29",
       "message_ts": "1780319438.846839",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
       "imagen_local": "error-23-property-user-idx-not-found.png",
@@ -521,10 +521,10 @@
         "Soporte determinará si corresponde instalar un Service Pack o actualizar los componentes OLE",
         "Como workaround temporal: exportar la boleta desde Manager y enviarla manualmente al SII"
       ],
-      "fuente": "Slack #customer-service-time — 2026-05-29 (reporte de Sylvia Fernandez, cliente bezma)",
+      "fuente": "Slack #customer-service-time — 2026-05-29",
       "message_ts": "1780319455.474749",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-24-ole-error-0x8002000e-boleta-sii.png",
-      "imagen_local": "error-24-ole-error-0x8002000e-boleta-sii.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": "F0B7WSR8N56",
       "intercom_article_id": null,
       "stable_key": "slack-F0B7WSR8N56"
@@ -546,7 +546,7 @@
         "Soporte deberá revisar el correlativo de la tabla NOTDE_DB y corregir el valor desincronizado en SQL Server",
         "Confirmar si hay algún WS o proceso automático generando registros en NOTDE_DB"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-02 (reporte de Claudia Lavín, cliente Llantas del Pacífico)",
+      "fuente": "Slack #customer-service-time — 2026-06-02",
       "message_ts": "1780436553.740639",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-25-primary-key-notde-db.png",
       "imagen_local": "error-25-primary-key-notde-db.png",
@@ -571,7 +571,7 @@
         "Volver a ingresar a Manager con las credenciales habituales",
         "Si el error persiste: contactar a soporte para diagnóstico remoto"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-03 (caso reportado por Claudia Lavín, diagnóstico de Osvaldo Anabalón y Oscar Olivares)",
+      "fuente": "Slack #customer-service-time — 2026-06-03",
       "message_ts": "1780520805.287289",
       "imagen_github": null,
       "imagen_local": null,
@@ -596,7 +596,7 @@
         "Guardar los cambios",
         "Volver a ingresar la factura de compra — ya debe procesarse correctamente"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-03 (reporte de Claudia Lavín, solución de Isabel López)",
+      "fuente": "Slack #customer-service-time — 2026-06-03",
       "message_ts": "1780578390.075359",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-27-factura-compra-moneda-usd-origen.png",
       "imagen_local": "error-27-factura-compra-moneda-usd-origen.png",
@@ -621,7 +621,7 @@
         "Volver a ingresar a Manager y repetir la operación en Centro de Información",
         "Si el error persiste: contactar a soporte para diagnóstico remoto"
       ],
-      "fuente": "caso Intercom #215474564872107 (Mundolab SA, 2026-06-03, operadora Isidora)",
+      "fuente": "Intercom #215474564872107 — 2026-06-03",
       "message_ts": "1780581018.011439",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-28-descargar-informe-dll-faltante.png",
       "imagen_local": "error-28-descargar-informe-dll-faltante.png",
@@ -646,7 +646,7 @@
         "Se corrige la KNA y el folio se da por consumido",
         "Una vez corregido, el sistema permite emitir nuevas boletas con normalidad"
       ],
-      "fuente": "caso Intercom #215474564889962 (Swarovski, 2026-06-04, operadora Emilia)",
+      "fuente": "Intercom #215474564889962 — 2026-06-04",
       "message_ts": "1780579590.617969",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-29-manager-go-folio-pegado.png",
       "imagen_local": "error-29-manager-go-folio-pegado.png",
@@ -670,7 +670,7 @@
         "Si el problema persiste tras el nuevo login: levantar ticket a IT indicando que la unidad Y no es visible en Parámetros Internos",
         "Equipo Plataforma aplica solución definitiva a nivel de servidor"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-01 (reporte de Alejandro Vera, ticket 260601-00003, solución de Eduardo Jofré / equipo Plataforma)",
+      "fuente": "Slack #customer-service-time — 2026-06-01 (ticket 260601-00003)",
       "message_ts": "1780581007.380049",
       "imagen_github": null,
       "imagen_local": null,
@@ -696,7 +696,7 @@
         "Hacer clic en 'Borrar datos'",
         "Volver a ingresar al sistema Manager — el error debe resolverse"
       ],
-      "fuente": "caso Intercom #215474566679525 (Le Creuset, 2026-06-03/04, operadora Emilia)",
+      "fuente": "Intercom #215474566679525 — 2026-06-03/04",
       "message_ts": "1780600050.232219",
       "imagen_github": null,
       "imagen_local": null,
@@ -721,7 +721,7 @@
         "Soporte confirma al cliente que el documento fue desbloqueado",
         "El cliente elimina o modifica el documento, corrige el error y reenvía al SII"
       ],
-      "fuente": "caso Intercom #215474567694548 (Blunding, 2026-06-03/04, operadora Isidora)",
+      "fuente": "Intercom #215474567694548 — 2026-06-03/04",
       "message_ts": "1780600065.467779",
       "imagen_github": null,
       "imagen_local": null,
@@ -745,7 +745,7 @@
         "Soporte se conecta remotamente y ejecuta script SQL para eliminar el registro huérfano directamente en la base de datos",
         "Verificar que la eliminación fue exitosa buscando el documento en Manager"
       ],
-      "fuente": "caso Intercom #215474577523856 (Ingeniería y Construcción GGL Ltda., 2026-06-04, operadora Isidora / diagnóstico Oscar Olivares)",
+      "fuente": "Intercom #215474577523856 — 2026-06-04",
       "message_ts": "1780956600.131129",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-33-factura-compra-vacia-hresult-0x80040e19.png",
       "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
@@ -770,7 +770,7 @@
         "Soporte ejecutará script correctivo para asignar fecha válida o eliminar registros inválidos",
         "Reintentar generar el Libro de Honorarios tras la corrección"
       ],
-      "fuente": "caso Intercom #215474580363208 (Slack #customer-service-time, 2026-06-04, operadora Claudia Lavín)",
+      "fuente": "Intercom #215474580363208 / Slack #customer-service-time — 2026-06-04",
       "message_ts": "1780956615.292379",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-34-libro-honorarios-fecha-null-balflex.png",
       "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
@@ -794,7 +794,7 @@
         "Verificar si existe actualización de DTEPlanoWS en Facturación.CL compatible con V.ABR 2026",
         "Esperar Service Pack o parche de PSI que corrija la generación del campo <FchSalida> en el XML de GD"
       ],
-      "fuente": "Slack #customer-service-time — 2026-06-05 (reporte de Claudia Lavín)",
+      "fuente": "Slack #customer-service-time — 2026-06-05",
       "message_ts": "1780956632.918089",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
       "imagen_local": "error-35-fchsalida-fecha-invalida-gd-abril-2026.png",
@@ -907,7 +907,7 @@
         "Eliminar la referencia a la Guía de Despacho de dicha sección.",
         "Guardar los cambios y reintentar el envío del documento."
       ],
-      "fuente": "Slack #customer-service-time — hilo de Claudia Lavin Luque, 2026-06-19",
+      "fuente": "Slack #customer-service-time — 2026-06-19",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-38-validation-failure-nc-referencia-gd.png",
       "imagen_local": "error-38-validation-failure-nc-referencia-gd.png",
       "slack_file_id": "F0BBSD0BDN1",
@@ -972,7 +972,7 @@
         "En el archivo Excel de importación, ingresar en la columna 26 el código de la forma de pago ya creada en el ERP.",
         "Volver a ejecutar la carga masiva de Notas de Venta."
       ],
-      "fuente": "caso Intercom #215474918954799 (Genera S.A., 2026-07-01, respuesta Fin AI — Marcus)",
+      "fuente": "Intercom #215474918954799 — 2026-07-01",
       "imagen_local": null,
       "slack_file_id": null,
       "imagen_github": null,
