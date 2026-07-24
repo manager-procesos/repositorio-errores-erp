@@ -124,7 +124,7 @@
       "sintoma": "Al intentar emitir una factura aparece 'Servicio transaccional': Ocurrió un error. Más detalles archivo log.",
       "causa": "Los archivos DLL de Acepta no están instalados correctamente en el equipo local desde el que se factura. Instalar en el servidor no es suficiente.",
       "solucion_pasos": [
-        "Descargar el instalador ManagerTxInstaladorDLL versión Tx 3.0.0.0 (solicitarlo a soporte)",
+        "Descargar el instalador ManagerTxInstaladorDLL versión Tx 3.0.0.0",
         "Ejecutar la instalación directamente en el equipo que va a facturar (no en el servidor)",
         "Reiniciar el equipo después de la instalación",
         "Volver a intentar emitir el documento"
@@ -192,8 +192,7 @@
       "causa": "La fórmula de cálculo configurada en el módulo de Boleta de Honorarios contiene un error interno.",
       "solucion_pasos": [
         "Si al presionar Ignorar el sistema graba igualmente, puede continuar de forma temporal",
-        "Contactar a soporte para solicitar conexión remota",
-        "El operador corrige la fórmula de cálculo del BOH directamente en el sistema",
+        "Corregir la fórmula de cálculo del BOH directamente en el sistema — requiere acceso de configuración avanzada, no es ajustable desde la interfaz estándar de usuario",
         "Validar emitiendo una boleta de prueba — el error no debe volver a aparecer"
       ],
       "fuente": "Intercom #215473409804855 — 2026-04-22",
@@ -213,10 +212,9 @@
       "sintoma": "Al intentar crear un nuevo tipo de documento en Manager → Tablas Generales → Tipos de documentos, el sistema muestra: 'Ya existe', aunque el documento no está en la lista.",
       "causa": "El correlativo interno de la tabla corr_db (campo sqtdoc) está desincronizado con los registros reales de la base de datos.",
       "solucion_pasos": [
-        "Contactar a soporte — esta corrección requiere acceso directo a la base de datos",
-        "El operador identifica el numreg correspondiente al tipo de documento en la tabla corr_db",
-        "Se consulta el último valor real del correlativo",
-        "Se ejecuta: update corr_db set sqtdoc=xxx where numreg=xxx",
+        "Esta corrección requiere acceso directo a la base de datos: identificar el numreg correspondiente al tipo de documento en la tabla corr_db",
+        "Consultar el último valor real del correlativo",
+        "Ejecutar: update corr_db set sqtdoc=xxx where numreg=xxx",
         "Volver a intentar crear el tipo de documento — ya no debe arrojar el error"
       ],
       "fuente": "Intercom #215473907031311 — 2026-04-22",
@@ -311,8 +309,7 @@
         "Verificar si hay impresoras redirigidas activas y desactivarlas temporalmente",
         "Si usa escritorio remoto: cerrar la sesión RDP completamente y reconectar",
         "Limpiar archivos temporales del sistema (carpeta %TEMP%)",
-        "Volver a intentar la importación del comprobante",
-        "Si el error persiste: contactar a soporte para diagnóstico con conexión remota"
+        "Volver a intentar la importación del comprobante"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-19",
       "message_ts": "1779739607.040869",
@@ -333,9 +330,8 @@
       "solucion_pasos": [
         "Identificar que el problema ocurre solo al buscar histórico de cuenta",
         "Confirmar que la base de datos está en versión Octubre",
-        "Contactar a soporte técnico — requiere ejecutar un script de creación del índice faltante en la BD",
-        "Soporte ejecuta el script de reparación del índice en el servidor",
-        "Volver a intentar la búsqueda de histórico"
+        "Este error requiere crear en la base de datos el índice faltante en la tabla de histórico de cuentas (acción de backend, aplica solo a bases de datos versión Octubre)",
+        "Volver a intentar la búsqueda de histórico una vez creado el índice"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-19",
       "message_ts": "1779739622.390329",
@@ -357,8 +353,7 @@
         "Esperar unos minutos y reintentar la impresión (en la mayoría de casos se resuelve solo)",
         "Verificar si hay otros usuarios activos usando el mismo recurso compartido simultáneamente",
         "Si utiliza carpeta FTP compartida: revisar que los archivos temporales no estén bloqueados",
-        "Cerrar sesión correctamente desde Manager → Archivo → Salir y volver a ingresar",
-        "Si el error es recurrente: contactar a soporte para revisar la configuración de la carpeta compartida"
+        "Cerrar sesión correctamente desde Manager → Archivo → Salir y volver a ingresar"
       ],
       "fuente": "Intercom #215474350431361 — 2026-05-18",
       "message_ts": "1779734500.424869",
@@ -381,8 +376,7 @@
         "Esperar 1-2 minutos para que el driver libere los recursos",
         "Volver a ingresar al sistema y repetir la operación",
         "Si el error persiste: reiniciar el equipo completo",
-        "Si sigue ocurriendo: verificar que no haya otras sesiones de Manager abiertas en el mismo equipo o servidor",
-        "Si es recurrente tras actualizar a ABR 2026: contactar a soporte para revisión de configuración de conexiones"
+        "Si sigue ocurriendo: verificar que no haya otras sesiones de Manager abiertas en el mismo equipo o servidor"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26",
       "message_ts": "1779889123.064979",
@@ -449,9 +443,8 @@
       "solucion_pasos": [
         "Confirmar que nadie del equipo está usando ese usuario en ningún dispositivo ni pestaña abierta",
         "Limpiar cookies y caché en todos los equipos que usen esa cuenta y reintentar el ingreso",
-        "Si el error persiste: contactar a soporte PSI para solicitar el cierre forzado de la sesión del usuario",
-        "Indicar a soporte: nombre del usuario (formato empresa.usuarioXX) y nombre de la empresa",
-        "Una vez que soporte confirme que la sesión fue liberada, reingresar con las credenciales normales"
+        "Si el error persiste: escalar a PSI para solicitar el cierre forzado de la sesión del usuario, indicando nombre del usuario (formato empresa.usuarioXX) y nombre de la empresa",
+        "Una vez que PSI confirme que la sesión fue liberada, reingresar con las credenciales normales"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-27",
       "message_ts": "1780061992.729669",
@@ -495,8 +488,7 @@
         "Verificar que todos los componentes de integración SII estén actualizados en el equipo local (DLL de Acepta / servicio transaccional)",
         "Reiniciar Manager correctamente desde Archivo → Salir (NO cerrar con la X) y volver a intentar",
         "Reiniciar el equipo completo si el paso anterior no resuelve",
-        "Si persiste: contactar a soporte indicando versión V.ABR 2026, instalación local y el error exacto",
-        "Soporte determinará si corresponde instalar un Service Pack o actualizar los componentes OLE",
+        "Si persiste: este error (OLE 0x8002000e / DISP_E_BADPARAMCOUNT) requiere instalar un Service Pack o actualizar los componentes OLE — registrar versión V.ABR 2026, instalación local y el error exacto para el seguimiento",
         "Como workaround temporal: exportar la boleta desde Manager y enviarla manualmente al SII"
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29",
@@ -519,8 +511,7 @@
         "No forzar el cierre de Manager — cerrar siempre desde Archivo → Salir (nunca con la X)",
         "Verificar que no haya múltiples usuarios o procesos accediendo simultáneamente a la misma Nota de Venta",
         "Reiniciar Manager correctamente y reintentar",
-        "Si persiste: contactar a soporte indicando versión V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales",
-        "Soporte deberá revisar el correlativo de la tabla NOTDE_DB y corregir el valor desincronizado en SQL Server",
+        "Si persiste: este error requiere revisar y corregir en SQL Server el correlativo desincronizado de la tabla NOTDE_DB (acción de base de datos, no ejecutable desde la interfaz de Manager) — registrar versión V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales",
         "Confirmar si hay algún WS o proceso automático generando registros en NOTDE_DB"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-02",
@@ -541,11 +532,10 @@
       "causa": "Manager ERP requiere que el instalador oficial sea ejecutado en cada equipo para registrar correctamente los drivers ODBC, las DLLs de sistema y otras dependencias. Si solo se copia la carpeta Manager8 sin instalar, faltan componentes críticos.",
       "solucion_pasos": [
         "Verificar con el cliente si Manager fue instalado mediante el instalador oficial o solo copiando la carpeta Manager8",
-        "Si fue copiado sin instalar: solicitar el instalador oficial de Manager8 a soporte técnico",
+        "Si fue copiado sin instalar: obtener el instalador oficial de Manager8",
         "Ejecutar el instalador oficial en el equipo afectado (no solo copiar archivos)",
         "Reiniciar el equipo una vez finalizada la instalación",
-        "Volver a ingresar a Manager con las credenciales habituales",
-        "Si el error persiste: contactar a soporte para diagnóstico remoto"
+        "Volver a ingresar a Manager con las credenciales habituales"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-03",
       "message_ts": "1780520805.287289",
@@ -589,11 +579,10 @@
       "causa": "Manager ERP no fue instalado correctamente en el equipo. El sistema fue configurado copiando archivos directamente sin ejecutar el instalador oficial, omitiendo el registro de componentes DLL y dependencias necesarias para el módulo de Centro de Información.",
       "solucion_pasos": [
         "Verificar con el área de informática del cliente si Manager fue instalado mediante el instalador oficial",
-        "Si fue instalado sin el instalador oficial: solicitar el instalador oficial de Manager8 a soporte técnico",
+        "Si fue instalado sin el instalador oficial: obtener el instalador oficial de Manager8",
         "Ejecutar el instalador oficial en el equipo afectado — no solo copiar archivos",
         "Reiniciar el equipo una vez finalizada la instalación",
-        "Volver a ingresar a Manager y repetir la operación en Centro de Información",
-        "Si el error persiste: contactar a soporte para diagnóstico remoto"
+        "Volver a ingresar a Manager y repetir la operación en Centro de Información"
       ],
       "fuente": "Intercom #215474564872107 — 2026-06-03",
       "message_ts": "1780581018.011439",
@@ -613,11 +602,8 @@
       "causa": "El folio quedó bloqueado internamente en el documento KNA (documento interno de Manager GO) sin liberarse correctamente. Ocurre por un cierre inesperado del proceso de emisión, desconexión durante la operación, o error al generar el documento.",
       "solucion_pasos": [
         "Identificar el número de folio afectado (Manager GO lo muestra al intentar emitir)",
-        "Contactar a soporte indicando: nombre del cliente, módulo Manager GO y número de folio pegado",
-        "Soporte se conecta remotamente al equipo del cliente (vía Zoho Join u otro)",
-        "El operador rescata la KNA del ambiente del cliente",
-        "Se corrige la KNA y el folio se da por consumido",
-        "Una vez corregido, el sistema permite emitir nuevas boletas con normalidad"
+        "Este error requiere acceso de backend: identificar y corregir la KNA (documento interno de Manager GO) asociada a ese folio, para que quede dado por consumido — requiere conexión remota al equipo del cliente (ej. vía Zoho Join)",
+        "Una vez corregida la KNA, el sistema permite emitir nuevas boletas con normalidad"
       ],
       "fuente": "Intercom #215474564889962 — 2026-06-04",
       "message_ts": "1780579590.617969",
@@ -684,11 +670,10 @@
       "sintoma": "Un documento tributario electrónico (DTE) fue rechazado por el SII y queda en estado bloqueado en Manager ERP. El cliente no puede eliminarlo ni modificarlo para corregir el error.",
       "causa": "Al ser rechazado por el SII, el documento queda con los campos E_enviado='1' e impresa='1' en la base de datos docu_db, bloqueando cualquier modificación posterior.",
       "solucion_pasos": [
-        "El cliente contacta a soporte indicando: RUT de la empresa, tipo de documento, número de folio y numreg del documento bloqueado",
-        "Enviar captura del documento con la información de la empresa visible",
-        "Soporte identifica la base de datos (BD) correspondiente al cliente",
-        "Soporte ejecuta el comando SQL para desbloquear: update docu_db set E_enviado='0', impresa='0' where numreg IN (XXXX)",
-        "Soporte confirma al cliente que el documento fue desbloqueado",
+        "El cliente indica: RUT de la empresa, tipo de documento, número de folio y numreg del documento bloqueado (más una captura del documento con la información visible)",
+        "Identificar la base de datos (BD) correspondiente al cliente",
+        "Ejecutar en la base de datos: update docu_db set E_enviado='0', impresa='0' where numreg IN (XXXX)",
+        "Confirmar al cliente que el documento fue desbloqueado",
         "El cliente elimina o modifica el documento, corrige el error y reenvía al SII"
       ],
       "fuente": "Intercom #215474567694548 — 2026-06-03/04",
@@ -709,9 +694,8 @@
       "causa": "La FC existe en la tabla de encabezados de la base de datos pero no tiene líneas de detalle asociadas (registro huérfano). Al intentar eliminarla, SQL Server no puede completar la operación porque el motor de consultas encuentra una inconsistencia de integridad.",
       "solucion_pasos": [
         "Confirmar que el documento no tiene pagos ni documentos asociados",
-        "El usuario NO puede eliminar el registro directamente desde la interfaz de Manager",
-        "Contactar a soporte indicando: empresa, número de FC, correlativo y versión de Manager",
-        "Soporte se conecta remotamente y ejecuta script SQL para eliminar el registro huérfano directamente en la base de datos",
+        "El usuario no puede eliminar el registro directamente desde la interfaz de Manager",
+        "Este error requiere acceso a la base de datos: eliminar el registro huérfano (encabezado sin líneas de detalle) directamente en SQL Server — registrar empresa, número de FC, correlativo y versión de Manager para el seguimiento",
         "Verificar que la eliminación fue exitosa buscando el documento en Manager"
       ],
       "fuente": "Intercom #215474577523856 — 2026-06-04",
@@ -733,9 +717,7 @@
       "solucion_pasos": [
         "Ir a Manager → Parámetros → Período habilitado de ingreso de datos",
         "Confirmar que las fechas del período incluyen el rango que se intenta generar (ej: 01/05/2026 a 31/05/2026)",
-        "Si el período está correcto y el error persiste: contactar a soporte indicando versión V.MAY 2026 BALFLEX y el error exacto",
-        "Soporte revisará la base de datos para identificar registros de honorarios con campo FECHA nulo",
-        "Soporte ejecutará script correctivo para asignar fecha válida o eliminar registros inválidos",
+        "Si el período está correcto y el error persiste: este error requiere revisar en la base de datos los registros de honorarios con campo FECHA nulo y corregirlos (asignar fecha válida o eliminar el registro inválido) — acción de backend, registrar versión V.MAY 2026 BALFLEX y el error exacto para el seguimiento",
         "Reintentar generar el Libro de Honorarios tras la corrección"
       ],
       "fuente": "Intercom #215474580363208 / Slack #customer-service-time — 2026-06-04",
@@ -756,8 +738,7 @@
       "causa": "La versión Abril 2026 de Manager ERP modificó la construcción del XML de la Guía de Despacho, generando el campo <FchSalida> con un valor inválido o vacío. El facturador electrónico Facturación.CL (DTEPlanoWS) valida este campo y rechaza el DTE cuando no contiene una fecha válida.",
       "solucion_pasos": [
         "Workaround inmediato: revertir a versión anterior de Manager si el negocio lo permite",
-        "Contactar a soporte indicando: versión V.ABR 2026, facturador DTEPlanoWS (Facturación.CL) v4.3.3.4, DTE Tipo 52 (GD) y el error exacto",
-        "Soporte debe escalar a PSI (equipo de desarrollo) — es un bug de compatibilidad de V.ABR 2026 con el facturador externo",
+        "Escalar a PSI (equipo de desarrollo) indicando: versión V.ABR 2026, facturador DTEPlanoWS (Facturación.CL) v4.3.3.4, DTE Tipo 52 (GD) y el error exacto — es un bug de compatibilidad de V.ABR 2026 con el facturador externo",
         "Verificar si existe actualización de DTEPlanoWS en Facturación.CL compatible con V.ABR 2026",
         "Esperar Service Pack o parche de PSI que corrija la generación del campo <FchSalida> en el XML de GD"
       ],
@@ -779,7 +760,7 @@
       "causa": "Bug en versiones anteriores de Manager ERP (Marzo 2026 y anteriores): la columna IVASAF se genera en la exportación de forma incorrecta, independientemente de la configuración del documento",
       "solucion_pasos": [
         "Verificar la versión de Manager ERP instalada (debe ser Abril 2026 o posterior)",
-        "Solicitar al equipo de soporte la actualización a la versión más reciente de Manager ERP",
+        "Actualizar Manager ERP a la versión Abril 2026 o posterior — la generación incorrecta de la columna IVASAF fue corregida en esa versión",
         "Una vez actualizado, volver a exportar el libro de compras",
         "Confirmar que la columna IVASAF ya no aparece en documentos sin Activo Fijo"
       ],
@@ -800,11 +781,11 @@
       "sintoma": "El sistema muestra clientes con el mismo RUT pero con NREGUIST (código interno) distintos. Al intentar unificar o fusionar los registros duplicados, el sistema no lo permite directamente.",
       "causa": "El RUT de uno de los registros fue ingresado con un espacio al final. Manager lo interpreta como un RUT diferente y crea un nuevo registro con un NREGUIST distinto.",
       "solucion_pasos": [
-        "Ir a Manager → Tablas Generales → Clientes y buscar los registros con el RUT duplicado.",
-        "Verificar cuál de los registros tiene un espacio al final en el campo RUT (el incorrecto).",
-        "Si son pocos registros duplicados: marcar el registro incorrecto (con el espacio en el RUT) como 'Eliminado' directamente en Manager.",
-        "Si hay muchos registros afectados: contactar al equipo de soporte de Manager para solicitar la ejecución de un script de unificación.",
-        "Confirmar que las transacciones históricas queden correctamente asociadas al registro con el RUT válido."
+        "Ir a Manager → Tablas Generales → Clientes y buscar los registros con el RUT duplicado",
+        "Verificar cuál de los registros tiene un espacio al final en el campo RUT (el incorrecto)",
+        "Si son pocos registros duplicados: marcar el registro incorrecto (con el espacio en el RUT) como 'Eliminado' directamente en Manager",
+        "Si hay muchos registros afectados: este caso requiere ejecutar un script de unificación en la base de datos en lugar de eliminar registros manualmente uno por uno",
+        "Confirmar que las transacciones históricas queden correctamente asociadas al registro con el RUT válido"
       ],
       "fuente": "Slack #customer-service-time (18-19/06/2026) + Intercom #215474761301614",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-36-clientes-duplicados-rut-con.png",
@@ -1126,12 +1107,12 @@
       "sintoma": "Al enviar Guías de Despacho (GDV) hacia el facturador electrónico Artikos, el documento es rechazado con error 1032 (esquema XML inválido), señalando campos de transporte y destino faltantes (RUTTrans, Chofer, DirDest, ComunaDest, CiudadDest). Al completar esos campos y reenviar, Artikos vuelve a rechazar el documento, esta vez indicando que esos mismos campos no debiesen ir.",
       "causa": "Manager ERP actualizó la generación del XML de Guías de Despacho para cumplir con la nueva exigencia del SII (vigente desde mayo 2026, con plazo de adecuación hasta noviembre 2026) que agrega campos obligatorios de transporte y destino. El facturador electrónico Artikos, usado por este cliente, aún no había implementado soporte para el nuevo esquema, por lo que rechaza los documentos que incluyen esos campos nuevos.",
       "solucion_pasos": [
-        "Confirmar que el rechazo corresponde al código 1032 y que el XML generado por Manager cumple con la nueva normativa SII de Guías de Despacho (mayo 2026, plazo de adecuación hasta noviembre 2026).",
-        "Solicitar a soporte que libere los documentos bloqueados por el rechazo (Autorizaciones → Ventas → Guía de Despacho → marcar autorización de modificar → Aceptar), o pedirlo directamente por chat si el cliente no tiene acceso a Ramaflex.",
-        "Confirmar con Artikos si ya soportan el nuevo esquema SII; si aún no, esa es la causa real del rechazo (no es un bug de Manager).",
-        "Como contingencia mientras Artikos actualiza su integración, solicitar a soporte Manager agendar la baja temporal de versión del cliente a una versión anterior sin los campos nuevos (ej. Febrero 2026) para permitir el envío de guías sin rechazo.",
-        "Reenviar las guías liberadas y confirmar en Artikos que fueron aceptadas por el SII.",
-        "Hacer seguimiento con Artikos sobre su cronograma de actualización para restaurar la versión estándar de Manager cuando corresponda."
+        "Confirmar que el rechazo corresponde al código 1032 y que el XML generado por Manager cumple con la nueva normativa SII de Guías de Despacho (mayo 2026, plazo de adecuación hasta noviembre 2026)",
+        "Liberar los documentos bloqueados por el rechazo: Autorizaciones → Ventas → Guía de Despacho → marcar autorización de modificar → Aceptar (hacerlo directamente por chat interno si el cliente no tiene acceso a Ramaflex)",
+        "Confirmar con Artikos si ya soportan el nuevo esquema SII; si aún no, esa es la causa real del rechazo (no es un bug de Manager)",
+        "Como contingencia mientras Artikos actualiza su integración: agendar la baja temporal de versión del cliente a una versión anterior sin los campos nuevos (ej. Febrero 2026) para permitir el envío de guías sin rechazo",
+        "Reenviar las guías liberadas y confirmar en Artikos que fueron aceptadas por el SII",
+        "Hacer seguimiento con Artikos sobre su cronograma de actualización para restaurar la versión estándar de Manager cuando corresponda"
       ],
       "fuente": "Intercom #215475098343649",
       "imagen_github": null,
