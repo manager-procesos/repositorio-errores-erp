@@ -1,0 +1,6 @@
+{
+  "name": "repositorio-errores-erp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio estatico del repositorio de errores ERP, protegido con usuario/contrasena via Vercel Edge Middleware."
+}
