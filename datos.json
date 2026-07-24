@@ -473,15 +473,15 @@
       "solucion_pasos": [
         "Confirmar si el PDF del documento se generó y si el DTE aparece en el SII — si es así, el documento ya fue procesado correctamente a pesar del cuadro de error.",
         "Indicar al usuario que presione 'Ignore' en el cuadro de error para seguir operando con normalidad; el error es una advertencia de interfaz, no bloquea la emisión.",
-        "Pedir al usuario que cierre sesión desde Manager → Archivo → Salir (NO con la X de la ventana) y vuelva a ingresar. Esto resuelve el error en la mayoría de los casos reportados.",
-        "PENDIENTE DE INVESTIGAR: si el error persiste en TODOS los documentos de ese usuario después de reingresar, no hay solución confirmada — la causa raíz de USER_IDX no está verificada (ver campo causa). No publicado en el artículo de Intercom porque no es una solución real, solo un diagnóstico. Registrar el ambiente (ASP/Ramaflex) y el mensaje exacto para dar seguimiento si vuelve a ocurrir."
+        "Pedir al usuario que cierre sesión desde Manager → Archivo → Salir (NO con la X de la ventana) y vuelva a ingresar. Esto resuelve el error en la mayoría de los casos reportados."
       ],
       "fuente": "Slack #customer-service-time — 2026-05-29",
       "message_ts": "1780319438.846839",
       "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-23-property-user-idx-not-found.png",
       "imagen_local": "error-23-property-user-idx-not-found.png",
       "slack_file_id": "F0B6Y8WUKN1",
-      "stable_key": "slack-F0B6Y8WUKN1"
+      "stable_key": "slack-F0B6Y8WUKN1",
+      "pendiente_investigar": "PENDIENTE DE INVESTIGAR: si el error persiste en TODOS los documentos de ese usuario después de reingresar, no hay solución confirmada — la causa raíz de USER_IDX no está verificada (ver campo causa). No publicado en el artículo de Intercom porque no es una solución real, solo un diagnóstico. Registrar el ambiente (ASP/Ramaflex) y el mensaje exacto para dar seguimiento si vuelve a ocurrir."
     },
     {
       "numero": 22,
@@ -519,8 +519,7 @@
       "solucion_pasos": [
         "No forzar el cierre de Manager — cerrar siempre desde Archivo → Salir (nunca con la X)",
         "Verificar que no haya múltiples usuarios o procesos accediendo simultáneamente a la misma Nota de Venta",
-        "Reiniciar Manager correctamente y reintentar",
-        "PENDIENTE DE INVESTIGAR: si persiste, requeriría revisar y corregir en SQL Server el correlativo desincronizado de la tabla NOTDE_DB, pero no hay un script confirmado ni una via de escalamiento verificada — solo la hipotesis de causa. No publicado en el articulo de Intercom porque no es una solucion real. Registrar version V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales, para dar seguimiento si vuelve a ocurrir."
+        "Reiniciar Manager correctamente y reintentar"
       ],
       "fuente": "Slack #customer-service-time — 2026-06-02",
       "message_ts": "1780436553.740639",
@@ -528,7 +527,8 @@
       "imagen_local": "error-25-primary-key-notde-db.png",
       "slack_file_id": null,
       "stable_key": "intercom-15453594",
-      "intercom_article_id": "15453594"
+      "intercom_article_id": "15453594",
+      "pendiente_investigar": "PENDIENTE DE INVESTIGAR: si persiste, requeriría revisar y corregir en SQL Server el correlativo desincronizado de la tabla NOTDE_DB, pero no hay un script confirmado ni una via de escalamiento verificada — solo la hipotesis de causa. No publicado en el articulo de Intercom porque no es una solucion real. Registrar version V.FEB 2026 SP00/0311, el error exacto PK_NOTDE_DB y que afecta a todas las sucursales, para dar seguimiento si vuelve a ocurrir."
     },
     {
       "numero": 24,
@@ -707,8 +707,7 @@
       "causa": "La FC existe en la tabla de encabezados de la base de datos pero no tiene líneas de detalle asociadas (registro huérfano). Al intentar eliminarla, SQL Server no puede completar la operación porque el motor de consultas encuentra una inconsistencia de integridad.",
       "solucion_pasos": [
         "Confirmar que el documento no tiene pagos ni documentos asociados",
-        "El usuario no puede eliminar el registro directamente desde la interfaz de Manager",
-        "PENDIENTE DE INVESTIGAR: el registro huerfano (encabezado de FC sin lineas de detalle) requeriria eliminarse directamente en SQL Server, pero no hay un script confirmado ni una via de escalamiento verificada. No publicado en el articulo de Intercom porque no es una solucion real. Registrar numero de FC, correlativo y version de Manager para dar seguimiento si vuelve a ocurrir."
+        "El usuario no puede eliminar el registro directamente desde la interfaz de Manager"
       ],
       "fuente": "Intercom #215474577523856 — 2026-06-04",
       "message_ts": "1780956600.131129",
@@ -716,7 +715,8 @@
       "imagen_local": "error-33-factura-compra-vacia-hresult-0x80040e19.png",
       "slack_file_id": "F0B8H6UQ9PW",
       "stable_key": "intercom-15453612",
-      "intercom_article_id": "15453612"
+      "intercom_article_id": "15453612",
+      "pendiente_investigar": "PENDIENTE DE INVESTIGAR: el registro huerfano (encabezado de FC sin lineas de detalle) requeriria eliminarse directamente en SQL Server, pero no hay un script confirmado ni una via de escalamiento verificada. No publicado en el articulo de Intercom porque no es una solucion real. Registrar numero de FC, correlativo y version de Manager para dar seguimiento si vuelve a ocurrir."
     },
     {
       "numero": 32,
@@ -729,8 +729,7 @@
       "causa": "Existe al menos un registro de honorarios en la base de datos con el campo FECHA vacío o nulo. El proceso de generación del Libro de Honorarios requiere que todos los registros tengan una fecha válida. También puede ocurrir si el período habilitado de ingreso de datos no incluye el rango de fechas solicitado.",
       "solucion_pasos": [
         "Ir a Manager → Parámetros → Período habilitado de ingreso de datos",
-        "Confirmar que las fechas del período incluyen el rango que se intenta generar (ej: 01/05/2026 a 31/05/2026)",
-        "PENDIENTE DE INVESTIGAR: si el periodo esta correcto y el error persiste, requeriria revisar en la base de datos los registros de honorarios con campo FECHA nulo, pero no hay un script confirmado ni una via de escalamiento verificada. No publicado en el articulo de Intercom porque no es una solucion real. Registrar version V.MAY 2026 BALFLEX y el error exacto para dar seguimiento si vuelve a ocurrir."
+        "Confirmar que las fechas del período incluyen el rango que se intenta generar (ej: 01/05/2026 a 31/05/2026)"
       ],
       "fuente": "Intercom #215474580363208 / Slack #customer-service-time — 2026-06-04",
       "message_ts": "1780956615.292379",
@@ -738,7 +737,8 @@
       "imagen_local": "error-34-libro-honorarios-fecha-null-balflex.png",
       "slack_file_id": "F0B8AR14EJZ",
       "stable_key": "intercom-15453614",
-      "intercom_article_id": "15453614"
+      "intercom_article_id": "15453614",
+      "pendiente_investigar": "PENDIENTE DE INVESTIGAR: si el periodo esta correcto y el error persiste, requeriria revisar en la base de datos los registros de honorarios con campo FECHA nulo, pero no hay un script confirmado ni una via de escalamiento verificada. No publicado en el articulo de Intercom porque no es una solucion real. Registrar version V.MAY 2026 BALFLEX y el error exacto para dar seguimiento si vuelve a ocurrir."
     },
     {
       "numero": 33,
