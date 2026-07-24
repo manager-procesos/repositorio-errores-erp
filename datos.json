@@ -432,8 +432,8 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-05-26, caso Intercom #215474453188524",
       "message_ts": "1779986555.392629",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-21-oc-proveedores-spoofing-550.png",
-      "imagen_local": "error-21-oc-proveedores-spoofing-550.png",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-19-mensaje-rechazado-spoofing-correo.png",
+      "imagen_local": "error-19-mensaje-rechazado-spoofing-correo.png",
       "slack_file_id": "F0B72QWUPS4",
       "stable_key": "slack-F0B72QWUPS4"
     },
@@ -550,8 +550,8 @@
       ],
       "fuente": "Slack #customer-service-time — 2026-06-03 (caso reportado por Claudia Lavín, diagnóstico de Osvaldo Anabalón y Oscar Olivares)",
       "message_ts": "1780520805.287289",
-      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-26-manager-falta-dll-sin-instalador.png",
-      "imagen_local": "error-26-manager-falta-dll-sin-instalador.png",
+      "imagen_github": null,
+      "imagen_local": null,
       "slack_file_id": null,
       "stable_key": "baseline-03a1b0c2e8ed"
     },
