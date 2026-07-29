@@ -1150,6 +1150,27 @@
       "slack_file_id": null,
       "intercom_article_id": "16041097",
       "stable_key": "intercom-16041097"
+    },
+    {
+      "numero": 51,
+      "titulo": "Error al importar comprobantes desde REX+ — centro de costo obligatorio no configurado",
+      "modulo": "Contabilidad / Integración REX+ — Manager ERP",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-07-28",
+      "sintoma": "Al importar comprobantes contables desde REX+ hacia Manager ERP, el sistema rechaza líneas de movimiento con el mensaje \"Cuenta:XXXXXX. El centro de costo del movimiento debe ingresarse obligatoriamente\", listando múltiples cuentas y líneas del archivo (informe Fx.Err_cu — Registros que no pudieron ser importados desde Sucursales).",
+      "causa": "La(s) cuenta(s) contable(s) involucrada(s) tienen configurado el centro de costo como obligatorio en Manager ERP, pero el archivo de comprobantes generado desde REX+ no incluye ese dato para esas líneas, ya que REX+ no tiene ese campo habilitado/completado en su configuración.",
+      "solucion_pasos": [
+        "Agregar manualmente el centro de costo correspondiente en el archivo de importación (exportado desde REX+) para las líneas/cuentas indicadas en el mensaje de error, antes de volver a cargarlo en Manager ERP.",
+        "Adicionalmente, solicitar a REX+ que configure/complete el campo de centro de costo en el origen, para evitar que el problema se repita en futuras centralizaciones."
+      ],
+      "pendiente_investigar": null,
+      "fuente": "Slack #customer-service-time — 2026-07-28",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-51-rex-centro-costo.png",
+      "imagen_local": "error-51-rex-centro-costo.png",
+      "slack_file_id": "F0BM92CE2QY",
+      "intercom_article_id": "16131152",
+      "stable_key": "intercom-16131152"
     }
   ]
 }
