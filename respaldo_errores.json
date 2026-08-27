@@ -1171,6 +1171,51 @@
       "slack_file_id": "F0BM92CE2QY",
       "intercom_article_id": "16131152",
       "stable_key": "intercom-16131152"
+    },
+    {
+      "numero": 52,
+      "titulo": "El número de nota de venta ya existe — Manager Go!",
+      "modulo": "Ventas / Punto de Venta (Manager Go!)",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-08-21",
+      "sintoma": "Al enviar una Nota de Venta desde Manager Go!, el sistema muestra: \"Error al enviar el documento: El número de nota de venta ya existe.\" y no permite completar el documento.",
+      "causa": "El campo \"Actual\" del rango de folios \"Nota de venta\" en los Parámetros locales del terminal quedó desincronizado y apunta a un número ya utilizado por otro documento.",
+      "solucion_pasos": [
+        "Ir a los Parámetros locales del terminal (Caja) donde se produjo el error.",
+        "Ubicar la fila \"Nota de venta\" dentro de la tabla de Folios (columnas Desde / Actual / Hasta).",
+        "Actualizar el valor de la columna \"Actual\" al siguiente número correlativo disponible, mayor al último número de nota de venta ya emitido, y presionar Guardar.",
+        "Reintentar el envío de la Nota de Venta."
+      ],
+      "pendiente_investigar": null,
+      "fuente": "Slack #customer-service-time — 2026-08-21",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-52-nota-venta-ya-existe.png",
+      "imagen_local": "error-52-nota-venta-ya-existe.png",
+      "slack_file_id": null,
+      "intercom_article_id": 16666610,
+      "stable_key": "intercom-16666610"
+    },
+    {
+      "numero": 53,
+      "titulo": "Comprobante descuadrado en $1 al centralizar por decimales de IVA",
+      "modulo": "Contabilidad / Centralización",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-08-21",
+      "sintoma": "Al centralizar un comprobante contable, este queda descuadrado en $1 y no hay forma de modificarlo manualmente. El informe \"Documentos Descuadrados\" (Fx_Err_cu) muestra el registro con una diferencia de -1.",
+      "causa": "Diferencia de redondeo en los decimales del IVA entre el monto calculado del documento y el monto registrado en la contabilización (tabla DOCU_DB).",
+      "solucion_pasos": [
+        "Identificar en el informe \"Documentos Descuadrados\" (Fx_Err_cu) el registro afectado: número de comprobante (NUMREG) y su PGNUMRECOR.",
+        "Ejecutar en SQL Server: UPDATE DOCU_DB SET HABER = HABER - 1 WHERE NUMREG = [numreg] AND PGNUMRECOR = [pgnumrecor] AND HABER = [valor_haber_actual]",
+        "Volver a centralizar el comprobante y verificar que ya no aparezca en el informe \"Documentos Descuadrados\"."
+      ],
+      "pendiente_investigar": "Si el descuadre es de un monto distinto a $1, no es la misma causa — corresponde aislar qué documento específico genera esa diferencia centralizándolo por separado.",
+      "fuente": "Slack #customer-service-time — 2026-08-21",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-53-comprobante-descuadrado-iva.png",
+      "imagen_local": "error-53-comprobante-descuadrado-iva.png",
+      "slack_file_id": null,
+      "intercom_article_id": 16666611,
+      "stable_key": "intercom-16666611"
     }
   ]
 }
