@@ -1200,6 +1200,75 @@
       "slack_file_id": null,
       "intercom_article_id": 16666611,
       "stable_key": "intercom-16666611"
+    },
+    {
+      "numero": 54,
+      "titulo": "DEBE1 incorrecto en factura de exportación — campo moneda extranjera desactualizado",
+      "modulo": "Contabilidad / Facturas de Exportación / Pendientes",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-09-11",
+      "sintoma": "Al revisar el reporte de pendientes, la columna DEBE1 (moneda extranjera) muestra un monto incorrecto en la factura de exportación, aunque el campo DEBE en pesos esté correcto.",
+      "causa": "La moneda de venta configurada en la ficha del producto no corresponde a la moneda con que se emitió la factura, o el campo DEBE1 en la tabla DOCU_DB quedó con un valor desactualizado.",
+      "solucion_pasos": [
+        "Verificar la moneda de venta en la ficha del producto: ir al producto → revisar el campo Moneda Venta y asegurarse que coincida con la moneda usada en la factura de exportación.",
+        "Si el valor en DEBE1 ya está registrado incorrectamente en la base de datos, ejecutar el siguiente script SQL en la BD del cliente: UPDATE docu_db SET debe1 = [valor_correcto] WHERE numreg = [numreg_del_documento]",
+        "Reemplazar [valor_correcto] con el monto en moneda extranjera real y [numreg_del_documento] con el numreg de la factura afectada.",
+        "Verificar en el reporte de pendientes que el valor DEBE1 quedó actualizado correctamente."
+      ],
+      "pendiente_investigar": null,
+      "fuente": "Slack #customer-service-time — 2026-09-11",
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "intercom_article_id": 16666610,
+      "stable_key": "intercom-16666610"
+    },
+    {
+      "numero": 55,
+      "titulo": "Informe muestra valor UF con menos decimales de los esperados",
+      "modulo": "Informes / Diseño de informes / Indicadores económicos",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-09-10",
+      "sintoma": "Al generar un informe que incluye el valor UF, el sistema muestra el valor aproximado con menos decimales de los esperados, lo que genera diferencias de redondeo visibles en los documentos.",
+      "causa": "El diseño del informe tiene configurado el campo UF con pocos decimales. Es un problema de formato en el diseño, no un error de datos.",
+      "solucion_pasos": [
+        "Ir al módulo de diseño del informe afectado.",
+        "Ubicar el campo que muestra el valor UF.",
+        "Editar el formato del campo y aumentar la cantidad de decimales a mostrar (mínimo 2, recomendado 4).",
+        "Guardar el diseño y regenerar el informe para verificar que el valor UF aparece con los decimales correctos."
+      ],
+      "pendiente_investigar": null,
+      "fuente": "Slack #customer-service-time — 2026-09-10",
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "intercom_article_id": 16666611,
+      "stable_key": "intercom-16666611"
+    },
+    {
+      "numero": 56,
+      "titulo": "No se pueden eliminar documentos importados de venta de forma masiva por interfaz",
+      "modulo": "Ventas / Documentos importados / Eliminación masiva",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-09-14",
+      "sintoma": "Al intentar eliminar de forma masiva documentos importados de venta desde la interfaz de Manager, el sistema no permite completar la operación o no existe una opción directa para hacerlo.",
+      "causa": "Manager no tiene una funcionalidad nativa de eliminación masiva para documentos importados de venta. La interfaz no soporta esta operación en lote.",
+      "solucion_pasos": [
+        "Identificar el número de proceso asociado a los documentos importados a eliminar: ejecutar SELECT numreg, [campo_proceso] FROM docu_db WHERE [condición] para listar los documentos y validar el dato.",
+        "Confirmar con el equipo GEX (área técnica) la generación de un script de eliminación masiva, indicando el número de proceso y el rango de documentos a eliminar.",
+        "Una vez recibido el script de GEX, ejecutarlo en la base de datos del cliente en un ambiente de pruebas primero para validar.",
+        "Ejecutar en producción solo tras confirmar que el script elimina correctamente los documentos esperados."
+      ],
+      "pendiente_investigar": null,
+      "fuente": "Slack #customer-service-time — 2026-09-14",
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "intercom_article_id": null,
+      "stable_key": "baseline-a5cbde28a270"
     }
   ]
 }
