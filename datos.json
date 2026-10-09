@@ -1203,29 +1203,6 @@
     },
     {
       "numero": 54,
-      "titulo": "DEBE1 incorrecto en factura de exportación — campo moneda extranjera desactualizado",
-      "modulo": "Contabilidad / Facturas de Exportación / Pendientes",
-      "frecuencia": "Media",
-      "estado": "Resuelto",
-      "fecha": "2026-09-11",
-      "sintoma": "Al revisar el reporte de pendientes, la columna DEBE1 (moneda extranjera) muestra un monto incorrecto en la factura de exportación, aunque el campo DEBE en pesos esté correcto.",
-      "causa": "La moneda de venta configurada en la ficha del producto no corresponde a la moneda con que se emitió la factura, o el campo DEBE1 en la tabla DOCU_DB quedó con un valor desactualizado.",
-      "solucion_pasos": [
-        "Verificar la moneda de venta en la ficha del producto: ir al producto → revisar el campo Moneda Venta y asegurarse que coincida con la moneda usada en la factura de exportación.",
-        "Si el valor en DEBE1 ya está registrado incorrectamente en la base de datos, ejecutar el siguiente script SQL en la BD del cliente: UPDATE docu_db SET debe1 = [valor_correcto] WHERE numreg = [numreg_del_documento]",
-        "Reemplazar [valor_correcto] con el monto en moneda extranjera real y [numreg_del_documento] con el numreg de la factura afectada.",
-        "Verificar en el reporte de pendientes que el valor DEBE1 quedó actualizado correctamente."
-      ],
-      "pendiente_investigar": null,
-      "fuente": "Slack #customer-service-time — 2026-09-11",
-      "imagen_github": null,
-      "imagen_local": null,
-      "slack_file_id": null,
-      "intercom_article_id": 16666610,
-      "stable_key": "intercom-16666610"
-    },
-    {
-      "numero": 55,
       "titulo": "Informe muestra valor UF con menos decimales de los esperados",
       "modulo": "Informes / Diseño de informes / Indicadores económicos",
       "frecuencia": "Baja",
@@ -1246,6 +1223,29 @@
       "slack_file_id": null,
       "intercom_article_id": 16666611,
       "stable_key": "intercom-16666611"
+    },
+    {
+      "numero": 55,
+      "titulo": "DEBE1 incorrecto en factura de exportación — campo moneda extranjera desactualizado",
+      "modulo": "Contabilidad / Facturas de Exportación / Pendientes",
+      "frecuencia": "Media",
+      "estado": "Resuelto",
+      "fecha": "2026-09-11",
+      "sintoma": "Al revisar el reporte de pendientes, la columna DEBE1 (moneda extranjera) muestra un monto incorrecto en la factura de exportación, aunque el campo DEBE en pesos esté correcto.",
+      "causa": "La moneda de venta configurada en la ficha del producto no corresponde a la moneda con que se emitió la factura, o el campo DEBE1 en la tabla DOCU_DB quedó con un valor desactualizado.",
+      "solucion_pasos": [
+        "Verificar la moneda de venta en la ficha del producto: ir al producto → revisar el campo Moneda Venta y asegurarse que coincida con la moneda usada en la factura de exportación.",
+        "Si el valor en DEBE1 ya está registrado incorrectamente en la base de datos, ejecutar el siguiente script SQL en la BD del cliente: UPDATE docu_db SET debe1 = [valor_correcto] WHERE numreg = [numreg_del_documento]",
+        "Reemplazar [valor_correcto] con el monto en moneda extranjera real y [numreg_del_documento] con el numreg de la factura afectada.",
+        "Verificar en el reporte de pendientes que el valor DEBE1 quedó actualizado correctamente."
+      ],
+      "pendiente_investigar": null,
+      "fuente": "Slack #customer-service-time — 2026-09-11",
+      "imagen_github": null,
+      "imagen_local": null,
+      "slack_file_id": null,
+      "intercom_article_id": 16666610,
+      "stable_key": "intercom-16666610"
     },
     {
       "numero": 56,
@@ -1269,6 +1269,29 @@
       "slack_file_id": null,
       "intercom_article_id": null,
       "stable_key": "baseline-a5cbde28a270"
+    },
+    {
+      "numero": 57,
+      "titulo": "Guía de despacho: \"El documento no tiene URL de PDF disponible. Verifique que fue emitido con el facturador\"",
+      "modulo": "Ventas / Guía de Despacho / PDF DTE",
+      "frecuencia": "Baja",
+      "estado": "Resuelto",
+      "fecha": "2026-10-02",
+      "sintoma": "Al intentar ver el PDF de una Guía de Despacho emitida, Manager muestra el mensaje \"El documento no tiene URL de PDF disponible. Verifique que fue emitido con el facturador\" y el PDF no se abre.",
+      "causa": "El registro del documento con la URL del PDF no quedó guardado en la tabla docu_db_aux al emitir la guía, por lo que Manager no encuentra el PDF asociado. Ocurre con versiones de Manager desactualizadas.",
+      "solucion_pasos": [
+        "Abrir la guía de despacho afectada en Manager, presionar el botón Modificar y luego OK (sin cambiar datos) para regrabar el documento.",
+        "Reenviar la guía al facturador (botón de envío del DTE) para que se genere nuevamente el PDF y quede registrada su URL.",
+        "Verificar que al presionar el ícono de PDF de la guía se abra el documento.",
+        "Enviar a actualizar Manager del cliente a la última versión/service pack disponible, ya que la falla corresponde a una versión anterior."
+      ],
+      "pendiente_investigar": "Validar con el cliente cómo ingresa/emite las guías para identificar por qué no se guarda el registro en docu_db_aux (caso similar ocurrió en la versión anterior).",
+      "fuente": "Slack #customer-service-time — 2026-10-02",
+      "imagen_github": "https://raw.githubusercontent.com/manager-procesos/repositorio-errores-erp/main/imagenes/error-57-gd-documento-sin-url-pdf.png",
+      "imagen_local": "error-57-gd-documento-sin-url-pdf.png",
+      "slack_file_id": "F0C6C9F9350",
+      "intercom_article_id": "17506689",
+      "stable_key": "slack-F0C6C9F9350"
     }
   ]
 }
